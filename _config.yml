@@ -43,15 +43,13 @@ author:
   # Used by `jekyll-feed`:
   name:                 Soyeon Kim
   email:                mailto:<soyeon.kim.it@gmail.com>
-  linkedid:             https://github.com/soyeonkimgithub
+  linkedin:             https://github.com/soyeonkimgithub
   facebook:             https://www.facebook.com/profile.php?id=100001799942006
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
 # Add links to the sidebar.
 menu:
-  - title:             Dev. Log
-    url:               /dev/
   - title:             Study Log
     url:               /study/
     menu:
