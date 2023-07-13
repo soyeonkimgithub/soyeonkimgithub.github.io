@@ -6,3 +6,4 @@ description: >
   Check out the `blog` layout for comparison.
 grouped: true
 ---
+this is list layout for showing blog posts.
