@@ -55,15 +55,13 @@ menu:
   - title:             Study Log
     url:               /study/
     menu:
-      - title:             Example
-        url:               /example/
-      - title:             Documentation
-        url:               /docs/
+      - title:         Documentation
+        url:           /docs/
   - title:             Poject
     url:               /project/    
     menu:
-      - title:             Example
-        url:               /example/    
+      - title:         Example
+        url:           /example/    
   - title:             About
     url:               /about/    
 
