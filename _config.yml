@@ -41,8 +41,10 @@ logo:                  /assets/img/Logo_400x400.png
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                Soyeon Kim
-  email:               <mailto:soyeon.kim.it@gmail.com>
+  name:                 Soyeon Kim
+  email:                mailto:<soyeon.kim.it@gmail.com>
+  linkedid:             https://github.com/soyeonkimgithub
+  facebook:             https://www.facebook.com/profile.php?id=100001799942006&mibextid=LQQJ4d
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
@@ -50,11 +52,6 @@ author:
 menu:
   - title:             Dev. Log
     url:               /dev/
-    menu:
-      - title:             Example
-        url:               /example/
-      - title:             Documentation
-        url:               /docs/
   - title:             Study Log
     url:               /study/
     menu:
