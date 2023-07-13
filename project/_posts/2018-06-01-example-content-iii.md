@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Example Content III
+title: Project Content III
 description: >
   A page showing Hydejack-specific markdown content.
 image: 
