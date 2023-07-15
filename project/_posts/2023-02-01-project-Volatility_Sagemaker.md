@@ -1,8 +1,9 @@
 ---
 layout: post
-title: Project Content
+title: Volatility Forecast with Sagemaker
 description: >
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+  Volatility Forecast
+  This project is based on the World Happiness report which was released in 2017 and ranks 155 countries by their levels of happiness.
 sitemap: false
 hide_last_modified: true
 ---
