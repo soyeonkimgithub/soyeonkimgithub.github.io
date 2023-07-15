@@ -206,3 +206,7 @@ keybase:
 download:
   name: Download
   icon: icon-box-add
+strava:
+  name: strava
+  icon: icon-strava
+  prepend: 'https://www.strava.com/athletes/'
