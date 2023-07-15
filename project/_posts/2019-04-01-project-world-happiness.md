@@ -1,6 +1,8 @@
 ---
 layout: post
 title: World Happiness
+image: 
+  path: /assets/img/blog/jeremy-bishop@0,5x.jpg
 description: >
   School group assignment, worked with other 4 students.
   This project is based on the World Happiness report which was released in 2017 and ranks 155 countries by their levels of happiness.
