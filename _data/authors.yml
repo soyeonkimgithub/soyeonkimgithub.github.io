@@ -26,10 +26,11 @@ author1:
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    github:          https://github.com/soyeonkimgithub
-    email:           soyeon.kim.it@gmail.com
-    facebook:        Sophie Soyeon Kim
     linkedin:        soyeon-kim  
+    github:          soyeonkimgithub
+    facebook:        Sophie Soyeon Kim
+    email:           soyeon.kim.it@gmail.com
+    
     #twitter:         <username>
     # rss:             https://<url>/feed.xml
     # google:          <number>

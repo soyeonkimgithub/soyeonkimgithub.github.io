@@ -43,8 +43,11 @@ author:
   # Used by `jekyll-feed`:
   name:                 Soyeon Kim
   email:                soyeon.kim.it@gmail.com
-  linkedin:             soyeon-kim
-  facebook:             Sophie Soyeon Kim
+  social:  
+    linkedin:        soyeon-kim  
+    github:          soyeonkimgithub
+    facebook:        Sophie Soyeon Kim
+    email:           soyeon.kim.it@gmail.com
   # # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
