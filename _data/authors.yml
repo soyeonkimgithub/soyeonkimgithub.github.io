@@ -2,8 +2,8 @@
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
 author1:
-  name:              <firstname> <lastname>
-  email:             <mail@domain.tld>
+  name:              Soyeon Kim
+  email:             soyeon.kim.it@gmail.com
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
@@ -26,11 +26,12 @@ author1:
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
   social:
-    twitter:         <username>
-    github:          <username>
-    # email:           <mail@domain.tld>
+    github:          https://github.com/soyeonkimgithub
+    email:           soyeon.kim.it@gmail.com
+    facebook:        Sophie Soyeon Kim
+    linkedin:        soyeon-kim  
+    #twitter:         <username>
     # rss:             https://<url>/feed.xml
-    # facebook:        <username>
     # google:          <number>
     # vk:              <username>
     # youtube:         <string_string_string>
@@ -57,7 +58,6 @@ author1:
     # npm:             <username>
     # hackernews:      <username>
     # trello:          <firstnamelastname>
-    # linkedin:        <firstname-lastname-string>
     # xing:            <firstname_lastname_counter>
     # blogger:         <number>
     # delicious:       <username>
