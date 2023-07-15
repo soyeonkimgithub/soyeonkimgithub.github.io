@@ -207,6 +207,6 @@ download:
   name: Download
   icon: icon-box-add
 strava:
-  name: strava
-  icon: icon-strava
+  name: Strava
+  icon: icon-trophy
   prepend: 'https://www.strava.com/athletes/'
