@@ -57,6 +57,12 @@ menu:
     url:               /project/    
   - title:             Study Log
     url:               /study/    
+    menu:
+      - title:             Algorithm
+        url:               /algorithm/   
+    menu:
+      - title:             Python
+        url:               /python/           
   - title:             Review
     url:               /review/       
   - title:             Documentation
