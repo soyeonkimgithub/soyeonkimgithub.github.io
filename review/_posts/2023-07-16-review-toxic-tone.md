@@ -45,6 +45,11 @@ Saturday Night Live에서 Jimmy Fallon의 재미있는 Nick Burns:Your Company's
 이 용어들의 차이는 질문에 답변한 사람에게는 너무 명확해서 어떻게 이해를 위해 더 간단한 영어가 필요할 수 있는지 상상을 못하고 있다. 질문자가 원래 답변을 보고 어떻게 느꼇을지 궁금하다. 분명 질문자에게 도움이 된다거나 자신감을 주지는 않았다고 생각한다. 트위터에서의 이후 토론에서 사람들이 이 글을 보고 불편해 한다는 것을 알았다.
 
 
+
+### 친절한 대안
+
+
+
 ## Inline HTML elements
 
 HTML defines a long list of available inline tags, a complete list of which can be found on the [Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/HTML/Element).
