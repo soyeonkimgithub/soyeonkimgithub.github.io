@@ -2,9 +2,11 @@
 layout: post
 title: Tech has a Toxic Tone Problem - Let's Fix It!
 description: >
-  This is summarise and translate the article about toxic tone in tech industry. 
+  This is summarise and translate the article about toxic tone in tech
+  industry. 
 sitemap: false
 hide_last_modified: true
+published: true
 ---
 
 The original post is <a href="https://compassionatecoding.com/blog/2016/8/25/tech-has-a-toxic-tone-problemlets-fix-it">Tech has a Toxic Tone Problem - Let's Fix It!</a>.
@@ -38,9 +40,9 @@ Saturday Night Live에서 Jimmy Fallon의 재미있는 Nick Burns:Your Company's
 
 하지만 거만한 말투가 항상 이렇게 노골적인 것은 아니다. 좀더 미묘한 사례를 보자. 누군가 Stack Overflow에 Ovserver와 Overvable의 차이를 물었다. 오랜시간 검색을 해도 여전히 이해가 안됬기 때문이다. 다음은 100표가 넘는 평가를 받은 답변이다. 
 
-> 어떻게 간단한 영어로 설명해야할지 모르겠네요. 위에 정의가 있습니다. 두 문장입니다. 열번을 읽어도 소화해야 할 게 별로 없죠.
+> 어떻게 더 간단한 영어로 설명해야할지 모르겠네요. 위에 정의가 있습니다. 두 문장입니다. 열번을 읽어도 소화해야 할 게 별로 없죠.
 
-이 용어들의 차이는 질문에 답변한 사람에게는 너무 명확해서 어떻게 더 간단한 영어가 필요할 수 있는지 상상을 못하고 있다. 
+이 용어들의 차이는 질문에 답변한 사람에게는 너무 명확해서 어떻게 이해를 위해 더 간단한 영어가 필요할 수 있는지 상상을 못하고 있다. 질문자가 원래 답변을 보고 어떻게 느꼇을지 궁금하다. 분명 질문자에게 도움이 된다거나 자신감을 주지는 않았다고 생각한다. 트위터에서의 이후 토론에서 사람들이 이 글을 보고 불편해 한다는 것을 알았다.
 
 
 ## Inline HTML elements
