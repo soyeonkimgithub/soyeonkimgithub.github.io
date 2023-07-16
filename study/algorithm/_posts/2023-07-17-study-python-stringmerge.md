@@ -2,6 +2,7 @@
 layout: post
 title: [Python] Merge Strings Alternately
 sitemap: false
+categories: [python]
 hide_last_modified: true
 ---
 
