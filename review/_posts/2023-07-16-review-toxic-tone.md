@@ -7,8 +7,9 @@ sitemap: false
 hide_last_modified: true
 ---
 
-## Heading 2
 The original post is <a href="https://compassionatecoding.com/blog/2016/8/25/tech-has-a-toxic-tone-problemlets-fix-it">Tech has a Toxic Tone Problem - Let's Fix It!</a>.
+
+Put the summary here with one or two pharagraphes.
 
 커뮤니케이션 특히 엔지니어와 하는 기술관련 커뮤니케이션에는 독성 말투에 대한 문제가 있다. 나는 지난 10년 동안 그 문제들에 둘라싸여 있었을 뿐 아니라 그 문제에 대해 잘 모를 때는 심지어 그 문제에 기여했기 때문에 알고 있다. 
 
