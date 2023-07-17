@@ -1,11 +1,11 @@
 ---
 layout: post
 title: [Python] LeetCode - Merge Strings Alternately
+image: 
+  path: /assets/img/blog/jeremy-bishop@0,5x.jpg
 description: >
-  This is summarise and translate the article about toxic tone in tech
-  industry. 
-categories: study
-sitemap: false
+  This is summarise and translate the article about toxic tone in tech industry. 
+category: study
 hide_last_modified: true
 published: true
 ---
