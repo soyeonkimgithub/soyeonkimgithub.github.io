@@ -1,12 +1,12 @@
 ---
 layout: post
 title: NAV POC
-category: project
 description: >
   NAV POC project in company.
   This project is based on the World Happiness report which was released in 2017 and ranks 155 countries by their levels of happiness.
-# sitemap: false
-# hide_last_modified: true
+category: project
+hide_last_modified: true
+published: true
 ---
 
 Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.

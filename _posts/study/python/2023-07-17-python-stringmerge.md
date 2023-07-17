@@ -1,10 +1,12 @@
 ---
 layout: post
-title: [Python] Merge Strings Alternately
+title: [Python] LeetCode - Merge Strings Alternately
 sitemap: false
-categories: [study, python]
-tags: [study, python]
+categories: study
+tags: python
+sitemap: false
 hide_last_modified: true
+published: true
 ---
 
 ## [Python] LeetCode - Merge Strings Alternately
