@@ -2,8 +2,6 @@
 # Featured tags need to have either the `list` or `grid` layout (PRO only).
 layout: tag-list
 
-type: tag
-
 # The title of the tag's page.
 title: Algorithm
 
@@ -14,7 +12,5 @@ category: study
 
 order: 2
 
-menu: true
-
-sidebar: true
+menu: false
 ---
