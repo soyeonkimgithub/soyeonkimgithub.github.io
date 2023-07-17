@@ -2,7 +2,9 @@
 layout: post
 title: [Algorithm] Regarding ML Algorithm
 categories: study
-tags: algorithm
+sitemap: false
+hide_last_modified: true
+published: true
 ---
 
 ## [Algorithm]Anything
