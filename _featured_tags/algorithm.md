@@ -1,6 +1,8 @@
 ---
 # Featured tags need to have either the `list` or `grid` layout (PRO only).
-layout: tag-blog
+layout: tag-list
+
+type: tag
 
 # The title of the tag's page.
 title: Algorithm
@@ -8,7 +10,7 @@ title: Algorithm
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
 slug: algorithm
 
-menu: false
+category: study
 
-order: 2
+sidebar: true
 ---

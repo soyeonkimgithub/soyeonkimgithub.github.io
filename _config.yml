@@ -1,9 +1,6 @@
 # Config
 # ========================================================================================
 
-# The title of your blog. Used in the sidebar and the browser tab.
-title:                 Soyeon Kim
-
 # Uncomment and set the URL of your site (with protocol, e.g. `https://`)
 # NOTE: You don't need to provide this property when hosting on GitHub Pages or Netlify.
 url:                   https://soyeonkimgithub.github.io
@@ -17,6 +14,8 @@ baseurl:               ''
 
 # General settings
 # ---------------------------------------------------------------------------------------
+# The title of your blog. Used in the sidebar and the browser tab.
+title:                 Soyeon Kim
 
 # Language of your content in 2-letter code, e.g.: en, de.
 # You may also provide a location, e.g.: en-us, de_AT.
@@ -52,24 +51,24 @@ author:
   # twitter:             <username>
 
 # Add links to the sidebar.
-menu:
-  - title:             Poject
-    url:               /project/    
-  - title:             Study Log
-    url:               /study/    
-    submenu:
-    - title:           Python
-      url:             /python/    
-    - title:           Algorithm
-      url:             /algorithm/          
-  - title:             Review
-    url:               /review/  
-  - title:             Documentation
-    url:               /docs/    
-  - title:             Example
-    url:               /example/        
-  - title:             About
-    url:               /about/    
+# menu:
+#   - title:             Poject
+#     url:               /project/    
+#   - title:             Study Log
+#     url:               /study/    
+#     submenu:
+#     - title:           Python
+#       url:             /python/    
+#     - title:           Algorithm
+#       url:             /algorithm/          
+#   - title:             Review
+#     url:               /review/  
+#   - title:             Documentation
+#     url:               /docs/    
+#   - title:             Example
+#     url:               /example/        
+#   - title:             About
+#     url:               /about/    
 
 
 # Add links to the footer.
@@ -86,8 +85,8 @@ menu:
 copyright:             © 2023. All rights reserved.
 
 # Format of the permalinks
-permalink:             /:categories/:year-:month-:day-:title/
-#permalink:             pretty
+#permalink:             /:categories/:year-:month-:day-:title/
+permalink:             none
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              20
@@ -308,7 +307,7 @@ hydejack:
 
 collections:
   featured_categories:
-    permalink:         /category/:name/
+    permalink:         /:name/
     output:            true
 
   featured_tags:
