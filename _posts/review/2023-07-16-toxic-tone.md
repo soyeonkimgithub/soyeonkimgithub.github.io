@@ -1,9 +1,6 @@
 ---
 layout: post
 title: Tech has a Toxic Tone Problem - Let's Fix It!
-description: >
-  This is summarise and translate the article about toxic tone in tech
-  industry. 
 categories: review
 sitemap: false
 hide_last_modified: true
