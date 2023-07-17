@@ -2,7 +2,7 @@
 # Featured tags need to have either the `list` or `grid` layout (PRO only).
 layout: list
 
-type : category
+type: category
 
 # The title of the tag's page.
 title: Example
