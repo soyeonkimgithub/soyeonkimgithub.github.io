@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: post
 title: [Python] LeetCode - Merge Strings Alternately
 category: study
 sitemap: false
