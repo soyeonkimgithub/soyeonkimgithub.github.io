@@ -3,16 +3,18 @@
 layout: list
 
 # The title of the tag's page.
-title: Review
+title: Algorithm
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: review
+slug: algorithm
 
 menu: true
 
+order: 2
+
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  Review and translation of article
+  Repository of study
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true
