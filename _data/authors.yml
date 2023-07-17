@@ -1,7 +1,7 @@
 # The primary author of this blog.
 # Must be the same as `author` in `_config.yml`.
 # Change `author1` to your shortname.
-author1:
+soyeonkim:
   name:              Soyeon Kim
   email:             soyeon.kim.it@gmail.com
 
