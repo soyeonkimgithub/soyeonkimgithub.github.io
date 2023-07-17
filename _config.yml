@@ -82,7 +82,8 @@ copyright:             © 2023. by soyeonkim
 
 # Format of the permalinks
 #permalink:             /:categories/:year-:month-:day-:title/
-permalink:             pretty
+#permalink:             pretty
+permalink:              /:categories/:tag
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              20
@@ -307,7 +308,7 @@ collections:
     output:            true
 
   featured_tags:
-    permalink:         /tag/:name/
+    permalink:         /:name/
     output:            true
 
   projects:
