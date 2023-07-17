@@ -8,9 +8,15 @@ title: Review
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
 slug: review
 
+menu: true
+
+submenu: false
+
+order: 3
+
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
-  Review and translation of articles.
+  Review and translation of article
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true
