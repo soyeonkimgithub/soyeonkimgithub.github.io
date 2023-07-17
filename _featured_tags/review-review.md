@@ -11,8 +11,4 @@ slug: review
 menu: false
 
 order: 1
-
-# (Optional) Write a short (~150 characters) description of this featured tag.
-description: >
-  Review and translation of article
 ---
