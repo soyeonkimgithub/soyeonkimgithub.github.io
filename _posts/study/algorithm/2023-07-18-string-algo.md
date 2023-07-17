@@ -1,7 +1,6 @@
 ---
 layout: post
 title: [Algorithm] Regarding ML Algorithm
-sitemap: true
 categories: study
 tags: algorithm
 ---
