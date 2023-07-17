@@ -16,7 +16,7 @@ published: true
 # About
 
 <!--author-->
-This is about author.
+This is about author..
 
 ## Hydejack
 
