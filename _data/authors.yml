@@ -21,11 +21,11 @@ author1:
   # Social media icons in sidebar
   # Comment/uncommet to show/hide
   # Rearrange to change the order in which they appear
-  social:
-    linkedin:        soyeonsophiekim 
-    github:          soyeonkimgithub
-    strava:          28038819
-    email:           soyeon.kim.it@gmail.com
+  # social:
+  #   linkedin:        soyeonsophiekim 
+  #   github:          soyeonkimgithub
+  #   strava:          28038819
+  #   email:           soyeon.kim.it@gmail.com
     
     #twitter:         <username>
     # rss:             https://<url>/feed.xml
