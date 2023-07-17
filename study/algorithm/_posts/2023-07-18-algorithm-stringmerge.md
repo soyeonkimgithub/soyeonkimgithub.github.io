@@ -1,7 +1,7 @@
 ---
 layout: post
-title: [Python] Merge Strings Alternately
-sitemap: false
+title: [Algorithm] Regarding ML Algorithm
+sitemap: true
 categories: [study, algorithm]
 tags: [study, algorithm]
 hide_last_modified: true
