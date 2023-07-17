@@ -436,12 +436,4 @@ jekyll_compose:
         path: /assets/img/sidebar-bg.jpg
       links:
         - title: Project Link
-          url: https://example.com
-
-
-# jekyll-feed settings
-feed:
-  categories:
-    - project
-    - study
-    - review          
+          url: https://example.com    

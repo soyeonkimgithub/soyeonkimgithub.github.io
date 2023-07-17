@@ -1,7 +1,11 @@
 ---
 layout: post
 title: [Algorithm] Regarding ML Algorithm
+description: >
+  This is summarise and translate the article about toxic tone in tech
+  industry. 
 categories: study
+sitemap: false
 hide_last_modified: true
 published: true
 ---
