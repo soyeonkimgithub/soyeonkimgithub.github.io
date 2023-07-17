@@ -437,3 +437,11 @@ jekyll_compose:
       links:
         - title: Project Link
           url: https://example.com
+
+
+# jekyll-feed settings
+feed:
+  categories:
+    - project
+    - study
+    - review          
