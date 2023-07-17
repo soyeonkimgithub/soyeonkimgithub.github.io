@@ -4,7 +4,7 @@ title: Tech has a Toxic Tone Problem - Let's Fix It!
 categories: review
 sitemap: false
 hide_last_modified: true
-published: true
+published: false
 ---
 
 The original post is <a href="https://compassionatecoding.com/blog/2016/8/25/tech-has-a-toxic-tone-problemlets-fix-it">Tech has a Toxic Tone Problem - Let's Fix It!</a>.
