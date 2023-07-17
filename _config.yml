@@ -308,7 +308,7 @@ collections:
     output:            true
 
   featured_tags:
-    permalink:         /:name/
+    permalink:         /:name-tag/
     output:            true
 
   projects:
