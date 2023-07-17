@@ -3,16 +3,16 @@
 layout: list
 
 # The title of the tag's page.
-title: Learn
+title: Study
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: learn
+slug: study
 
 menu: true
 
 submenu: false
 
-order: 3
+order: 2
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >

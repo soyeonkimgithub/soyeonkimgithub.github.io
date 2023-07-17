@@ -1,11 +1,8 @@
 ---
 layout: post
-title: [Algorithm] Regarding ML Algorithm
-image: 
-  path: /assets/img/blog/jeremy-bishop@0,5x.jpg
-description: >
-  This is summarise and translate the article about toxic tone in tech industry. 
+title: [Algorithm] ML Algorithm
 category: study
+sitemap: false
 hide_last_modified: true
 published: true
 ---
