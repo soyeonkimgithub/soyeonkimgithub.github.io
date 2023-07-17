@@ -2,7 +2,6 @@
 layout: post
 title: [Algorithm] Regarding ML Algorithm
 categories: study
-sitemap: false
 hide_last_modified: true
 published: true
 ---
