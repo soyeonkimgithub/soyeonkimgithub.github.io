@@ -10,7 +10,7 @@ slug: study
 
 menu: true
 
-submenu: true
+submenu: false
 
 order: 2
 
