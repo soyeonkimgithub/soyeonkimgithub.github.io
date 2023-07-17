@@ -4,9 +4,6 @@ title: [Algorithm] Regarding ML Algorithm
 sitemap: true
 categories: study
 tags: algorithm
-sitemap: false
-hide_last_modified: true
-published: true
 ---
 
 ## [Algorithm]Anything
