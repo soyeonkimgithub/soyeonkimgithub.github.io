@@ -81,9 +81,8 @@ author:
 copyright:             © 2023. by soyeonkim
 
 # Format of the permalinks
-#permalink:             /:categories/:year-:month-:day-:title/
+permalink:             /:categories/:year-:month-:day-:title/
 #permalink:             pretty
-permalink:              /:categories/:tag
 
 # Pagination configuration (used by the `blog` layout)
 paginate:              20
@@ -304,11 +303,11 @@ hydejack:
 
 collections:
   featured_categories:
-    permalink:         /:name/
+    permalink:         /category/:name/
     output:            true
 
   featured_tags:
-    permalink:         /:name-tag/
+    permalink:         /tag/:name/
     output:            true
 
   projects:
