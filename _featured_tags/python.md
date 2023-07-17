@@ -12,5 +12,9 @@ slug: python
 
 category: study
 
-sidebar: true
+order: 1
+
+menu: true
+
+submenu: false
 ---

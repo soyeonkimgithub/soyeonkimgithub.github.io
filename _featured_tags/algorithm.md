@@ -12,5 +12,9 @@ slug: algorithm
 
 category: study
 
+order: 2
+
+menu: true
+
 sidebar: true
 ---
