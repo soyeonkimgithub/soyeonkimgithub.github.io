@@ -12,6 +12,8 @@ menu: true
 
 submenu: false
 
+sidebar: true
+
 order: 2
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
