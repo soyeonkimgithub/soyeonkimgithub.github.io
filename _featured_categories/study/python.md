@@ -2,8 +2,6 @@
 # Featured tags need to have either the `list` or `grid` layout (PRO only).
 layout: list
 
-bigtitle: Python1
-
 # The title of the tag's page.
 title: Python
 
@@ -14,9 +12,7 @@ menu: true
 
 category: study
 
-list: true
-
-order: 1
+list: false
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
