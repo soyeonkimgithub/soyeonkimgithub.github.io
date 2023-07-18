@@ -2,8 +2,6 @@
 # Featured tags need to have either the `list` or `grid` layout (PRO only).
 layout: list
 
-bigtitle: Study1
-
 # The title of the tag's page.
 title: Study
 
@@ -25,11 +23,11 @@ description: >
 
 # Exclude this example category from the sitemap.
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
-#sitemap: false
+sitemap: false
 ---
-* [Python]{:.heading.flip-title} 
+* [Python]{:.heading.flip-title} - 1
 
-* [Algorithm]{:.heading.flip-title} 
+* [Algorithm]{:.heading.flip-title} - 2
 
 [Python]: /python/
 
