@@ -3,8 +3,9 @@ layout: post
 title: [Python] LeetCode - Merge Strings Alternately
 category: study
 sitemap: false
-hide_last_modified: true
-published: true
+categories:
+    - study
+    - python
 ---
 
 ## [Python] LeetCode - Merge Strings Alternately
