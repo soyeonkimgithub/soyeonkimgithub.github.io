@@ -1,7 +1,7 @@
 ---
 layout: post
 title: [Python] LeetCode - Two Sum
-categories: study
+categories: example
 sitemap: false
 hide_last_modified: true
 published: true
