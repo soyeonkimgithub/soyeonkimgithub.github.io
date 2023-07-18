@@ -15,8 +15,8 @@ submenu: false
 order: 2
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
-description: >
-  Review and translation of article
+#description: >
+#  Review and translation of article
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true
