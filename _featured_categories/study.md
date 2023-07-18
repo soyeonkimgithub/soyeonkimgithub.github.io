@@ -10,25 +10,18 @@ slug: study
 
 menu: true
 
-submenu: true
+submenu: false
 
 order: 2
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 #description: >
-#  Study 
+#  Review or translation of article
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true
 
 # Exclude this example category from the sitemap.
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
-#sitemap: false
+sitemap: false
 ---
-* [Python]{:.heading.flip-title} - 1
-
-* [Algorithm]{:.heading.flip-title} - 2
-
-[Python]: /python/
-
-[Algorithm]: /algorithm/
