@@ -12,7 +12,7 @@ menu: true
 
 submenu: false
 
-order: 2
+order: 4
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 #description: >
