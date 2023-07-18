@@ -1,10 +1,11 @@
 ---
 layout: post
-title: [Python] LeetCode - Two Sum
+title: LeetCode - Two Sum
 categories: example
 sitemap: false
 hide_last_modified: true
 published: true
+
 ---
 
 ## [Python] LeetCode - Two Sum
