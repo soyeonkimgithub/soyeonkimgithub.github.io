@@ -10,7 +10,7 @@ slug: study
 
 menu: true
 
-submenu: false
+submenu: true
 
 sidebar: true
 
@@ -25,5 +25,12 @@ order: 2
 
 # Exclude this example category from the sitemap.
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
-sitemap: false
+#sitemap: false
 ---
+* [Test1]{:.heading.flip-title} 
+
+* [Test2]{:.heading.flip-title} 
+
+[Python]: /python/
+
+[Algorithm]: /algorithm/
