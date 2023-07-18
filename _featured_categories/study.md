@@ -2,7 +2,7 @@
 # Featured tags need to have either the `list` or `grid` layout (PRO only).
 layout: list
 
-bittitle: Study
+bigtitle: Study1
 
 # The title of the tag's page.
 title: Study
@@ -17,8 +17,8 @@ submenu: true
 order: 2
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
-#description: >
-#  Review and translation of article
+description: >
+  Study 
 
 # (Optional) You can disable grouping posts by date.
 # no_groups: true
