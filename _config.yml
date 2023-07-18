@@ -67,9 +67,9 @@ menu:
 #     url:               /docs/    
 #   - title:             Example
 #     url:               /example/  
-   - title:             Posts
-    url:               /posts/        
-   - title:             About
+#   - title:             Posts
+#     url:               /posts/        
+  - title:             About
     url:               /about/    
 
 
