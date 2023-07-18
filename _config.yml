@@ -56,11 +56,6 @@ menu:
     url:               /project/    
   - title:             Study
     url:               /study/    
-    submenu:
-    - title:           Python
-      url:             /python/    
-    - title:           Algorithm
-      url:             /algorithm/          
   - title:             Review
     url:               /review/  
 #   - title:             Documentation
