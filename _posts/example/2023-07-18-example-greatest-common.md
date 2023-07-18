@@ -34,5 +34,8 @@ class Solution(object):
                         rtn = rtn + str1[i]        
                     break
         return rtn      
+        
+s = Solution()
+s.gcdOfStrings("ABCABC", "ABC")       
 
 ~~~
