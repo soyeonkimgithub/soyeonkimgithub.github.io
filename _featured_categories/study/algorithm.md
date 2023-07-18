@@ -1,6 +1,6 @@
 ---
 # Featured tags need to have either the `list` or `grid` layout (PRO only).
-layout: post
+layout: list
 
 # The title of the tag's page.
 title: Algorithm
@@ -9,6 +9,8 @@ title: Algorithm
 slug: algorithm
 
 menu: true
+
+submenu: true
 
 category: study
 
