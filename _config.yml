@@ -51,18 +51,18 @@ author:
   # twitter:             <username>
 
 # Add links to the sidebar.
-# menu:
-#   - title:             Poject
-#     url:               /project/    
-#   - title:             Study Log
-#     url:               /study/    
-#     submenu:
-#     - title:           Python
-#       url:             /python/    
-#     - title:           Algorithm
-#       url:             /algorithm/          
-#   - title:             Review
-#     url:               /review/  
+menu:
+  - title:             Poject
+    url:               /project/    
+  - title:             Study
+    url:               /study/    
+    submenu:
+    - title:           Python
+      url:             /python/    
+    - title:           Algorithm
+      url:             /algorithm/          
+  - title:             Review
+    url:               /review/  
 #   - title:             Documentation
 #     url:               /docs/    
 #   - title:             Example
