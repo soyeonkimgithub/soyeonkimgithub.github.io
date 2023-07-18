@@ -12,7 +12,9 @@ menu: true
 
 submenu: true
 
-category: study
+categories:
+  - study
+  - python
 
 hide_last_modified: false
 

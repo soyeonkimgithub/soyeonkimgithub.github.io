@@ -12,9 +12,9 @@ menu: true
 
 submenu: true
 
-category: study
-
-hide_last_modified: false
+categories:
+  - study
+  - algorithm
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
