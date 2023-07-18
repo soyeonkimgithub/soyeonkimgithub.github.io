@@ -2,6 +2,8 @@
 # Featured tags need to have either the `list` or `grid` layout (PRO only).
 layout: list
 
+bittitle: Study
+
 # The title of the tag's page.
 title: Study
 
@@ -9,10 +11,6 @@ title: Study
 slug: study
 
 menu: true
-
-submenu: true
-
-sidebar: true
 
 order: 2
 
@@ -27,9 +25,9 @@ order: 2
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
 #sitemap: false
 ---
-* [Test1]{:.heading.flip-title} 
+* [Python]{:.heading.flip-title} 
 
-* [Test2]{:.heading.flip-title} 
+* [Algorithm]{:.heading.flip-title} 
 
 [Python]: /python/
 
