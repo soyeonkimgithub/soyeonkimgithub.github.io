@@ -1,6 +1,6 @@
 ---
 # Featured tags need to have either the `list` or `grid` layout (PRO only).
-layout: list
+layout: post
 
 # The title of the tag's page.
 title: Algorithm
@@ -12,7 +12,7 @@ menu: true
 
 category: study
 
-list: false
+hide_last_modified: false
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
@@ -23,5 +23,5 @@ description: >
 
 # Exclude this example category from the sitemap.
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
-#sitemap: false
+sitemap: false
 ---
