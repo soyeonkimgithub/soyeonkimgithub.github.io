@@ -20,22 +20,29 @@ class Solution(object):
         :type str2: str
         :rtype: str
         """
-
         self.str1 = str1
         self.str2 = str2
-        rtn = ""
+        divisor = ""
+        str1Div = ""
+        str2Div = ""
 
         for i in range(len(str1)):
+            print(str1Div, str1[i], divisor)
+            if str1Div != "" and str1[i] != divisor and str1[i] in divisor:
+                break
+            str1Div = str1Div + str1[i]
+            str2Div = ""
             for j in range(len(str2)):
-                if i == j and str1[i] == str2[j]:
-                    if str1[i] in rtn :
-                        break
-                    else :    
-                        rtn = rtn + str1[i]        
+                str2Div = str2Div + str2[j]
+                if str1Div == str2Div:
+                    divisor = str1Div
+                elif len(str1Div) < len(str2Div) or j == (len(str2)-1):
                     break
-        return rtn      
-        
+                else:
+                    continue
+        return divisor 
+
 s = Solution()
-s.gcdOfStrings("ABCABC", "ABC")       
+s.gcdOfStrings("ABCDEF", "ABC")     
 
 ~~~
