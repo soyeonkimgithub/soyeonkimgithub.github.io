@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LeetCode - Two Sum
-categories: example
+categories: study
 sitemap: false
 hide_last_modified: true
 published: true

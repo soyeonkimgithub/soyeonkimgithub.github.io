@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LeetCode - Greatest Common Divisor of Strings
-categories: example
+categories: study
 sitemap: false
 hide_last_modified: true
 published: true

@@ -54,8 +54,8 @@ author:
 menu:
   - title:             Poject
     url:               /project/    
-  - title:             Example
-    url:               /example/     
+  - title:             Study
+    url:               /study/     
   - title:             Review
     url:               /review/  
   #   - title:             Documentation
