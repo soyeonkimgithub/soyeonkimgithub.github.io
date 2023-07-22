@@ -45,3 +45,12 @@ credit: datacamp
 {:.figcaption}
 
 > 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1662633286/Marketing/Blog/Data_Storytelling_Cheat_Sheet.pdf">여기</a>
+
+4. 데이터 시각화: 데이터 시각화는 데이터 사이언스의 필수적인 부분으로 데이터의 관계와 패턴을 탐색하고 이해할 수 있게 해준다. 이 섹션에서는 ggplot2, Matplotlib 및 seaborn과 같은 널리 사용되는 시각화 도구를 다룬다.
+
+![Screenshot](assets/img/post/cheatsheet-5.webp){:.lead width="1920" height="1080" loading="lazy"}
+
+credit: datacamp
+{:.figcaption}
+
+> 다운로드는 <a href="https://s3.amazonaws.com/assets.datacamp.com/email/other/Data+Visualizations+-+DataCamp.pdf">여기</a>
