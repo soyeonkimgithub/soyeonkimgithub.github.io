@@ -37,3 +37,12 @@ credit: datacamp
 {:.figcaption}
 
 > 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1674822557/Marketing/Blog/Probability_Cheat_Sheet.pdf">여기</a>
+
+3. 데이터 스토리텔링: 데이터 스토리텔링은 데이터 분석에서 얻은 인사이트와 결과를 명확하고 설득력있는 방식으로 전달하는 프로세스이다. 데이터 스토리텔링의 목표는 청중을 참여시키고 이해하기 쉽고 기억하기 쉽고 영량력 있는 방식으로 핵심 메지리를 전달하는 것이다.
+
+![Screenshot](assets/img/post/cheatsheet-4.webp){:.lead width="1920" height="1080" loading="lazy"}
+
+credit: datacamp
+{:.figcaption}
+
+> 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1662633286/Marketing/Blog/Data_Storytelling_Cheat_Sheet.pdf">여기</a>
