@@ -5,7 +5,6 @@ categories: review
 sitemap: false
 hide_last_modified: true
 published: true
-image: /assets/img/post/cheatsheet-1.webp
 ---
 
 The original post is <a href="https://ai.plainenglish.io/master-data-science-with-this-comprehensive-cheat-sheet-numpy-pandas-python-r-ml-dl-nlp-188d50a54952"> Master Data Science with This Comprehensive Cheat Sheet</a>
