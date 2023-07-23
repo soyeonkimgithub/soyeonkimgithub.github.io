@@ -78,6 +78,15 @@ credit: datacamp
 {:.figcaption}
 > 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1673614153/Marketing/Blog/Python_Cheat_Sheet_for_Beginners.pdf">여기</a>
 
+#### 11. R: R은 통계 계산 및 그래픽을 위한 고급 프로그래밍 언어 및 소프트웨어 환경이다. R은 통계학자, 데이터 과학자 및 연구원이 데이터 분석 및 시각화를 위해 널리 사용한다.
+[cheatsheet-12](/assets/img/post/cheatsheet-12.webp){:width="65%" :.centered }
+credit: datacamp
+{:.figcaption}
+> 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1654763044/Marketing/Blog/R_Cheat_Sheet.pdf">여기</a>
+
+
+
+
 > 
 ## 결론
 결론적으로 데이터 사이언스 치트 시트는 해당 분야에서 지식을 확장하려는 모든 사람들에게 귀중한 리소스이다. 초보자이든 숙련된 데이터 사이언티스트이든 치트 시트는 현장에서 사용되는 모든 필수 개념과 도구에 대한 빠른 참조를 제공한다. 이 치트 시트를 즐겨찾기에 추가하고 다음 데이터 사이언스 프로젝트를 할 때 편리하게 사용하라.
