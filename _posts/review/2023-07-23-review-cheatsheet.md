@@ -19,15 +19,17 @@ The original post is <a href="https://ai.plainenglish.io/master-data-science-wit
 
 다음은 데이터 사이언스 치트 시트에서 다루는 몇 가지 주제이다. 
 
-1. 통계: 통계의 기초를 이해하는 것은 데이터 사이언스에서 필수적이다. 이 섹션에서는 평균, 중앙값, 최빈값, 표준편차 및 상관관계와 같은 주요 개념을 다룬다. 
-![Screenshot](/assets/img/post/cheatsheet-2.webp){:.lead width="1920" height="1080" loading="lazy"}
+## 1. 통계: 
+통계의 기초를 이해하는 것은 데이터 사이언스에서 필수적이다. 이 섹션에서는 평균, 중앙값, 최빈값, 표준편차 및 상관관계와 같은 주요 개념을 다룬다. 
+![Screenshot](/assets/img/post/cheatsheet-2.webp){:.lead width="1500" loading="lazy"}
 
 credit: datacamp
 {:.figcaption}
 
 > 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1662111933/Marketing/Blog/Descriptive_Statistics_Cheat_Sheet.pdf">여기</a>
 
-2.확률: 확률은 데이터 사이언스의 기본 개념으로 데이터에서 예측하고 추론하는 데 사용된다. 이 섹션에서는 베이즈의 정리(Bayes's theorem) 및 조건부 확률과 같은 기본 확률 개념을 다룬다.
+## 2. 확률: 
+확률은 데이터 사이언스의 기본 개념으로 데이터에서 예측하고 추론하는 데 사용된다. 이 섹션에서는 베이즈의 정리(Bayes's theorem) 및 조건부 확률과 같은 기본 확률 개념을 다룬다.
 
 ![Screenshot](/assets/img/post/cheatsheet-3.webp){:.lead width="1920" height="1080" loading="lazy"}
 
