@@ -10,7 +10,7 @@ slug: review
 
 menu: true
 
-submenu: false
+submenu: true
 
 order: 3
 
