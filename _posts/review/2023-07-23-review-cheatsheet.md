@@ -69,7 +69,7 @@ credit: Intellipat
 > 다운로드는 <a href="https://github.com/Ritik2703/Data-Science-Cheat-Notes-/blob/master/Big%20Data/Hadoop-and-mapreduce-cheat-sheet.pdf">여기</a>
 
 #### 8. NLP: 자연어처리(Natural Language Processing)은 자연어를 사용하여 컴퓨터와 인간 간의 상호 작용에 초점을 맞춘 인공 지능의 하위 분야이다. NLP는 컴퓨터가 인간의 언어를 처리, 분석 및 이해할 수 있도록 하는 알고리즘 및 모델의 개발을 포함한다. NLP의 목표는 컴퓨터가 정확하고 자연스러운 방식으로 인간의 언어를 이해하고 생성할 수 있도록 하는 것이다.
-![cheatsheet-9](/assets/img/post/cheatsheet-9.webp){:width="65%" :.centered }
+![cheatsheet-9](/assets/img/post/cheatsheet-9.jpeg){:width="65%" :.centered }
 
 credit: cheatography
 {:.figcaption}
