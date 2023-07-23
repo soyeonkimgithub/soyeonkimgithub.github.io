@@ -19,8 +19,7 @@ The original post is <a href="https://ai.plainenglish.io/master-data-science-wit
 
 다음은 데이터 사이언스 치트 시트에서 다루는 몇 가지 주제이다. 
 
-## 1. 통계: 
-통계의 기초를 이해하는 것은 데이터 사이언스에서 필수적이다. 이 섹션에서는 평균, 중앙값, 최빈값, 표준편차 및 상관관계와 같은 주요 개념을 다룬다. 
+### 1. 통계: 통계의 기초를 이해하는 것은 데이터 사이언스에서 필수적이다. 이 섹션에서는 평균, 중앙값, 최빈값, 표준편차 및 상관관계와 같은 주요 개념을 다룬다. 
 ![Screenshot](/assets/img/post/cheatsheet-2.webp){:.lead width="1500" loading="lazy"}
 
 credit: datacamp
@@ -28,7 +27,7 @@ credit: datacamp
 
 > 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1662111933/Marketing/Blog/Descriptive_Statistics_Cheat_Sheet.pdf">여기</a>
 
-## 2. 확률: 
+### 2. 확률: 
 확률은 데이터 사이언스의 기본 개념으로 데이터에서 예측하고 추론하는 데 사용된다. 이 섹션에서는 베이즈의 정리(Bayes's theorem) 및 조건부 확률과 같은 기본 확률 개념을 다룬다.
 
 ![Screenshot](/assets/img/post/cheatsheet-3.webp){:.lead width="1920" height="1080" loading="lazy"}
@@ -38,7 +37,7 @@ credit: datacamp
 
 > 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1674822557/Marketing/Blog/Probability_Cheat_Sheet.pdf">여기</a>
 
-3.데이터 스토리텔링: 데이터 스토리텔링은 데이터 분석에서 얻은 인사이트와 결과를 명확하고 설득력 있는 방식으로 전달하는 프로세스이다. 데이터 스토리텔링의 목표는 청중을 참여시키고 이해하기 쉽고 기억하기 쉽고 영향력 있는 방식으로 핵심 메지리를 전달하는 것이다.
+### 3. 데이터 스토리텔링: 데이터 스토리텔링은 데이터 분석에서 얻은 인사이트와 결과를 명확하고 설득력 있는 방식으로 전달하는 프로세스이다. 데이터 스토리텔링의 목표는 청중을 참여시키고 이해하기 쉽고 기억하기 쉽고 영향력 있는 방식으로 핵심 메지리를 전달하는 것이다.
 
 ![Screenshot](/assets/img/post/cheatsheet-4.webp){:.lead width="1920" height="1080" loading="lazy"}
 
@@ -47,7 +46,7 @@ credit: datacamp
 
 > 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1662633286/Marketing/Blog/Data_Storytelling_Cheat_Sheet.pdf">여기</a>
 
-4. 데이터 시각화: 데이터 시각화는 데이터 사이언스의 필수적인 부분으로 데이터의 관계와 패턴을 탐색하고 이해할 수 있게 해준다. 이 섹션에서는 ggplot2, Matplotlib 및 seaborn과 같은 널리 사용되는 시각화 도구를 다룬다.
+### 4. 데이터 시각화: 데이터 시각화는 데이터 사이언스의 필수적인 부분으로 데이터의 관계와 패턴을 탐색하고 이해할 수 있게 해준다. 이 섹션에서는 ggplot2, Matplotlib 및 seaborn과 같은 널리 사용되는 시각화 도구를 다룬다.
 
 ![Screenshot](/assets/img/post/cheatsheet-5.webp){:.lead width="1920" height="1080" loading="lazy"}
 
@@ -56,7 +55,7 @@ credit: datacamp
 
 > 다운로드는 <a href="https://s3.amazonaws.com/assets.datacamp.com/email/other/Data+Visualizations+-+DataCamp.pdf">여기</a>
 
-5. 머신러닝: 데이터 시각화는 데이터 사이언스의 필수적인 부분으로 데이터의 관계와 패턴을 탐색하고 이해할 수 있게 해준다. 이 섹션에서는 ggplot2, Matplotlib 및 seaborn과 같은 널리 사용되는 시각화 도구를 다룬다.
+### 5. 머신러닝: 데이터 시각화는 데이터 사이언스의 필수적인 부분으로 데이터의 관계와 패턴을 탐색하고 이해할 수 있게 해준다. 이 섹션에서는 ggplot2, Matplotlib 및 seaborn과 같은 널리 사용되는 시각화 도구를 다룬다.
 
 ![Screenshot](/assets/img/post/cheatsheet-6.webp){:.lead width="1920" height="1080" loading="lazy"}
 
