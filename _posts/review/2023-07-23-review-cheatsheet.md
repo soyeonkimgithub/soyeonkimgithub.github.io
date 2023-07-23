@@ -21,7 +21,9 @@ The original post is <a href="https://ai.plainenglish.io/master-data-science-wit
 
 #### 1. 통계: 통계의 기초를 이해하는 것은 데이터 사이언스에서 필수적이다. 이 섹션에서는 평균, 중앙값, 최빈값, 표준편차 및 상관관계와 같은 주요 개념을 다룬다. 
 ![Screenshot](/assets/img/post/cheatsheet-2.webp){:.lead width="800" height="200" loading="lazy"}
+<p class="text-align-center">
 <img src="/assets/img/post/cheatsheet-2.webp" width="50%">
+</p>
 
 credit: datacamp
 {:.figcaption}
