@@ -37,3 +37,23 @@ published: true
 #### XGBoost
 1. one of tree model
 2. 
+
+
+
+clalssification 
+- classify input data into categories
+- predict cateogories (spam or ham, buy or sell or hold, cat or dog or mouse, positive text or negative or neutral)
+
+regression 
+- predict continuous numeric values
+- given characteristics of a car predict mileage, given location and attributes of a home predict price, given GDP, health indicators predict life expectation
+
+clustering 
+- discover patterns and groupings in data
+- document discovery: find all documents related to homicide cases, social media ad targeting: find all users who are interested in sports
+
+dimensionality reduction 
+- find latent or significant features in data
+- find latent drivers of stock movements
+- pre-process data to build more robust machine learning models
+- improve performance of models

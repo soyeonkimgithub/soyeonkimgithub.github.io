@@ -12,3 +12,5 @@ published: true
 
 ### Marketing
 gain and lift chart
+
+learn - reverse-engineer
