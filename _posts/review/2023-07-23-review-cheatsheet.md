@@ -25,6 +25,10 @@ The original post is <a href="https://ai.plainenglish.io/master-data-science-wit
 {:.text-align-center}
 ![cheatsheet-2](/assets/img/post/cheatsheet-2.webp){:width="65%"}
 
+
+{:.text-align-center}
+![cheatsheet-2](/assets/img/post/cheatsheet-2.webp){:.centered}
+
 credit: datacamp
 {:.figcaption}
 
