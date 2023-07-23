@@ -17,17 +17,17 @@ The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit int
 ~~~python
 class Solution:
     def productExceptSelf(self, nums: List[int]) -> List[int]:
-        answer = [0] * len(nums)
+        answer = [1] * len(nums)
+        pre = 1
+        post = 1
         for i in range(len(nums)) :
-            prod = 1
-            for j in range(len(nums)) :
-                if j != i :
-                    prod = prod * nums[j]
-            answer[i] = prod
+            answer[i] *= pre
+            answer[-1-i] *= post
+            pre *= nums[i]
+            post *= nums[-1-i]
         return answer
 
 s = Solution()
-inputList = [-1,1,0,-3,3]
-s.productExceptSelf(inputList)                 
-        
+inputList = [1,2,3,4]
+s.productExceptSelf(inputList)        
 ~~~
