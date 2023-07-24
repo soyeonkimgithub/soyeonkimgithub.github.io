@@ -96,9 +96,56 @@ credit: datacamp
 {:.figcaption}
 > 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1654763044/Marketing/Blog/R_Cheat_Sheet.pdf">여기</a>
 
+#### 12. Numpy: Numpy는 숫자 컴퓨팅, 특히 배열 및 행렬용 Python 라이브러리이다. Python을 사용한 과학 컴퓨팅을 위한 기본 패키지이며 데이터 사이언스, 머신러닝 및 기타 기술 분야에서 널리 사용된다.
+![cheatsheet-13](/assets/img/post/cheatsheet-13.webp){:width="65%" :.centered loading="lazy"}
 
+credit: datacamp
+{:.figcaption}
+> 다운로드는 <a href="https://images.datacamp.com/image/upload/v1676302459/Marketing/Blog/Numpy_Cheat_Sheet.pdf">여기</a>
 
+#### 13. Pandas: Pandas는 데이터 조작 및 분석을 위한 Python 라이브러리이다. 대용량 데이터 세트를 효율적으로 저장하기 위한 데이터 구조와 작업을 위한 도구를 제공한다. Pandas는 데이터 정리, 집계 및 변환과 같은 작업을 위해 데이터 사이언스, 머신러닝 및 기타 기술 분야에서 널리 사용된다.
+![cheatsheet-14](/assets/img/post/cheatsheet-14.webp){:width="65%" :.centered loading="lazy"}
 
-> 
+credit: datacamp
+{:.figcaption}
+> 다운로드는 <a href="https://images.datacamp.com/image/upload/v1676302827/Marketing/Blog/Data_Wrangling_Cheat_Sheet.pdf">여기</a>
+
+#### 14. Seaborn: Seaborn은 Matplotlib 위에 구축된 Python의 데이터 시각화 라이브러리로, 통계 그래픽을 만들기 위한 고급 인터페이스를 제공한다. 복잡한 데이터 세트의 구조를 탐색하고 이해하기 위한 시각화 사용에 중점을 둔다.
+![cheatsheet-15](/assets/img/post/cheatsheet-15.webp){:width="65%" :.centered loading="lazy"}
+
+credit: datacamp
+{:.figcaption}
+> 다운로드는 <a href="https://images.datacamp.com/image/upload/v1676302629/Marketing/Blog/Seaborn_Cheat_Sheet.pdf">여기</a>
+
+#### 15. Plotly Express: Plotly Express는 Plotly를 기반으로 구축된 Python의 고급 데이터 시각화 라이브러리로, 대화형 애니메이션 및 출판 품질의 시각화를 만드는 간단하고 표현적인 방법을 제공한다. 사용자가 너무 많은 코드를 작성하지 않고도 신속하게 시각화를 생성할 수 있도록 설계되었으며 합리적인 기본값으로 다양한 차트 및 옵션을 제공하는 데 중점을 둔다.
+![cheatsheet-16](/assets/img/post/cheatsheet-16.webp){:width="65%" :.centered loading="lazy"}
+
+credit: datacamp
+{:.figcaption}
+> 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1668605954/Marketing/Blog/Plotly_Cheat_Sheet.pdf">여기</a>
+
+#### 16. Git: Git은 소프트웨어 개발 및 코드 관리를 위한 버전 제어 시스템이다. 이를 통해 개발자는 시간 경과에 따른 코드 변경 사항을 추적하고, 다른 개발자와 프로젝트에서 공동 작업하고, 다른 버전의 코드베이스를 유지할 수 있다. Git은 분산 모델에서 작동한다. 즉, 리포지토리의 여러 복사본이 서로 다른 시스템에 존재할 수 있으므로 오프라인에서 쉽게 작업하고 다른 사람과 변경 사항을 공유할 수 있다.
+![cheatsheet-17](/assets/img/post/cheatsheet-17.webp){:width="65%" :.centered loading="lazy"}
+
+credit: datacamp
+{:.figcaption}
+> 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1656573882/Marketing/Blog/git_cheat_sheet.pdf">여기</a>
+
+#### 17. PySpark: PySpark는 빅 데이터 처리 및 분석을 위한 오픈 소스 분산 컴퓨팅 시스템인 Apache Spark용 Python API이다. PySpark는 Python 개발자가 Spark의 강력한 처리 엔진을 사용하여 대규모 데이터 세트를 병렬로 처리하고 분석할 수 있는 방법을 제공한다. 이를 통해 개발자는 Python 프로그래밍의 단순성과 표현력을 활용하면서 계산을 확장하고 복잡한 데이터 변환 및 집계를 수행할 수 있다.
+![cheatsheet-18](/assets/img/post/cheatsheet-18.webp){:width="65%" :.centered loading="lazy"}
+
+credit: datacamp
+{:.figcaption}
+> 다운로드는 <a href="https://images.datacamp.com/image/upload/v1676303379/Marketing/Blog/PySpark_RDD_Cheat_Sheet.pdf">여기</a>
+
+#### 18. Excel
+> 다운로드는 <a href="https://res.cloudinary.com/dyd911kmh/image/upload/v1674225421/Marketing/Blog/Excel_Cheat_Sheet.pdf">여기</a>
+
+#### 19. Tableau
+> 다운로드는 <a href="https://s3.amazonaws.com/assets.datacamp.com/email/other/Tableau+Cheat+Sheet.pdf">여기</a>
+
+#### 20. Power BI
+> 다운로드는 <a href="https://s3.amazonaws.com/assets.datacamp.com/email/other/Power+BI_Cheat+Sheet.pdf">여기</a>
+
 ## 결론
 결론적으로 데이터 사이언스 치트 시트는 해당 분야에서 지식을 확장하려는 모든 사람들에게 귀중한 리소스이다. 초보자이든 숙련된 데이터 사이언티스트이든 치트 시트는 현장에서 사용되는 모든 필수 개념과 도구에 대한 빠른 참조를 제공한다. 이 치트 시트를 즐겨찾기에 추가하고 다음 데이터 사이언스 프로젝트를 할 때 편리하게 사용하라.
