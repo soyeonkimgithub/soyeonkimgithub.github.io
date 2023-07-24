@@ -56,7 +56,3 @@ published: true
 - Tue model parameters
 - Experiment with different odels
 - Think about potential bias
-
-
-
-
