@@ -4,10 +4,39 @@ title: Volatility Forecast with Sagemaker
 description: >
   Volatility Forecast
   This project is based on the World Happiness report which was released in 2017 and ranks 155 countries by their levels of happiness.
+  Volatility Forecasting using AWS SageMaker
 category: project
 hide_last_modified: true
 published: true
 ---
+
+### Summary
+Task
+
+Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+
+* Task: Predict tomorrow's volatility and implement the process using SageMaker
+* Data: historical price and VIX of "Coca-Cola" from 01/Jan/2010 ~ 10/Feb/2023 retrieved from yahoo finance
+* Tools: Python, AWS SageMaker
+* ML Algorithms: XGBoost
+* Evaluation metrics: RMSE
+
+### Key Points
+1. compare result
+2. resources
+3. Constraints : look into just one security, does not explain different domain
+4. Why Standardisation?
+5. What Did I Find?
+6. Result?
+
+### Results
+
+### Code
+<iframe src="https://nbviewer.org/github/soyeonkimgithub/sagemaker/blob/main/xgboost_volatility_forecast.ipynb" width="800" height="1500" scrolling="yes" frameborder="0"></iframe>
+
+<a href="#">download for presentation ppt file</a>
+<a href="#">download for code</a>
+
 
 Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
 
@@ -104,12 +133,10 @@ Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, conse
 |:---------|:----------|:----------|
 | Alice    |        10 |        11 |
 | Bob      |         4 |         3 |
-| Charlie  |         7 |         9 |
+| Charlie  |         7 | ![200x200](https://via.placeholder.com/200x200 "Small example image") |
 |==========|===========|===========|
 |Totals    |        21 |        23 |
 
 Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.
 
-*[HTML]: HyperText Markup Language
-*[CSS]: Cascading Style Sheets
-*[JS]: JavaScript
+*[Volitility]: the range of price changes a security experiences over a given period

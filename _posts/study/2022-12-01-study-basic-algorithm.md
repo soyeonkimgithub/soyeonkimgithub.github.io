@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Basic Essiential Algorithm
+title: Basic Algorithm
 categories: study
 sitemap: false
 hide_last_modified: true
@@ -8,7 +8,7 @@ published: true
 
 ---
 
-## [Algorithm] Basic Essiential Algorithm
+## [Algorithm] Basic Algorithm
 
 ### Linear Regression
 1. easy to use
