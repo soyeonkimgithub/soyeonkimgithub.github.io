@@ -31,11 +31,14 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 
 ### Results
 
-### Code
-<iframe src="https://nbviewer.org/github/soyeonkimgithub/sagemaker/blob/main/xgboost_volatility_forecast.ipynb" width="800" height="1500" scrolling="yes" frameborder="0"></iframe>
+### Download
+* <a href="#">download for presentation ppt file</a>
+* <a href="#">download for code</a>
 
-<a href="#">download for presentation ppt file</a>
-<a href="#">download for code</a>
+### Code
+<iframe src="https://nbviewer.org/github/soyeonkimgithub/sagemaker/blob/main/xgboost_volatility_forecast.ipynb" width="1000" height="1500" scrolling="yes" frameborder="1"></iframe>
+
+
 
 
 Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
