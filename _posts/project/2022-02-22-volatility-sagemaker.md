@@ -9,7 +9,7 @@ category: project
 hide_last_modified: true
 published: true
 ---
-## [Personal Project]Volatility Forecast with Sagemaker
+## [Personal]Volatility Forecast with Sagemaker
 
 ### Summary
 * Task: Predict tomorrow's volatility using AWS SageMaker

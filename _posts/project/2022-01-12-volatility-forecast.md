@@ -9,7 +9,7 @@ category: project
 hide_last_modified: true
 published: true
 ---
-## [Personal Project]Breach Detection for Dynamic Tolerance
+## [Personal]Breach Detection for Dynamic Tolerance
 
 ### Summary
 * Task: Detect Breach of Stock Price

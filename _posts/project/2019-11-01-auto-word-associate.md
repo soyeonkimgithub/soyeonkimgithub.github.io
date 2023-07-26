@@ -8,6 +8,31 @@ category: project
 hide_last_modified: true
 published: true
 ---
+## [School]Auto Word Association
+
+### Summary
+* Task: Predict tomorrow's volatility using AWS SageMaker
+* Data: historical price and VIX of "Coca-Cola" from 01/Jan/2010 ~ 10/Feb/2023 retrieved from yahoo finance
+* Tools: Python, AWS SageMaker
+* ML Algorithms: XGBoost
+* Evaluation metrics: RMSE
+
+### Key Points
+1. compare result
+2. resources
+3. Constraints : look into just one security, does not explain different domain
+4. Why Standardisation?
+5. What Did I Find?
+6. Result?
+
+### Results
+MSE slightly decreased from 1.29 to 1.25 after Automatic Model Tuning
+
+### Download
+* <a href="#">download for presentation ppt file</a>
+* <a href="#">download for code</a>
+
+### Code
 
 Inside post,
 Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. *Aenean eu leo quam.* Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.
