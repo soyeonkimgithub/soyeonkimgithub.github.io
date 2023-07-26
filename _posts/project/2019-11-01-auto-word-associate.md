@@ -11,10 +11,10 @@ published: true
 ## [School]Auto Word Association
 
 ### Summary
-* Task: Predict tomorrow's volatility using AWS SageMaker
+* Task: Implement and evaluate word embedding models which could be used in a medical information retrieval system
 * Data: historical price and VIX of "Coca-Cola" from 01/Jan/2010 ~ 10/Feb/2023 retrieved from yahoo finance
-* Tools: Python, AWS SageMaker
-* ML Algorithms: XGBoost
+* Tools: Python
+* ML Algorithms: word embedding models (Word2Vec, fastText, GloVe) 
 * Evaluation metrics: RMSE
 
 ### Key Points
@@ -26,7 +26,7 @@ published: true
 6. Result?
 
 ### Results
-MSE slightly decreased from 1.29 to 1.25 after Automatic Model Tuning
+fastText dimension 200, trained over 30 iterations has best performance
 
 ### Download
 * <a href="#">download for presentation ppt file</a>
