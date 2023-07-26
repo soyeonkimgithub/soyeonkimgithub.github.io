@@ -34,8 +34,8 @@ published: true
 MSE slightly decreased from 1.29 to 1.13 after Automatic Model Tuning
 
 ### Download
-* <a href="https://github.com/soyeonkimgithub/Volatility-Sagemaker/blob/main/Volatility_Forecast_Sagemaker.pptx">download presentation ppt</a>
-* <a href="https://github.com/soyeonkimgithub/Volatility-Sagemaker/blob/main/xgboost_volatility_forecast.ipynb">download for code</a>
+* <a href="https://github.com/soyeonkimgithub/Volatility-Sagemaker/blob/main/Volatility_Forecast_Sagemaker.pptx">presentation ppt</a>
+* <a href="https://github.com/soyeonkimgithub/Volatility-Sagemaker/blob/main/xgboost_volatility_forecast.ipynb">code</a>
 
 ### Code
 <iframe src="https://nbviewer.org/github/soyeonkimgithub/Volatility-Sagemaker/blob/main/xgboost_volatility_forecast.ipynb" width="1000" height="1500" scrolling="yes" frameborder="1"></iframe>
