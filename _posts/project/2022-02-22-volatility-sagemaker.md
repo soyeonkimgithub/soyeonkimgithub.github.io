@@ -29,6 +29,7 @@ published: true
 {:.text-align-center}
 ![Infer 1](/assets/img/post/project/volatility_inference01.png){:width="45%"}
 ![Infer 2](/assets/img/post/project/volatility_inference02.png){:width="45%"}
+
 Pass today's volatility 0.301 and get predicted volatility -0.399
 
 ### Results
