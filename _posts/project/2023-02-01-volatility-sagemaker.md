@@ -9,13 +9,10 @@ category: project
 hide_last_modified: true
 published: true
 ---
+## [Personal Project]Volatility Forecast with Sagemaker
 
 ### Summary
-Task
-
-Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
-
-* Task: Predict tomorrow's volatility and implement the process using SageMaker
+* Task: Predict tomorrow's volatility using AWS SageMaker
 * Data: historical price and VIX of "Coca-Cola" from 01/Jan/2010 ~ 10/Feb/2023 retrieved from yahoo finance
 * Tools: Python, AWS SageMaker
 * ML Algorithms: XGBoost
@@ -30,6 +27,7 @@ Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus
 6. Result?
 
 ### Results
+MSE slightly decreased from 1.29 to 1.25 after Automatic Model Tuning
 
 ### Download
 * <a href="#">download for presentation ppt file</a>
