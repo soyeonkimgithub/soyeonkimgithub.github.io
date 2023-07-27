@@ -2,6 +2,7 @@
 layout: post
 title: Volatility Forecast with Sagemaker
 description: >
+  Personal project for dev meeting in company. 
   Volatility Forecast
   This project is based on the World Happiness report which was released in 2017 and ranks 155 countries by their levels of happiness.
   Volatility Forecasting using AWS SageMaker

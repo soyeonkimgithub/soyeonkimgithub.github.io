@@ -47,3 +47,24 @@ num1 = [1,2,3]
 num2 = [2,4,6]
 s.findDifference(num1, num2)            
 ~~~
+
+## Unique Number of Occurrences
+Given an array of integers arr, return true if the number of occurrences of each value in the array is unique or false otherwise.
+
+~~~python
+class Solution:
+    def uniqueOccurrences(self, arr: List[int]) -> bool:
+        d = {}
+        v = set()
+        for i in range(len(arr)) :
+            d[arr[i]] = arr.count(arr[i])
+
+        for x in d.values() :
+            v.add(x)
+
+        return len(d) == len(v)
+
+s = Solution()
+a = [-3,0,1,-3,1,1,1,-3,10,0]
+s.uniqueOccurrences(a)               
+~~~

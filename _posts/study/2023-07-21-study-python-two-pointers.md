@@ -45,20 +45,24 @@ A subsequence of a string is a new string that is formed from the original strin
 ~~~python
 class Solution:
     def isSubsequence(self, s: str, t: str) -> bool:
-        r = t
-        for i in range(len(t)) :
-            if t[i] in s:
-                continue
-            else :
-                r = r.replace(t[i],"")
-        print(r)
-        print(s in r)
-        print(s==r)
-        return s in r or s == r
+        r = []
+        k = 0
+
+        if len(s) == len(t):
+            return s==t
+
+        for i in range(len(s)) :
+            for j in range(len(t)) :
+                if t[j] == s[i] :
+                    if (k == 0 and j == 0) or (k < j) :
+                        r.append(t[j])
+                        k = j
+                        break
+        return s == ''.join(r)
         
 
 s = Solution()
-input1 = "leeeeetcode"
-input2 = "ylyyyeyyyeeeeyyyyetcode"
-rtn = s.isSubsequence(input1, input2)           
+input1 = "bb"
+input2 = "ahbgdc" # false
+rtn = s.isSubsequence(input1, input2)      
 ~~~
