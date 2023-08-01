@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Basic Algorithm
+title: Linear Regression
 categories: study
 sitemap: false
 hide_last_modified: true
@@ -8,7 +8,7 @@ published: true
 
 ---
 
-## [Algorithm] Basic Algorithm
+## [Algorithm] Linear Regression
 
 ### Linear Regression
 1. easy to use
