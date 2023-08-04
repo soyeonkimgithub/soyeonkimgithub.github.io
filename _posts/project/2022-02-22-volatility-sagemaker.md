@@ -2,7 +2,7 @@
 layout: post
 title: Volatility Forecast with Sagemaker
 description: >
-  This is personal project for knoweledge sharing session in company. I built pipeline of forcasting volatility based on historical price and VIX in AWS SageMaker.
+  This is personal project for knoweledge sharing session in company. I built pipeline of forcasting volatility based on historical price and VIX.
 category: project
 hide_last_modified: true
 published: true
@@ -19,8 +19,8 @@ published: true
 ### Key Points
 1. I used each of the machine learning process in SageMaker; from getting built-in algorithm, training, model tuning, deploying and using model by lambda. 
 2. Automatic Model Tuning improves result.
-3. There is tendency to follow to a recent time window.
-4. ARIMA might be better model for precition.
+3. It tends to follow the recent time window.
+4. ARIMA might be better for precition.
 
 {:.text-align-center}
 ![400x200](/assets/img/post/project/volatility_inference01.png){:width="45%"}
