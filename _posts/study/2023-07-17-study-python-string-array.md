@@ -252,4 +252,43 @@ nums = [20,100,10,12,5,13]
 print(s.increasingTriplet(nums))       
 ~~~
 
- 
+## String Compression
+Given an array of characters chars, compress it using the following algorithm:
+
+Begin with an empty string s. For each group of consecutive repeating characters in chars:
+
+If the group's length is 1, append the character to s.
+Otherwise, append the character followed by the group's length.
+The compressed string s should not be returned separately, but instead, be stored in the input character array chars. Note that group lengths that are 10 or longer will be split into multiple characters in chars.
+
+After you are done modifying the input array, return the new length of the array.
+
+~~~python
+class Solution:
+    def compress(self, chars: List[str]) -> int:
+        s = []
+        cnt = 1
+
+        for i in range(1, len(chars)) :
+            if chars[i]==chars[i-1] :
+                cnt += 1
+            else:
+                s.append([chars[i-1], cnt])
+                cnt = 1
+        s.append([chars[-1], cnt])
+
+        i = 0
+        for k, v in s:
+            chars[i] = k
+            i += 1        
+            if v>1:
+                for item in str(v):
+                    chars[i] = str(item)
+                    i += 1
+        return i
+
+
+s = Solution()
+chars = ["a","1","<","'","t","<","x","[","S","`"]
+a = s.compress(chars)
+~~~
