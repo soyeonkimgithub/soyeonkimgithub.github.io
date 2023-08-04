@@ -2,10 +2,7 @@
 layout: post
 title: Volatility Forecast with Sagemaker
 description: >
-  Personal project for dev meeting in company. 
-  Volatility Forecast
-  This project is based on the World Happiness report which was released in 2017 and ranks 155 countries by their levels of happiness.
-  Volatility Forecasting using AWS SageMaker
+  This is personal project for knoweledge sharing session in company. I built pipeline of forcasting volatility based on historical price and VIX in AWS SageMaker.
 category: project
 hide_last_modified: true
 published: true
@@ -20,12 +17,10 @@ published: true
 * Evaluation metrics: RMSE
 
 ### Key Points
-1. use each of the machine learning process in SageMaker; from getting built-in algorithm, training, model tuning, deploying and using model by lambda 
-2. resources
-3. Constraints : look into just one security, does not explain different domain
-4. Why Standardisation?
-5. What Did I Find?
-6. Result?
+1. I used each of the machine learning process in SageMaker; from getting built-in algorithm, training, model tuning, deploying and using model by lambda. 
+2. Automatic Model Tuning improves result.
+3. There is tendency to follow to a recent time window.
+4. ARIMA might be better model for precition.
 
 {:.text-align-center}
 ![400x200](/assets/img/post/project/volatility_inference01.png){:width="45%"}
@@ -42,7 +37,3 @@ MSE slightly decreased from 1.29 to 1.13 after Automatic Model Tuning
 
 ### Code
 <iframe src="https://nbviewer.org/github/soyeonkimgithub/Volatility-Sagemaker/blob/main/xgboost_volatility_forecast.ipynb" width="1000" height="1500" scrolling="yes" frameborder="1"></iframe>
-
-
-
-
