@@ -13,7 +13,7 @@ published: true
 
 ### Summary
 * Task: Predict tomorrow's volatility using AWS SageMaker
-* Data: historical price and VIX of "Coca-Cola" from 01/Jan/2010 ~ 22/Feb/2023 retrieved from yahoo finance
+* Data: historical price and VIX of "Coca-Cola" from 01/Jan/2010 ~ 11/Feb/2023 retrieved from yahoo finance
 * Tools: Python, AWS SageMaker
 * ML Algorithms: XGBoost
 * Evaluation metrics: RMSE
@@ -34,8 +34,8 @@ Pass today's volatility 0.301 and get predicted volatility -0.399
 MSE slightly decreased from 1.29 to 1.13 after Automatic Model Tuning
 
 ### Download
-* <a href="https://github.com/soyeonkimgithub/Volatility-Sagemaker/blob/main/Volatility_Forecast_Sagemaker.pptx">presentation ppt</a>
-* <a href="https://github.com/soyeonkimgithub/Volatility-Sagemaker/blob/main/xgboost_volatility_forecast.ipynb">code</a>
+* <a href="https://github.com/soyeonkimgithub/Volatility-Forecasting/blob/main/Security_Volatility_Forecast.pptx">presentation ppt</a>
+* <a href="https://github.com/soyeonkimgithub/Volatility-Forecasting/blob/main/volatility_forecasting.ipynb">code</a>
 
 ### Code
-<iframe src="https://nbviewer.org/github/soyeonkimgithub/Volatility-Sagemaker/blob/main/xgboost_volatility_forecast.ipynb" width="1000" height="1500" scrolling="yes" frameborder="1"></iframe>
+<iframe src="https://nbviewer.org/github/soyeonkimgithub/Volatility-Forecasting/blob/main/volatility_forecasting.ipynb" width="1000" height="1500" scrolling="yes" frameborder="1"></iframe>
