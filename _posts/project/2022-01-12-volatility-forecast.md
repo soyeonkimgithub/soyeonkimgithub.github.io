@@ -2,7 +2,7 @@
 layout: post
 title: Breach Detection for Dynamic Tolerance
 image: 
-  path: /assets/img/blog/jeremy-bishop@0,5x.jpg
+  path: /assets/img/post/project/Security_02.png
 description: >
   This is personal project for knoweledge sharing session in company. I experimented and implemented one of the hypothesis as an extension of the NAV-POC. 
 category: project
