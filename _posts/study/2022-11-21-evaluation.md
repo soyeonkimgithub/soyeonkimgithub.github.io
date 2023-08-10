@@ -24,7 +24,7 @@ published: true
 |   102   |    100   |   -2   |    2    |     4    | 
 |   95    |    94    |   -1   |    1    |     1    |  
 |   90    |    89    |   -1   |    1    |     1    |   
-                      sum=0      sum=8     sum=14
+                        sum=0      sum=8     sum=14
 
 1. Mean Absolute Error (MAE) : $$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
 - average error
