@@ -8,7 +8,8 @@ published: true
 ---
 ## [ML] Evalution
 
-### Regression Evaluation Metrics
+## Regression Evaluation Metrics
+Regression is a task when a model attempts to predict continuous values
 
 | $${y-test}$$ | $${prediction}$$ | $${diff}$$ | &#124;$${diff}$$&#124; | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
@@ -19,17 +20,20 @@ published: true
 | 90          | 89          | -1          | 1           | 1 |
 | | | sum = 0 | sum = 8 | sum=14 |
 
-#### 1. Mean Absolute Error (MAE) : $$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
+### 1. Mean Absolute Error (MAE) : $$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
+* take the difference between the true value minus predicted value, and take the absolute value because predictions could be over or under, then average that out for all predicted values
 * MAE = 8/5 = 1.6
 * average error
 
-#### 2. Mean Squared Error (MSE) : $$\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2$$
+### 2. Mean Squared Error (MSE) : $$\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2$$
+* take the difference the true and predicted value, and square it, then the larger errors are noted more than with MAE
 * MSE = 14/5 = 2.8
-* relatively big as it's squared (-> scale problem)
-* 'punishes' larger error, useful  
+* 'punishes' your model for those outlier situation that it's not fitting to
+* relatively big as it's squared -> scales units too, difficult to interpret
 
-#### 3. Root Mean Squred Error (RMSE) :  $$\sqrt{\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2}$$
-* adjust scale but, 
+### 3. Root Mean Squred Error (RMSE) :  $$\sqrt{\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2}$$
+* most popular because it punishes those larger error value and adjusts scale (interpretable in the 'y' units)
+* cannot be used for comparing between different dataset like below
 
 | $${y-test}$$ | $${prediction}$$ | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|
@@ -49,12 +53,10 @@ published: true
 | 900         | 890         | 100 |
 | | | RMSE = 16.7|
 
-* cannot be used for comparing between different dataset like above
 * can be used for comparing different model with same dataset
-* interpretable in the 'y' units
 
 
-#### 4. $${R}^2$$
+### 4. $${R}^2$$
 * how good that guess will be
 * i.e. 0.6 -> there is a 60% reduction in variance when we take the x feature into account
 * x feature 'explains' 60% of the variation in y
@@ -62,11 +64,10 @@ published: true
 
 ![evaluation-1](/assets/img/post/study/RSquared.png){:width="20%" :.centered loading="lazy"}
 
-----
-### Confusion Matrix
-1. easy to use
-2. easy to explain
-3. predict continuous variable
+## Classification Confusion Matrix
+Classification is a task when a model attempts to predict categorical values
+
+
 ----
 1. find the breach problem presentation
 2. post regarding the evaluation
