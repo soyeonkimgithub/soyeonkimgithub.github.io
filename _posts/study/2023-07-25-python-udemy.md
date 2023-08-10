@@ -38,7 +38,3 @@ published: true
 
 <iframe src="https://nbviewer.org/github/soyeonkimgithub/Python_for_Data_Science_and_Machine_Learning_Bootcamp/blob/main/03-Finance%20Project-Mine.ipynb" width="1000" height="1500" scrolling="yes" frameborder="1"></iframe>
 
-### Linear Regression
-<iframe src="https://nbviewer.org/github/soyeonkimgithub/Python_for_Data_Science_and_Machine_Learning_Bootcamp/blob/main/02-Linear%20Regression%20Project-Mine.ipynb" width="1000" height="1500" scrolling="yes" frameborder="1"></iframe>
-
-

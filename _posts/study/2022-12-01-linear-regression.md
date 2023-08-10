@@ -7,7 +7,6 @@ hide_last_modified: true
 published: true
 
 ---
-
 ## [Algorithm] Linear Regression
 
 ### Linear Regression
@@ -59,5 +58,3 @@ dimensionality reduction
 - improve performance of models
 
 ----
-1. find the breach problem presentation
-3. post regarding the linear regression
