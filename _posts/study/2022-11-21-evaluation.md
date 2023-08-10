@@ -17,13 +17,13 @@ published: true
 
 ### Regression Evaluation Metrics
 
-| y-test      | prediction  | diff        | abs(diff)   | diff^2      |
+| y-test      | prediction  | diff        | abs(diff)   | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| 98          | 100         | +2          | 2           | 4       |
-| 100         | 102         | +2          | 2           | 4       |
-| 102         | 100         | -2          | 2           | 4       |
-| 95          | 94          | -1          | 1           | 1       |
-| 90          | 89          | -1          | 1           | 1       |
+| 98          | 100         | +2          | 2           | 4 |
+| 100         | 102         | +2          | 2           | 4 |
+| 102         | 100         | -2          | 2           | 4 |
+| 95          | 94          | -1          | 1           | 1 |
+| 90          | 89          | -1          | 1           | 1 |
 
 
 1. Mean Absolute Error (MAE) : $$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
