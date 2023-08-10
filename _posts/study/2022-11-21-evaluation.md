@@ -84,10 +84,14 @@ Classification is a task when a model attempts to predict categorical values (bi
 * trade-off between recall and precision
 * recall expresses the ability to find all relevant instances in a dataset
 * precision expresses the proportion of the data points our model says was relevant that actually were relevant
-* optimal blend of precision and recall
 * harmonic mean of precision and recall -> punishes extreme value
-* $$F_{1} = {2* {(precision*recall)}\over(precision+recall)}$$
+$$F_{1} = {2* {(precision*recall)}\over(precision+recall)}$$
 
 ### 5. Confusion matrix
 * organise our predicted values compared to the real values 
-![evaluation-2](/assets/img/post/study/ConfusionMatrix.png){:width="30%" :.centered loading="lazy"}
+
+![evaluation-2](/assets/img/post/study/ConfusionMatrix.png){:width="40%" :.centered loading="lazy"}
+
+### What is good enough accuracy?
+* this all depends on the context of the situation, need to consider what is at stake.
+* is data balanced? are we creating a model to predict presence of a disease? want to minimise FN
