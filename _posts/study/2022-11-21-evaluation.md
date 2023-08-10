@@ -85,8 +85,8 @@ Classification is a task when a model attempts to predict categorical values (bi
 * recall expresses the ability to find all relevant instances in a dataset
 * precision expresses the proportion of the data points our model says was relevant that actually were relevant
 * optimal blend of precision and recall
-* harmonic mean of precision and recall
-* $$\frac 2(precision*recall)(precision+recall)\$$
+* harmonic mean of precision and recall -> punishes extreme value
+* F_{1} = $$\frac {2* {(precision*recall)}\over(precision+recall)}$$
 
 ### 5. Confusion matrix
 organise our predicted values compared to the real values 
