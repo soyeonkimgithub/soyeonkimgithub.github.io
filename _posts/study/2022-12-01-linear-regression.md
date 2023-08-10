@@ -16,6 +16,12 @@ published: true
 2. Determines how reliable that relationship is (p-Value)
 * y = wx + b (w : regression coefficients, weights, slope, b : y-intercept, outcome value when all features are 0)
 
+~~~python
+from sklearn.linear_model import LinearRegression
+lm = LinearRegression()
+lm.fit(X_train, y_train)
+predictions = lm.predict(X_test)
+~~~
 
 ### Gradient decent
 * a way of optimise (minimise loss function)
