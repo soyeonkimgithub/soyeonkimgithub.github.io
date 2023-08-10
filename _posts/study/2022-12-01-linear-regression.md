@@ -57,3 +57,7 @@ dimensionality reduction
 - find latent drivers of stock movements
 - pre-process data to build more robust machine learning models
 - improve performance of models
+
+----
+1. find the breach problem presentation
+3. post regarding the linear regression

@@ -86,17 +86,8 @@ Classification is a task when a model attempts to predict categorical values (bi
 * precision expresses the proportion of the data points our model says was relevant that actually were relevant
 * optimal blend of precision and recall
 * harmonic mean of precision and recall -> punishes extreme value
-* F_{1} = $$\frac {2* {(precision*recall)}\over(precision+recall)}$$
+* $$F_{1} = {2* {(precision*recall)}\over(precision+recall)}$$
 
 ### 5. Confusion matrix
-organise our predicted values compared to the real values 
-
-| $${y-test}$$ | $${prediction}$$ | $${diff}^2$$ |
-|:-----------:|:-----------:|:-----------:|
-| 980         | 1,000       | 400 |
-
-----
-1. find the breach problem presentation
-3. post regarding the linear regression
-
-
+* organise our predicted values compared to the real values 
+![evaluation-2](/assets/img/post/study/ConfusionMatrix.png){:width="30%" :.centered loading="lazy"}
