@@ -18,7 +18,7 @@ published: true
 ### Regression Evaluation Metrics
 
 | y-test      | prediction  | diff        | abs(diff)   | diff^2      |
-| ----------- | ----------- | ----------- | ----------- | ----------- |
+|:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
 | 98          | Title       | Title       | Title       | Title       |
 | 100         | Text        | Title       | Title       | Title       |
 | 102         | Text        | Title       | Title       | Title       |
