@@ -17,10 +17,13 @@ published: true
 
 ### Regression Evaluation Metrics
 
-| Syntax      | Description |
-| ----------- | ----------- |
-| Header      | Title       |
-| Paragraph   | Text        |
+| y-test      | prediction  | diff        | abs(diff)   | diff^2      |
+| ----------- | ----------- | ----------- | ----------- | ----------- |
+| Header      | Title       | Title       | Title       | Title       |
+| Paragraph   | Text        | Title       | Title       | Title       |
+| Paragraph   | Text        | Title       | Title       | Title       |
+| Paragraph   | Text        | Title       | Title       | Title       |
+| Paragraph   | Text        | Title       | Title       | Title       |
 
 table 1
 
