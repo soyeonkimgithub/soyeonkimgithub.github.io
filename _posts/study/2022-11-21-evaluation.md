@@ -6,7 +6,7 @@ sitemap: false
 hide_last_modified: true
 published: true
 ---
-## [ML] Evalution
+## [ML] Model Evalution
 
 ## Regression Evaluation Metrics
 Regression is a task when a model attempts to predict continuous values
@@ -66,7 +66,7 @@ Regression is a task when a model attempts to predict continuous values
 
 ## Classification Evaluation Metrics
 Classification is a task when a model attempts to predict categorical values (binary or multi)
-* either your model is correct or incorrect in its prediction
+-> either your model is correct or incorrect in its prediction
 
 ### 1. Accuracy
 * number of correct predictions / total number of predictions
