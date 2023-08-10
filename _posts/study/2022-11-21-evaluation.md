@@ -29,9 +29,7 @@ published: true
 * 'punishes' larger error, useful  
 
 #### 3. Root Mean Squred Error (RMSE) :  $$\sqrt{\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2}$$
-* adjust scale
-* interpretable in the 'y' units
-
+* adjust scale but, 
 
 | $${y-test}$$ | $${prediction}$$ | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|
@@ -51,8 +49,10 @@ published: true
 | 900         | 890         | 100 |
 | | | RMSE = 16.7|
 
-* RMSE cannot be compared between different dataset
+* cannot be used for comparing between different dataset like above
 * can be used for comparing different model with same dataset
+* interpretable in the 'y' units
+
 
 #### 4. $${R}^2$$
 * how good that guess will be
