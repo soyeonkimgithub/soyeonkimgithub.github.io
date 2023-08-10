@@ -16,16 +16,13 @@ published: true
 3. predict continuous variable
 
 ### Regression Evaluation Metrics
-1. Mean Absolute Error (MAE) 
-$$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
+1. Mean Absolute Error (MAE) : $$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
 - average error
 
-2. Mean Squared Error (MSE) 
-$$\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2$$
+2. Mean Squared Error (MSE) : $$\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2$$
 - 'punishes' larger error, useful  
 
-3. Root Mean Squred Error (RMSE) 
-$$\sqrt{\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2}$$
+3. Root Mean Squred Error (RMSE) :  $$\sqrt{\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2}$$
 - interpretable in the 'y' units
 
 4. 
