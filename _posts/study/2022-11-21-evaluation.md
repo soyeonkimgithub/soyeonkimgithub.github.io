@@ -17,23 +17,15 @@ published: true
 
 ### Regression Evaluation Metrics
 1. Mean Absolute Error (MAE) 
+$$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
 - average error
 
-**The Cauchy-Schwarz Inequality**
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
-
-this is second
-
-**The Cauchy-Schwarz Inequality**
-
-```math
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-```
-
 2. Mean Squared Error (MSE) 
+$$\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2$$
 - 'punishes' larger error, useful  
 
-3. Root Mean Squred Error (RMSE) : 
+3. Root Mean Squred Error (RMSE) 
+$$\sqrt{\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2}$$
 - interpretable in the 'y' units
 
 4. 
