@@ -33,7 +33,7 @@ published: true
 * interpretable in the 'y' units
 
 
-| y-test      | prediction  | $${diff}^2$$ |
+| $${y-test}$$ | $${prediction}$$ | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|
 | 98          | 100         | 4 |
 | 100         | 102         | 4 |
@@ -42,7 +42,7 @@ published: true
 | 90          | 89          | 1 |
 | | | RMSE = 1.67|
 
-| y-test      | prediction  | $${diff}^2$$ |
+| $${y-test}$$ | $${prediction}$$ | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|
 | 980         | 1,000       | 400 |
 | 1,000       | 1,020       | 400 |
