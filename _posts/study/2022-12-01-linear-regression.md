@@ -25,7 +25,7 @@ predictions = lm.predict(X_test)
 
 ### Gradient decent
 * a way of optimise (minimise loss function)
-* pick a random value  하고 그 점에 대한 편(partial)미분값 구하면 접선에 대한 기울기를 구하는데 음수면 오른쪽으로 양수면 왼쪽으로 해서 점점 최소 에러값 찾아서 가. 기울기(얼마나 멀리 뛰는지, learning rate)
+* pick a random value -> find the slope of that point (we can use tangent line to observe the steepness of the slope) -> updates to the weight (depending on the steepness which is learning rate) -> the slope gradually reduce until it reaches the lowest point on the curve (the point of convergence)
 * a differential coefficient (미분계수)
 * lowest sum of squared residuals
 
