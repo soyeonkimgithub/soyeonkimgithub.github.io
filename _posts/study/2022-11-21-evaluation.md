@@ -18,14 +18,18 @@ published: true
 ### Regression Evaluation Metrics
 1. Mean Absolute Error (MAE) : $$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
 - average error
+- metrics.mean_absolute_error(y_test, predictions)
 
 2. Mean Squared Error (MSE) : $$\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2$$
 - 'punishes' larger error, useful  
+- metrics.mean_squared_error(y_test, predictions)
 
 3. Root Mean Squred Error (RMSE) :  $$\sqrt{\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2}$$
 - interpretable in the 'y' units
+- np.sqrt(metrics.mean_squared_error(y_test, predictions))
 
-4. 
+4. $$\frac R^2$$
+- metrics.explained_variance_score(y_test, predictions)
 
 ### RMSE
 1. binary classification
