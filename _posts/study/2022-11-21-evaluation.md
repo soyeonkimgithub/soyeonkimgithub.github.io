@@ -54,7 +54,7 @@ Regression is a task when a model attempts to predict continuous values
 | | | RMSE = 16.7|
 
 * can be used for comparing different model with same dataset
-
+* cannot explain 'is this good enough?'
 
 ### 4. $${R}^2$$
 * how good that guess will be
@@ -64,13 +64,39 @@ Regression is a task when a model attempts to predict continuous values
 
 ![evaluation-1](/assets/img/post/study/RSquared.png){:width="20%" :.centered loading="lazy"}
 
-## Classification Confusion Matrix
-Classification is a task when a model attempts to predict categorical values
+## Classification Evaluation Metrics
+Classification is a task when a model attempts to predict categorical values (binary or multi)
+* either your model is correct or incorrect in its prediction
 
+### 1. Accuracy
+* number of correct predictions / total number of predictions
+* useful when target classes are well balanced
+
+### 2. Recall
+* ability of a model to find all the relevant cases within a dataset
+* number of true positive / (number of true positive + number of false negative)
+
+### 3. Precision
+* ability of a model to identify only the relevant data points
+* number of true positive / (number of true positive + number of false positive)
+
+### 4. F1-Score
+* trade-off between recall and precision
+* recall expresses the ability to find all relevant instances in a dataset
+* precision expresses the proportion of the data points our model says was relevant that actually were relevant
+* optimal blend of precision and recall
+* harmonic mean of precision and recall
+* $$\frac 2(precision*recall)(precision+recall)\$$
+
+### 5. Confusion matrix
+organise our predicted values compared to the real values 
+
+| $${y-test}$$ | $${prediction}$$ | $${diff}^2$$ |
+|:-----------:|:-----------:|:-----------:|
+| 980         | 1,000       | 400 |
 
 ----
 1. find the breach problem presentation
-2. post regarding the evaluation
 3. post regarding the linear regression
 
 
