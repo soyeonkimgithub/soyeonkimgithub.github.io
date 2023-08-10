@@ -17,7 +17,7 @@ published: true
 
 ### Regression Evaluation Metrics
 
-| actual  | predicts |  diff  | abs(diff) |  diff^2  |  
+| actual  | predicts |  diff  | absdiff |  diff  |  
 |---------|:---------|:------:|:---------:|:--------:|
 |   98    |    100   |   +2   |     2     |     4    |   
 |   100   |    102   |   +2   |     2     |     4    |   
@@ -32,7 +32,6 @@ published: true
 2. Mean Squared Error (MSE) : $$\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2$$
 - 'punishes' larger error, useful  
 - metrics.mean_squared_error(y_test, predictions)
-
 
 3. Root Mean Squred Error (RMSE) :  $$\sqrt{\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2}$$
 - interpretable in the 'y' units
