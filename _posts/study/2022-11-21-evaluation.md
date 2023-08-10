@@ -28,11 +28,11 @@ published: true
 
 1. Mean Absolute Error (MAE) : $$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
 - average error
-- sum of |diff| = 8, MAE = 8/5 = 1.6
+- sum of $$|diff|$$ = 8, MAE = 8/5 = 1.6
 
 2. Mean Squared Error (MSE) : $$\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2$$
 - 'punishes' larger error, useful  
-- sum of diff^2 = 14, MSE = 14/5 = 2.8
+- sum of $${diff}^2$$ = 14, MSE = 14/5 = 2.8
 
 3. Root Mean Squred Error (RMSE) :  $$\sqrt{\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2}$$
 - interpretable in the 'y' units
