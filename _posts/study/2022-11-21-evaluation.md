@@ -25,25 +25,18 @@ published: true
 | 95          | 94          | -1          | 1           | 1       |
 | 90          | 89          | -1          | 1           | 1       |
 
-table 1
-
-| Default aligned |Left aligned| Center aligned  | Right aligned  |
-|-----------------|:-----------|:---------------:|---------------:|
-| First body part |Second cell | Third cell      | fourth cell    |
-
-
 
 1. Mean Absolute Error (MAE) : $$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
 - average error
+- sum of |diff| = 8, MAE = 8/5 = 1.6
 
 2. Mean Squared Error (MSE) : $$\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2$$
 - 'punishes' larger error, useful  
-- metrics.mean_squared_error(y_test, predictions)
+- sum of diff^2 = 14, MSE = 14/5 = 2.8
 
 3. Root Mean Squred Error (RMSE) :  $$\sqrt{\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2}$$
 - interpretable in the 'y' units
-- np.sqrt(metrics.mean_squared_error(y_test, predictions))
-
+- 
 
 4. $${R}^2$$
 - metrics.explained_variance_score(y_test, predictions)
