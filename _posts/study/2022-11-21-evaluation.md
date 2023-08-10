@@ -10,7 +10,7 @@ published: true
 
 ### Regression Evaluation Metrics
 
-| $${y-test}$$ | $${prediction}$$ | $${diff}$$ | abs(diff) | $${diff}^2$$ |
+| $${y-test}$$ | $${prediction}$$ | $${diff}$$ | $${|diff|}$$ | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
 | 98          | 100         | +2          | 2           | 4 |
 | 100         | 102         | +2          | 2           | 4 |
@@ -31,10 +31,8 @@ published: true
 #### 3. Root Mean Squred Error (RMSE) :  $$\sqrt{\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2}$$
 * adjust scale
 * interpretable in the 'y' units
-* $${|diff|}$$
 
-<table border='0'>
-<tr><td>
+
 | y-test      | prediction  | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|
 | 98          | 100         | 4 |
@@ -43,8 +41,7 @@ published: true
 | 95          | 94          | 1 |
 | 90          | 89          | 1 |
 | | | RMSE = 1.67|
-</td>
-<td>
+
 | y-test      | prediction  | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|
 | 980         | 1,000       | 400 |
@@ -53,8 +50,6 @@ published: true
 | 950         | 940         | 100 |
 | 900         | 890         | 100 |
 | | | RMSE = 16.7|
-</td></tr>
-</table>
 
 * RMSE cannot be compared between different dataset
 * can be used for comparing different model with same dataset
@@ -66,6 +61,11 @@ published: true
 * measured with training set not new data
 
 ![evaluation-1](/assets/img/post/study/RSquared.png){:width="40%" :.centered loading="lazy"}
+
+library(webshot)
+flextable(pressure[1:7,])%>% set_caption(caption = "Table 1") %>% save_as_image("tmp1.png")
+flextable(cars[1:5,])%>% set_caption(caption = "Table 2") %>% save_as_image("tmp2.png")
+knitr::include_graphics(c("tmp1.png", "tmp2.png"))
 
 | Month    | Savings |      | Month    | Savings1 |
 | -------- | ------- |      | -------- | ------- |
