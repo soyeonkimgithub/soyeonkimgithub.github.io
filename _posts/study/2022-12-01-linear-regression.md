@@ -10,51 +10,17 @@ published: true
 ## [Algorithm] Linear Regression
 
 ### Linear Regression
-1. easy to use
-2. easy to explain
-3. predict continuous variable
-
-### Logistic Regression
-1. binary classification
-2. easy to translate (based on linear regression)
-3. used activation function in deep learning 
-
-### Decision Tree
-1. can be used in various problems
-2. visualisation
-3. based on latest algorithm 
-
-### Random Forerst
-1. fix overfitting and can be used in various problems
-2. based on ensembles
-3. good prediction
-
-### Kmeans Clustering
-1. unsupervised model
-2. segmentation
-
-#### XGBoost
-1. one of tree model
-2. 
+* Predict continuous numeric values (i.e. given characteristics of a car predict mileage, given location and attributes of a home predict price, given GDP, health indicators predict life expectation)
+* Given some data that we think are related, 
+1. Quantifies the relationship in the data ($${R}^2$$)
+2. Determines how reliable that relationship is (p-Value)
+* y = wx + b (w : regression coefficients, weights, slope, b : y-intercept, outcome value when all features are 0)
 
 
+### Gradient decent
+* a way of optimise (minimise loss function)
+* pick a random value  하고 그 점에 대한 편(partial)미분값 구하면 접선에 대한 기울기를 구하는데 음수면 오른쪽으로 양수면 왼쪽으로 해서 점점 최소 에러값 찾아서 가. 기울기(얼마나 멀리 뛰는지, learning rate)
+* a differential coefficient (미분계수)
+* lowest sum of squared residuals
 
-clalssification 
-- classify input data into categories
-- predict cateogories (spam or ham, buy or sell or hold, cat or dog or mouse, positive text or negative or neutral)
-
-regression 
-- predict continuous numeric values
-- given characteristics of a car predict mileage, given location and attributes of a home predict price, given GDP, health indicators predict life expectation
-
-clustering 
-- discover patterns and groupings in data
-- document discovery: find all documents related to homicide cases, social media ad targeting: find all users who are interested in sports
-
-dimensionality reduction 
-- find latent or significant features in data
-- find latent drivers of stock movements
-- pre-process data to build more robust machine learning models
-- improve performance of models
-
-----
+### p-Value
