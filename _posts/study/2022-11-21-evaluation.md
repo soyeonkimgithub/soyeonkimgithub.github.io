@@ -19,11 +19,11 @@ published: true
 
 | y-test      | prediction  | diff        | abs(diff)   | diff^2      |
 |:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
-| 98          | Title       | Title       | Title       | Title       |
-| 100         | Text        | Title       | Title       | Title       |
-| 102         | Text        | Title       | Title       | Title       |
-| 95          | Text        | Title       | Title       | Title       |
-| 90          | Text        | Title       | Title       | Title       |
+| 98          | 100         | +2          | Title       | Title       |
+| 100         | 102         | +2          | Title       | Title       |
+| 102         | 100         | -2          | Title       | Title       |
+| 95          | 94          | -1          | Title       | Title       |
+| 90          | 89          | -1          | Title       | Title       |
 
 table 1
 
