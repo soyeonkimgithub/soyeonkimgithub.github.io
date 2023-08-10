@@ -17,7 +17,7 @@ published: true
 
 ### Regression Evaluation Metrics
 
-| actual  | predicts |  diff  | |diff|  |  diff^2  |  
+| actual  | predicts |  diff  | ||diff||  |  diff^2  |  
 |---------|:---------|:------:|:-------:|:--------:|
 |   98    |    100   |   +2   |    2    |     4    |   
 |   100   |    102   |   +2   |    2    |     4    |   
@@ -28,7 +28,6 @@ published: true
 1. Mean Absolute Error (MAE) : $$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
 - average error
 - metrics.mean_absolute_error(y_test, predictions)
-
 
 2. Mean Squared Error (MSE) : $$\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2$$
 - 'punishes' larger error, useful  
