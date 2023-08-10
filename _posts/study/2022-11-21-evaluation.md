@@ -59,20 +59,7 @@ published: true
 * i.e. 0.6 -> there is a 60% reduction in variance when we take the x feature into account
 * x feature 'explains' 60% of the variation in y
 * measured with training set not new data
-
-![evaluation-1](/assets/img/post/study/RSquared.png){:width="40%" :.centered loading="lazy"}
-
-library(webshot)
-flextable(pressure[1:7,])%>% set_caption(caption = "Table 1") %>% save_as_image("tmp1.png")
-flextable(cars[1:5,])%>% set_caption(caption = "Table 2") %>% save_as_image("tmp2.png")
-knitr::include_graphics(c("tmp1.png", "tmp2.png"))
-
-| Month    | Savings |      | Month    | Savings1 |
-| -------- | ------- |      | -------- | ------- |
-| January  | $250    |      | January  | $250    |
-| February | $80     |      | February | $80     |
-| March    | $420    |      | March    | $420    |
-
+![evaluation-1](/assets/img/post/study/RSquared.png){:width="20%" :.centered loading="lazy"}
 
 ----
 ### Confusion Matrix
