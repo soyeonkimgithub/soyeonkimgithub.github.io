@@ -10,7 +10,7 @@ published: true
 
 ### Regression Evaluation Metrics
 
-| $${y-test}$$ | $${prediction}$$ | $${diff}$$ | $${|diff|}$$ | $${diff}^2$$ |
+| $${y-test}$$ | $${prediction}$$ | $${diff}$$ | $${&#124;diff&#124;}$$ | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
 | 98          | 100         | +2          | 2           | 4 |
 | 100         | 102         | +2          | 2           | 4 |
