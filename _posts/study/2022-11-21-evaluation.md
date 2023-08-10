@@ -28,7 +28,6 @@ published: true
 
 1. Mean Absolute Error (MAE) : $$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
 - average error
-- |diff] = 8/5 = 1.6
 
 2. Mean Squared Error (MSE) : $$\frac 1n\sum_{i=1}^n(y_i-\hat{y}_i)^2$$
 - 'punishes' larger error, useful  
