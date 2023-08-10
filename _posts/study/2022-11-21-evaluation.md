@@ -31,8 +31,7 @@ table 1
 |-----------------|:-----------|:---------------:|---------------:|
 | First body part |Second cell | Third cell      | fourth cell    |
 
-table 2
-                        sum=0      sum=8     sum=14
+
 
 1. Mean Absolute Error (MAE) : $$\frac 1n\sum_{i=1}^n|y_i-\hat{y}_i|$$
 - average error
