@@ -59,6 +59,7 @@ published: true
 * i.e. 0.6 -> there is a 60% reduction in variance when we take the x feature into account
 * x feature 'explains' 60% of the variation in y
 * measured with training set not new data
+
 ![evaluation-1](/assets/img/post/study/RSquared.png){:width="20%" :.centered loading="lazy"}
 
 ----
