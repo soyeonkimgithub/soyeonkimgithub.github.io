@@ -40,6 +40,8 @@ published: true
 - interpretable in the 'y' units
 - $${|diff|}$$
 
+<table border='0'>
+<tr><td>
 | y-test      | prediction  | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|
 | 98          | 100         | 4 |
@@ -48,7 +50,8 @@ published: true
 | 95          | 94          | 1 |
 | 90          | 89          | 1 |
 | | | RMSE = 1.67|
-
+</td>
+<td>
 | y-test      | prediction  | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|
 | 980         | 1,000       | 400 |
@@ -57,15 +60,20 @@ published: true
 | 950         | 940         | 100 |
 | 900         | 890         | 100 |
 | | | RMSE = 16.7|
+</td></tr>
+</table>
 
--> RMSE cannot be compared between different dataset
+
+- RMSE cannot be compared between different dataset
+- can be used for comparing different model with same dataset
 
 4. $${R}^2$$
 - how good that guess will be
 - 0.6 -> there is a 60% reduction in variance when we take the x feature into account
 - x feature 'explains' 60% of the variation in y
+- measured with training set not new data
 
-
+![evaluation-1](/assets/img/post/study/RSquared.png){:width="40%" :.centered loading="lazy"}
 ----
 
 1. find the breach problem presentation
