@@ -17,7 +17,7 @@ published: true
 
 ### Regression Evaluation Metrics
 
-| y-test      | prediction  | diff        | $$|diff|$$  | $${diff}^2$$ |
+| y-test      | prediction  | diff        | abs(diff)  | $${diff}^2$$ |
 |:-----------:|:-----------:|:-----------:|:-----------:|:-----------:|
 | 98          | 100         | +2          | 2           | 4 |
 | 100         | 102         | +2          | 2           | 4 |
@@ -42,6 +42,7 @@ published: true
 - metrics.explained_variance_score(y_test, predictions)
 
 
+----
 
 1. find the breach problem presentation
 2. post regarding the evaluation
