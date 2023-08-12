@@ -1,48 +1,33 @@
 ---
 layout: post
-title: Gradient Descent
+title: Logistic Regression
 categories: study
 sitemap: false
 hide_last_modified: true
 published: true
-
 ---
-
-## [Algorithm] Gradient Descent
-
-
-project
-### Summary
-Task : prediction for the customers' future transaction (binary classification)
-       This project is to recommend credit cards on ads banner by personalisation. For this, I made several clusters based on useRs' app usage. After that, I could define the characteristics of standardisation by each group.
-Data : 200,000 lines with 200 variables
-Tools : Python
-ML Algorithms : LightGBM
-Evaluation metrics : AUC
-
-Why Standardisation?
-What Did I Find?
-Result?
-
-### Key Points
-1. 
-2.
-
-### Results
-
-### Code
-----
-
-### Linear Regression
-1. easy to use
-2. easy to explain
-3. predict continuous variable
+## [Algorithm] Logistic Regression
 
 ### Logistic Regression
-1. binary classification
-2. easy to translate (based on linear regression)
-3. used activation function in deep learning 
+* predict discrete categories; classification problem
+* the result is probability between 0 and 1
+* easy to translate (based on linear regression)
+* used as an activation function in deep learning 
 
+~~~python
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import classification_report
+from sklearn.metrics import confusion_matrix
+
+logmodel = LogisticRegression()
+logmodel.fit(X_train, y_train)
+predictions = logmodel.predict(X_test)
+
+print(classification_report(y_test,predictions))
+confusion_matrix(y_test, predictions)
+~~~
+
+----
 ### Decision Tree
 1. can be used in various problems
 2. visualisation
@@ -80,5 +65,8 @@ dimensionality reduction
 - find latent drivers of stock movements
 - pre-process data to build more robust machine learning models
 - improve performance of models
+
+looks like people that did not survive were much more likely to be male 
+multi-collinearity
 
 ----

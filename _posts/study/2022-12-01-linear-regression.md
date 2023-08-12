@@ -33,4 +33,11 @@ predictions = lm.predict(X_test)
 * a differential coefficient (미분계수)
 * lowest sum of squared residuals
 
+### Bias-Variance Tradeoff
+* adding complexity to a model until it fits the training set very well &rarr; fail to predict for new test points (overfitting)
+* we want to balance out the bias and variance of the model to the point where test data and training data have reached some sort of minimum and grouping together
+* ‘bias’ here is systematic ‘error’
+* complexity low tree - bias high, variance low (underfitting)
+* complexity high tree - bias low, variance high (overfitting)
+
 ### p-Value
