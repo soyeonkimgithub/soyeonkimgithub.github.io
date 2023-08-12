@@ -9,6 +9,7 @@ published: true
 ## [Algorithm] Logistic Regression
 
 ### Logistic Regression
+* classify input data into categories (i.e. spam or ham, buy or sell or hold, cat or dog or mouse, positive text or negative or neutral)
 * predict discrete categories; classification problem
 * the result is probability between 0 and 1
 * easy to translate (based on linear regression)
@@ -46,15 +47,6 @@ confusion_matrix(y_test, predictions)
 1. one of tree model
 2. 
 
-
-
-clalssification 
-- classify input data into categories
-- predict cateogories (spam or ham, buy or sell or hold, cat or dog or mouse, positive text or negative or neutral)
-
-regression 
-- predict continuous numeric values
-- given characteristics of a car predict mileage, given location and attributes of a home predict price, given GDP, health indicators predict life expectation
 
 clustering 
 - discover patterns and groupings in data
