@@ -30,4 +30,5 @@ kmeans = KMeans(n_clusters=2)
 kmeans.fit(data.drop('Private', axis=1))
 kmeans.cluster_centers_
 kmeans.labels_
+
 ~~~
