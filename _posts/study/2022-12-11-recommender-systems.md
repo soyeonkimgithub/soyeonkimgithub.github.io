@@ -12,6 +12,7 @@ published: true
 ### Recommender Systems
 Content-based 
 - focus on the attributes of the items and give you recommendations based on the similarity between them.
+
 Collaborative Filtering(CF) 
 - produces recommendations based on the knowledge of users' attitude to items, that is it uses the 'wisdom of the crowd' to recommend items
 - i.e. Amazon will suggest items based on other people's shopping experiences
