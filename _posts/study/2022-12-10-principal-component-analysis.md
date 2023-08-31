@@ -17,13 +17,7 @@ published: true
 * PCA can tell us which variable is the most valuable for clustering the data. (i.e. PCA might tell us that variable 3 is responsible for separating samples along the x-axis.)
 * PCA can tell us how accurate the 2-D graph is.
 * PC1 is largest sum of the squared distances between the projected points and the origin.
-
-* For a large number of variables, we can compress the amount of explained variation to just a few components.
-* Unsupervised statistical technique used to examine the interrelations among a set of variables in order to identify the underlying structure of those variables. 
-* where regression determines a line of best fit to a data set, factor analysis determines several orthogonal lines of best fit to the data set
-* orthogonal → at right angles (lines are perpendicular to each other in n-dimensional space)
-* n-dimensional space is the variable sample space. (in the data set with 4 variables the sample space is 4-dimensional) 
-
+* The components don't relate one to one to a specific feature, really correspond to combinations of the original features. The compoments themselves are stored as an attribute of the PCA object.
 
 ~~~python
 from sklearn.preprocessing import StandardScaler
