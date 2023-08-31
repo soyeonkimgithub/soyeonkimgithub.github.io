@@ -12,7 +12,6 @@ published: true
 
 ## Data Filtering - Big Countries
 A country is big if:
-
 it has an area of at least three million (i.e., 3000000 km2), or
 it has a population of at least twenty-five million (i.e., 25000000).
 Write a solution to find the name, population, and area of the big countries.
@@ -33,8 +32,6 @@ Write a solution to find the ids of products that are both low fat and recyclabl
 
 Return the result table in any order.
 
-The result format is in the following example.
-
 ~~~python
 import pandas as pd
 
@@ -47,8 +44,6 @@ def find_products(products: pd.DataFrame) -> pd.DataFrame:
 Write a solution to find all customers who never order anything.
 
 Return the result table in any order.
-
-The result format is in the following example.
 
 ~~~python
 import pandas as pd
@@ -63,8 +58,6 @@ def find_customers(customers: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFram
 Write a solution to find all the authors that viewed at least one of their own articles.
 
 Return the result table sorted by id in ascending order.
-
-The result format is in the following example.
 
 ~~~python
 import pandas as pd
@@ -82,8 +75,6 @@ Write a solution to find the IDs of the invalid tweets. The tweet is invalid if 
 
 Return the result table in any order.
 
-The result format is in the following example.
-
 ~~~python
 import pandas as pd
 
@@ -93,15 +84,120 @@ def invalid_tweets(tweets: pd.DataFrame) -> pd.DataFrame:
 
 ## String Methods - Calculate Special Bonus
 
-Write a solution to find the IDs of the invalid tweets. The tweet is invalid if the number of characters used in the content of the tweet is strictly greater than 15.
+Write a solution to calculate the bonus of each employee. The bonus of an employee is 100% of their salary if the ID of the employee is an odd number and the employee's name does not start with the character 'M'. The bonus of an employee is 0 otherwise.
+
+Return the result table ordered by employee_id.
+
+~~~python
+import pandas as pd
+
+def calculate_special_bonus(employees: pd.DataFrame) -> pd.DataFrame:
+    employees['bonus'] = employees[(employees['employee_id']%2==1) & (~employees['name'].str.startswith('M')) ]['salary']
+    employees['bonus'] = employees['bonus'].fillna(0)
+    df = pd.DataFrame(employees, columns=['employee_id', 'bonus'])
+    df = df.sort_values(by=['employee_id'])
+    return df
+~~~
+
+## String Methods - Fix Names in a Table
+
+Write a solution to fix the names so that only the first character is uppercase and the rest are lowercase.
+
+Return the result table ordered by user_id.
+
+~~~python
+import pandas as pd
+
+def fix_names(users: pd.DataFrame) -> pd.DataFrame:
+    users['name'] = users['name'].str.lower()
+    users['name'] = users['name'].astype(str).str[0].str.upper() + "" + users['name'].astype(str).str[1:]
+    users = users.sort_values(by=['user_id'])
+    return users
+~~~
+
+## String Methods - Find Users With Valid E-Mails
+
+Write a solution to find the users who have valid emails.
+
+A valid e-mail has a prefix name and a domain where:
+
+The prefix name is a string that may contain letters (upper or lower case), digits, underscore '_', period '.', and/or dash '-'. The prefix name must start with a letter.
+The domain is '@leetcode.com'.
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def valid_emails(users: pd.DataFrame) -> pd.DataFrame:
+    return users[users['mail'].str.match(r'^[a-zA-Z][a-zA-Z\d_.-]*@leetcode\.com')]
+~~~
+
+## String Methods - Patients With a Condition
+
+Write a solution to find the patient_id, patient_name, and conditions of the patients who have Type I Diabetes. Type I Diabetes always starts with DIAB1 prefix.
 
 Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def find_diabetes(conditions) :
+    for con in conditions.split(' '):
+        if con.startswith('DIAB1'):
+            return True
+    return False
+
+def find_patients(patients: pd.DataFrame) -> pd.DataFrame:
+    patients = patients[patients['conditions'].apply(find_diabetes)]
+    return patients
+~~~
+
+## Data Manipulation - Delete Duplicate Emails
+
+Write a solution to delete all duplicate emails, keeping only one unique email with the smallest id.
+
+For Pandas users, please note that you are supposed to modify Person in place.
+
+After running your script, the answer shown is the Person table. The driver will first compile and run your piece of code and then show the Person table. The final order of the Person table does not matter.
+
+~~~python
+import pandas as pd
+
+# Modify Person in place
+def delete_duplicate_emails(person: pd.DataFrame) -> None:
+    person.sort_values(by=['id'], ascending=True, inplace=True)
+    person.drop_duplicates(subset='email', keep='first', inplace=True)
+    
+~~~    
+
+## Data Manipulation - Rearrange Products Table
+
+Write a solution to rearrange the Products table so that each row has (product_id, store, price). If a product is not available in a store, do not include a row with that product_id and store combination in the result table.
+
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def rearrange_products_table(products: pd.DataFrame) -> pd.DataFrame:
+    melted_of = products.melt(id_vars='product_id', var_name='store', value_name='price')
+    melted_of = melted_of.dropna()
+    return melted_of
+~~~
+
+## Statistics - The Number of Rich Customers
+
+Write a solution to report the number of customers who had at least one bill with an amount strictly greater than 500.
 
 The result format is in the following example.
 
 ~~~python
 import pandas as pd
 
-def invalid_tweets(tweets: pd.DataFrame) -> pd.DataFrame:
-    return tweets[tweets['content'].str.len()>15][['tweet_id']]
+def rearrange_products_table(products: pd.DataFrame) -> pd.DataFrame:
+    melted_of = products.melt(id_vars='product_id', var_name='store', value_name='price')
+    melted_of = melted_of.dropna()
+    return melted_of
 ~~~
+
+
