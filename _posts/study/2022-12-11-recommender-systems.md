@@ -7,7 +7,7 @@ hide_last_modified: true
 published: true
 
 ---
-## [System] Recommender Systems
+## [ML] Recommender Systems
 
 ### Recommender Systems
 Content-based 
