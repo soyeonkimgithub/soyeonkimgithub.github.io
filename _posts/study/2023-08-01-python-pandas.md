@@ -194,10 +194,28 @@ The result format is in the following example.
 ~~~python
 import pandas as pd
 
-def rearrange_products_table(products: pd.DataFrame) -> pd.DataFrame:
-    melted_of = products.melt(id_vars='product_id', var_name='store', value_name='price')
-    melted_of = melted_of.dropna()
-    return melted_of
+def count_rich_customers(store: pd.DataFrame) -> pd.DataFrame:
+    rich_customers = store[store['amount'] > 500]
+    num_rich_customers = rich_customers['customer_id'].nunique()
+    df = pd.DataFrame({'rich_count' : [num_rich_customers]})
+    return df
+~~~
+
+## Statistics - Immediate Food Delivery I
+
+If the customer's preferred delivery date is the same as the order date, then the order is called immediate; otherwise, it is called scheduled.
+
+Write a solution to find the percentage of immediate orders in the table, rounded to 2 decimal places.
+
+~~~python
+import pandas as pd
+
+def food_delivery(delivery: pd.DataFrame) -> pd.DataFrame:
+    imm_count = delivery[delivery['order_date']==delivery['customer_pref_delivery_date']].shape[0]
+    total_orders = delivery.shape[0]
+    imm_percentage = (imm_count / total_orders) * 100
+    df = pd.DataFrame({'immediate_percentage':[round(imm_percentage, 2)]})
+    return df
 ~~~
 
 
