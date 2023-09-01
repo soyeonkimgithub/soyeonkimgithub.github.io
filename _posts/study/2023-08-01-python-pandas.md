@@ -218,4 +218,168 @@ def food_delivery(delivery: pd.DataFrame) -> pd.DataFrame:
     return df
 ~~~
 
+## Data Aggregation - Find Total Time Spent by Each Employee
 
+Write a solution to calculate the total time in minutes spent by each employee on each day at the office. Note that within one day, an employee can enter and leave more than once. The time spent in the office for a single entry is out_time - in_time.
+
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def total_time(employees: pd.DataFrame) -> pd.DataFrame:
+    df = employees.groupby(['emp_id', 'event_day']).sum().reset_index()
+    df['total_time'] = df['out_time'] - df['in_time']
+    df.rename(columns={"event_day": "day", "emp_id":"emp_id", "total_time":"total_time"}, inplace=True)
+    df.drop(['in_time', 'out_time'], axis=1, inplace=True)
+
+    return df
+~~~
+
+## Data Aggregation - Game Play Analysis I
+
+Write a solution to find the first login date for each player.
+
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def game_analysis(activity: pd.DataFrame) -> pd.DataFrame:
+    df = activity.groupby(['player_id']).min().reset_index()
+    df.rename(columns={'player_id':'player_id', 'event_date':'first_login'}, inplace=True)
+    df.drop(['device_id', 'games_played'], axis=1, inplace=True)
+    return df
+    
+~~~
+
+## Data Aggregation - Number of Unique Subjects Taught by Each Teacher
+
+Write a solution to calculate the number of unique subjects each teacher teaches in the university.
+
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def count_unique_subjects(teacher: pd.DataFrame) -> pd.DataFrame:
+    df = teacher.groupby(['teacher_id']).nunique('subject_id').reset_index()
+    df.rename(columns={'teacher_id':'teacher_id', 'subject_id':'cnt'}, inplace=True)
+    df.drop(['dept_id'], axis=1, inplace=True)
+    return df
+    
+~~~
+
+## Data Aggregation - Classes More Than 5 Students
+
+Write a solution to find all the classes that have at least five students.
+
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def find_classes(courses: pd.DataFrame) -> pd.DataFrame:
+    df = courses.groupby('class').count().reset_index()
+    df = df[df['student'] >= 5]
+    df.drop(['student'], axis=1, inplace=True)
+    return df
+~~~
+
+## Data Aggregation - Customer Placing the Largest Number of Orders
+
+Write a solution to find the customer_number for the customer who has placed the largest number of orders.
+
+The test cases are generated so that exactly one customer will have placed more orders than any other customer.
+
+~~~python
+import pandas as pd
+
+def largest_orders(orders: pd.DataFrame) -> pd.DataFrame:
+    df = orders.groupby('customer_number').count().reset_index()
+    df = df[df['order_number']==df['order_number'].max()]
+    df.drop(['order_number'], axis=1, inplace=True)
+    return df
+    
+~~~
+
+## Data Aggregation - Group Sold Products By The Date
+
+Write a solution to find for each date the number of different products sold and their names.
+
+The sold products names for each date should be sorted lexicographically.
+
+Return the result table ordered by sell_date.
+
+~~~python
+import pandas as pd
+
+def categorize_products(activities: pd.DataFrame) -> pd.DataFrame:
+    df = activities.groupby(['sell_date'])['product'].agg([('num_sold', 'nunique'), ('products', lambda x: ','.join(sorted(x.unique())))]).reset_index()
+    return df
+    
+~~~
+
+## Data Aggregation - Daily Leads and Partners
+
+For each date_id and make_name, find the number of distinct lead_id's and distinct partner_id's.
+
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def daily_leads_and_partners(daily_sales: pd.DataFrame) -> pd.DataFrame:
+    df = daily_sales.groupby(['date_id', 'make_name']).nunique().reset_index()
+    df.rename(columns={'date_id':'date_id', 'make_name':'make_name', 'lead_id':'unique_leads','partner_id':'unique_partners'}, inplace=True)
+    return df
+~~~
+
+## Data Integration - Actors and Directors Who Cooperated At Least Three Times
+
+Write a solution to find all the pairs (actor_id, director_id) where the actor has cooperated with the director at least three times.
+
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def actors_and_directors(actor_director: pd.DataFrame) -> pd.DataFrame:
+    df = actor_director.groupby(['actor_id', 'director_id']).count().reset_index()
+    df = df[df['timestamp']>=3]
+    df.drop('timestamp', axis=1, inplace=True)
+    return df
+    
+~~~
+
+## Data Integration - Replace Employee ID With The Unique Identifier
+
+Write a solution to show the unique ID of each user, If a user does not have a unique ID replace just show null.
+
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def replace_employee_id(employees: pd.DataFrame, employee_uni: pd.DataFrame) -> pd.DataFrame:
+    df = employee_uni.merge(employees, how='right', on='id')
+    df.drop('id', axis=1, inplace=True)
+    return df
+~~~
+
+## Data Integration - Students and Examinations
+
+Write a solution to find the number of times each student attended each exam.
+
+Return the result table ordered by student_id and subject_name.
+
+~~~python
+import pandas as pd
+
+def students_and_examinations(students: pd.DataFrame, subjects: pd.DataFrame, examinations: pd.DataFrame) -> pd.DataFrame:
+    df = students.merge(subjects, how="cross")
+    exam = examinations.groupby(["student_id", "subject_name"]).agg(attended_exams=("subject_name", "count")).reset_index()
+    x = df.merge(exam, on=["student_id", "subject_name"],how="left").sort_values(by=["student_id", "subject_name"])
+    return x.fillna(0)[['student_id', 'student_name', 'subject_name', 'attended_exams']]
+    
+~~~
