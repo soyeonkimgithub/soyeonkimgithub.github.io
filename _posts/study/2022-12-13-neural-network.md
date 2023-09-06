@@ -76,4 +76,4 @@ published: true
     - each dropout layer will drop user-defined percentage of neuron units in the previous layer every batch
 
 ### Code
-<iframe src="https://nbviewer.org/github/soyeonkimgithub/Python_for_DS_and_ML_Bootcamp/blob/main/01-Recommender%20Systems%20with%20Python-Mine.ipynb" width="1000" height="1500" scrolling="yes" frameborder="1"></iframe>
+<iframe src="https://nbviewer.org/gist/soyeonkimgithub/902c88eddb070f1a4c92958666a65129" width="1000" height="1500" scrolling="yes" frameborder="1"></iframe>
