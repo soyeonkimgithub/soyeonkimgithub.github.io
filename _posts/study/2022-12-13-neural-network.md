@@ -6,7 +6,7 @@ sitemap: false
 hide_last_modified: true
 published: true
 ---
-## [Algorithm] Neural Network
+## [ML] Neural Network
 
 ### Perceptron model
 
