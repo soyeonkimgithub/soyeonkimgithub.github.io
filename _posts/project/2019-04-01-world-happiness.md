@@ -39,7 +39,3 @@ published: true
 3. Trust factor is the most varied factors in regions affecting happiness score.
 4. Bump chart for reasons of variations in rank of the top/bottom 10 countries, visible changes found. 
 5. Generated dynamic visualizations to show the distribution of countries from high happiness rank to low rank 
-
-### Download
-* <a href="#">download for presentation ppt file</a>
-* <a href="#">download for code</a>
