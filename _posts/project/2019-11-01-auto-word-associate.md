@@ -40,8 +40,8 @@ published: true
 ![400x200](/assets/img/post/project/AWA-CompareModels.png){:width="100%"}
 
 
-![400x200](/assets/img/post/project/AWA-SimilarityWords.png){:width="50%"}
-![400x200](/assets/img/post/project/AWA-Survey.png){:width="50%"}
+![400x200](/assets/img/post/project/AWA-SimilarityWords.png){:width="45%"}
+![400x200](/assets/img/post/project/AWA-Survey.png){:width="45%"}
 
 ![400x200](/assets/img/post/project/AWA-SimilarityMatrix.png){:width="100%"}
 
