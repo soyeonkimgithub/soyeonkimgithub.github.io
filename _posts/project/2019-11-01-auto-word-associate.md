@@ -37,7 +37,7 @@ published: true
 ![400x200](/assets/img/post/project/AWA-tSNE.png){:width="45%"}
 
 
-![400x200](/assets/img/post/project/AWA-CompareModels.png){:width="80%"}
+![400x200](/assets/img/post/project/AWA-CompareModels.png){:width="100%"}
 
 
 ![400x200](/assets/img/post/project/AWA-SimilarityWords.png){:width="45%"}
