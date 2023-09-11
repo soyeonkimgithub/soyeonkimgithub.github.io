@@ -29,8 +29,11 @@ published: true
 ![400x200](/assets/img/post/project/WH-LineChart02.png)
 
 3. Bump chart using Tableau
-![400x200](/assets/img/post/project/WH-BumpChart01.png)
+![400x200](/assets/img/post/project/WH-BumpChart01.png){:width="100%"}
 ![400x200](/assets/img/post/project/WH-BumpChart02.png)
+
+
+![600x100](/assets/img/post/project/WH-BumpChart01.png){:width="100%"}
 
 ### Key Points
 1. According to scattered plots, all features have a positive correlation, especially the “Economy” has a strongest relationship.
