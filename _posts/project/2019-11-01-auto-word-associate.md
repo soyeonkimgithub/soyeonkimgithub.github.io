@@ -32,15 +32,18 @@ published: true
 {:.text-align-center}
 ![400x200](/assets/img/post/project/AWA-FrequentWord.png){:width="60%"}
 
+
 ![400x200](/assets/img/post/project/AWA-PCA.png){:width="45%"}
 ![400x200](/assets/img/post/project/AWA-tSNE.png){:width="45%"}
 
-![400x200](/assets/img/post/project/AWA-CompareModels.png){:width="60%"}
+
+![400x200](/assets/img/post/project/AWA-CompareModels.png){:width="80%"}
+
 
 ![400x200](/assets/img/post/project/AWA-SimilarityWords.png){:width="45%"}
 ![400x200](/assets/img/post/project/AWA-Survey.png){:width="45%"}
 
-![400x200](/assets/img/post/project/AWA-SimilarityMatrix.png){:width="60%"}
+![400x200](/assets/img/post/project/AWA-SimilarityMatrix.png){:width="80%"}
 
 ### Results
 Word2Vec skip-gram model with 200 dimensions was selected, 
