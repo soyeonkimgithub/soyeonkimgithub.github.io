@@ -48,7 +48,7 @@ and 75% of survey options, a majority of respondents selected the synonym set ge
 
 
 ### Download
-* <a href="https://github.com/soyeonkimgithub/Volatility-Forecasting/blob/main/CS5703_Presentation.pdf">presentation ppt</a>
+* <a href="https://github.com/soyeonkimgithub/AWA/blob/main/CS5703_Presentation.pdf">presentation ppt</a>
 * <a href="https://github.com/soyeonkimgithub/AWA/blob/main/AutoWordAssociation_Core.ipynb">code</a>
 
 ### Code
