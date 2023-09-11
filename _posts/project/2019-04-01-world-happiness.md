@@ -1,8 +1,6 @@
 ---
 layout: post
 title: World Happiness
-image: 
-  path: /assets/img/blog/jeremy-bishop@0,5x.jpg
 description: >
   School group assignment, worked with other 4 students. This project is based on the World Happiness report which was released in 2017 and ranks 155 countries by their levels of happiness.
 category: project
@@ -22,18 +20,18 @@ published: true
 ### Visualisation
 1. Scatter plot using Tableau
 
-![Sca01](/assets/img/post/project/WH-ScatterPlot01.png){:width="50%"}
-![Sca02](/assets/img/post/project/WH-ScatterPlot02.png){:width="50%"}
+![Sca01](/assets/img/post/project/WH-ScatterPlot01.png){:width="45%"}
+![Sca02](/assets/img/post/project/WH-ScatterPlot02.png){:width="45%"}
 
 2. Line chart using Tableau
 
-![Lin01](/assets/img/post/project/WH-LineChart01.png){:width="50%"}
-![Lin02](/assets/img/post/project/WH-LineChart02.png){:width="50%"}
+![Lin01](/assets/img/post/project/WH-LineChart01.png){:width="45%"}
+![Lin02](/assets/img/post/project/WH-LineChart02.png){:width="45%"}
 
 3. Bump chart using Tableau
 
-![Bum01](/assets/img/post/project/WH-BumpChart01.png){:width="50%"}
-![Bum02](/assets/img/post/project/WH-BumpChart02.png){:width="50%"}
+![Bum01](/assets/img/post/project/WH-BumpChart01.png){:width="45%"}
+![Bum02](/assets/img/post/project/WH-BumpChart02.png){:width="45%"}
 
 ### Key Points
 1. According to scattered plots, all features have a positive correlation, especially the “Economy” has a strongest relationship.
