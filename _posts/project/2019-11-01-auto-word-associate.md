@@ -32,13 +32,10 @@ published: true
 {:.text-align-center}
 ![400x200](/assets/img/post/project/AWA-FrequentWord.png){:width="60%"}
 
-
 ![400x200](/assets/img/post/project/AWA-PCA.png){:width="45%"}
 ![400x200](/assets/img/post/project/AWA-tSNE.png){:width="45%"}
 
-
 ![400x200](/assets/img/post/project/AWA-CompareModels.png){:width="100%"}
-
 
 ![400x200](/assets/img/post/project/AWA-SimilarityWords.png){:width="45%"}
 ![400x200](/assets/img/post/project/AWA-Survey.png){:width="45%"}
