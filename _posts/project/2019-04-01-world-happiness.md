@@ -19,16 +19,17 @@ published: true
 
 ### Visualisation
 1. Scatter plot using Tableau
+
 ![Sca01](/assets/img/post/project/WH-ScatterPlot01.png){:width="45%"}
 ![Sca02](/assets/img/post/project/WH-ScatterPlot02.png){:width="45%"}
 
-
 2. Line chart using Tableau
+
 ![Lin01](/assets/img/post/project/WH-LineChart01.png){:width="45%"}
 ![Lin02](/assets/img/post/project/WH-LineChart02.png){:width="45%"}
 
-
 3. Bump chart using Tableau
+
 ![Bum01](/assets/img/post/project/WH-BumpChart01.png){:width="45%"}
 ![Bum02](/assets/img/post/project/WH-BumpChart02.png){:width="45%"}
 
