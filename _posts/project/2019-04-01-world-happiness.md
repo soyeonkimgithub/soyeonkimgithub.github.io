@@ -21,19 +21,16 @@ published: true
 
 ### Visualisation
 1. Scatter plot using Tableau
-![400x200](/assets/img/post/project/WH-ScatterPlot01.png)
-![400x200](/assets/img/post/project/WH-ScatterPlot02.png)
+![a](/assets/img/post/project/WH-ScatterPlot01.png){:width="50%"}
+![b](/assets/img/post/project/WH-ScatterPlot02.png){:width="50%"}
 
 2. Line chart using Tableau
-![400x200](/assets/img/post/project/WH-LineChart01.png)
-![400x200](/assets/img/post/project/WH-LineChart02.png)
+![400x200](/assets/img/post/project/WH-LineChart01.png){:width="50%"}
+![400x200](/assets/img/post/project/WH-LineChart02.png){:width="50%"}
 
 3. Bump chart using Tableau
-![400x200](/assets/img/post/project/WH-BumpChart01.png){:width="100%"}
-![400x200](/assets/img/post/project/WH-BumpChart02.png)
-
-
-![600x100](/assets/img/post/project/WH-BumpChart01.png){:width="100%"}
+![400x200](/assets/img/post/project/WH-BumpChart01.png){:width="50%"}
+![400x200](/assets/img/post/project/WH-BumpChart02.png){:width="50%"}
 
 ### Key Points
 1. According to scattered plots, all features have a positive correlation, especially the “Economy” has a strongest relationship.
