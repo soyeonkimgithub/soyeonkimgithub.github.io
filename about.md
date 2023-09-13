@@ -11,6 +11,4 @@ published: true
 # About
 
 <!--author-->
-Machine Learning Engineer with development background.
-
 Interested in creating solutions that enable me to leverage my development experience and combine it with my data science expertise.
