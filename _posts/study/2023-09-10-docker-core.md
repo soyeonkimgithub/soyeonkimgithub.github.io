@@ -81,3 +81,29 @@ published: true
 - multiple containers can be based on the same image
 - when we need an image → use an existing, pre-built image via Docker Hub, or create your own custom image based on another image by writing your own Dockerfile
 - whenever one layer changed, all layers after that will rebuild.
+
+### Managing Data
+
+- Data
+    - Application(Code+Environment) : Read-only, hence stored in Images
+        → written and provided by developer
+        → added to image and container in build phase
+        → fixed: cannot be changed once image is built
+    - Temporary App Data (i.e. user input) : Read + write temporary, hence stored in Containers
+        → fetched/produced in running container
+        → stored in memory or temporary files
+        → dynamic and changing, but cleared regularly
+    - Permanent App Data (i.e. user accounts) : Read + write, permanent, stored with Containers & Volumes
+        → fetched/produced in running container
+        → stored in files or a database
+        → must not be lost if container stop
+- Volumes
+    - folders on your host machine hard drive which are mounted/mapped into containers
+    - persist if a container shuts down. if a container (re)starts and mounts a volume, any data inside of that volume is available in the container
+    - A container can write data into a volume and read data from it
+    - Anonymous Volumes → managed by docker, “docker volume”, can be used to prioritise container-internal paths higher than external paths
+        - docker run -v /app/data …
+    - Named Volumes → managed by docker, great for data which should be persistent but you don’t need to edit directly
+        - docker run -v data:/app/data …
+    - Bind Mounts → managed by developer, you define a folder path on your host machine. great for persistent, editable (by developer) data
+        - docker run -v /path/to/code:/app/code …
