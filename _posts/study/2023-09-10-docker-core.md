@@ -107,3 +107,57 @@ published: true
         - docker run -v data:/app/data …
     - Bind Mounts → managed by developer, you define a folder path on your host machine. great for persistent, editable (by developer) data
         - docker run -v /path/to/code:/app/code …
+    - Docker supports build-time ARG and runtime ENV variables
+    - ARGuments
+        - available inside of Dockerfile, NOT accessible in CMD or any application code
+        - set on image build (docker build) via - - build-arg
+    - ENVironment
+        - available inside of Dockerfile and in application code
+        - set via ENV in Dockerfile or via - - env on docker run        
+
+### Networking
+
+- Container to WWW communication
+    - by default, container can reach out to the www via ‘docker run’
+- Container to Local Host Machine communication
+    - use “host.docker.internal” as address
+- Container to Container communication
+    - requires a container network + use container name as address
+    - docker, put all containers in one network with below command
+    - docker run - - network my_networks …
+    - then all containers can communicate with each other and IPs are automatically resolved
+
+### Docker-Compose
+
+- automating multi-container setups
+- tool that allows you to replace ‘docker build’ and ‘docker run’ commands with one configuration file and then a set of orchestration commands build/start/stop all containers
+- what docker compose is not
+    - not replace Dockerfile
+    - not replace images or containers
+    - not suited for managing multiple containers on different hosts
+- Writing Docker Compose Files
+    - Services (Containers) → published ports, environment variables, volumes, networks
+
+### Utility Containers
+
+- only has certain environment in it.
+- ‘docker run mynpm init’
+- executes/appends custom command
+
+### Deploying Docker Container
+
+- deployment to production
+    - bind mounts should not be used in production
+    - containerised apps might need a build step (i.e. React apps)
+    - multi-container projects might need to be split across multiple hosts/remove machines
+    - trade-offs between control and responsibility might be worth it
+    
+- bind mounts, volumes & copy
+    - development
+        - containers should encapsulate the runtime environment but not necessarily the code
+        - use ‘bind mounts’ to provide your local host project files to the running container
+        - allows for instant updates without restarting the container
+    - production
+        - container should really work standalone, you should not have source code on your remove machine (image/container is the single source of truth)
+        - use COPY instead of bind mounts to copy a code snapshot into the image
+        - ensures that every image runs without any extra, surrounding configuration or code        
