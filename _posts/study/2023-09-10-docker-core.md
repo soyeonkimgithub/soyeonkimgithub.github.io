@@ -1,14 +1,13 @@
 ---
 layout: post
-title: Docker - Pandas
+title: Docker 
 categories: study
 sitemap: false
 hide_last_modified: true
 published: true
-
 ---
 
-## [Docker] Docker and Kubernetes: The Practice Guide
+## [Docker] Docker and Kubernetes: The Practice Guide - Docker
 
 ## Docker
 
@@ -151,7 +150,6 @@ published: true
     - containerised apps might need a build step (i.e. React apps)
     - multi-container projects might need to be split across multiple hosts/remove machines
     - trade-offs between control and responsibility might be worth it
-    
 - bind mounts, volumes & copy
     - development
         - containers should encapsulate the runtime environment but not necessarily the code
