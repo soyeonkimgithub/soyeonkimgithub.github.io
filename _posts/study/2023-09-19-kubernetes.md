@@ -72,3 +72,51 @@ published: true
 - Cluster - Master Node, Work Node(s), also install all required software(services)
 - kubectl - a tool for sending instructions to the cluster (i.e. new deployment)
 - Minikube - tool that makes it easy to run Kubernetes locally, runs a single-node Kubernetes cluster inside a virtual machine
+
+### Objects
+
+- Kubernetes works with Objects - Pods, Deployments, Services, Volumes, etc.
+- Objects can be created in two ways Imperatively or Declaratively
+    - Imperatively: kubectl cerate deployment … (like each docker run command)
+    - Declaratively: kubectl apply -f config.yaml (like docker-compose)
+- Pod
+    - smallest unit Kubernetes interacts with
+    - containers and runs one or multiple containers: most common use-case is ‘one container per Pod’
+    - contain shared resources (i.e. volumes) for all Pod containers
+    - has a cluster-internal IP by default: containers inside a Pod can communicate via localhost
+    - Pods are designed to be ephemeral: Kubernetes will start, stop and replace them as needed
+    - For Pods to be managed for you, you need a ‘controller’ (i.e. a ‘Deployment’)
+- Deployments
+    - controls (multiple) Pods
+    - you set a desired state, Kubernetes then changes the actual state: define which Pods and containers to run and the number of instances
+    - deployments can be paused, deleted and rolled back
+    - deployments can be scaled dynamically (and automatically): you can change the number of desired Pods as needed
+    - Deployments manage a Pod for you, you can also create multiple Deployments.
+    - You therefore typically don’t directly control Pods, instead you use Deployments to set up the desired end state.
+- Auth error when kubectl to connect docker hub
+    - login docker in console then,
+    - kubectl create secret generic regcred --from-file=.dockerconfigjson=/Users/soyeonkim/.docker/config.json --type=[kubernetes.io/dockerconfigjson](http://kubernetes.io/dockerconfigjson)
+    - kubectl create secret docker-registry regcred --docker-server=https://index.docker.io/v1/ --docker-username=soyeonsophiekim --docker-password=XXX [-docker-email=sophie.kim.it@gmail.com](mailto:--docker-email=sophie.kim.it@gmail.com)
+    - if there is already, kubectl delete secret regcred
+    - confirm it’s created, kubectl get secret regcred --output=yaml
+    - ref. https://kubernetes.io/docs/tasks/configure-pod-container/pull-image-private-registry/
+- Service
+    - exposes Pods to the Cluster or Externally
+    - Pods have an internal IP by default and it changes when a Pod is replaced: finding Pods is hard if the IP changes all the time
+    - Services group Pods with a shared IP
+    - Services can allow external access to Pods: the default (internal only) can be overwritten
+    - Without Services, Pods are very hard to reach and communication is difficult
+    - Reaching a Pod from outside the Cluster is not possible at all without Services.
+- Volumes
+    - State is data created and used by your application which must not be lost
+        - User-generated data, user accounts etc → stored in a db or files
+        - Intermediate results derived by the app → stored in memory, temporary files
+        - Volumes can be solution!
+    - Kubernetes can mount Volumes into Containers
+        → variety type : Local volumes, cloud-provider specific volumes
+        → volume lifetime depends on the Pod lifetime: container restart then volumes are survive, Pods are destroyed then volumes removed
+        
+    - Persistent Volumes
+        → Volumes are destroyed when a Pod is removed
+        → Pod- and Node-independent Volumes are sometimes required
+        → Cluster > Node > Pod1, Pod2, .. PV Claim ↔ PV(Persistent Volume)
