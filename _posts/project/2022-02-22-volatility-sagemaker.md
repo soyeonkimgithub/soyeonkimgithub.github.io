@@ -22,7 +22,7 @@ published: true
 1. I used each of the machine learning process in SageMaker; from getting built-in algorithm, training, model tuning, deploying and using model by lambda. 
 2. Automatic Model Tuning improves result.
 3. It tends to follow the recent time window.
-4. ARIMA might be better for precition.
+4. ARIMA might be better for precision.
 
 {:.text-align-center}
 ![400x200](/assets/img/post/project/volatility_inference01.png){:width="45%"}
