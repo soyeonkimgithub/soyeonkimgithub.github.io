@@ -4,7 +4,7 @@ title: Volatility Forecast with Sagemaker
 image: 
   path: /assets/img/post/project/Security_01.png
 description: >
-  This is personal project for knoweledge sharing session in company. I built pipeline of forcasting volatility based on historical price and VIX.
+  This is personal project for knowledge sharing session in company. I built pipeline of forcasting volatility based on historical price and VIX.
 category: project
 hide_last_modified: true
 published: true
