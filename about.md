@@ -11,4 +11,6 @@ published: true
 # About
 
 <!--author-->
-Interested in creating solutions that enable me to leverage my development experience and combine it with my data science expertise.
+Self-Driven Machine Learning Engineer with extensive experience in development
+Certified AWS Specialist of Machine Learning
+Passionate about technology, data, running and minimalism
