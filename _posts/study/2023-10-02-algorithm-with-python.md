@@ -75,7 +75,21 @@ def fibonacci_tail(n, a=0, b=1):
         return b
     return fibonacci_tail(n-1, b, a+b)
 
-print(fibonacci_tail(6))
+def fibonacci_iteration(n):
+    a, b = 0, 1
+
+    if n == 0:
+        return a
+    elif n == 1:
+        return b
+    else:
+        for i in range(2, n+1) :
+            c = a + b
+            a, b = b, c
+        return b
+
+print(fibonacci_iteration(6))
+
 ~~~
 
 #### Towers of Hanoi
