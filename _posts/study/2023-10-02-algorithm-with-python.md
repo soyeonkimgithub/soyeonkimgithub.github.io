@@ -41,6 +41,7 @@ tail(5)
 ~~~
 
 #### Factorial
+the product of all positive integers less than or equal to n.
 ~~~python
 def factorial_head(n):
     # base case
@@ -57,7 +58,23 @@ def factorial_tail(n, accumulator=1):
 print(factorial_tail(5))
 ~~~
 
-#### Fibonacci number
+#### Fibonacci sequence
+is a sequence in which each number is the sum of the two preceding ones.
 ~~~python
+def fibonacci_head(n):
+    if n == 0:
+        return 0
+    if n == 1:
+        return 1
+    return fibonacci_head(n-1) + fibonacci_head(n-2)
+
+def fibonacci_tail(n, a=0, b=1):
+    if n == 0:
+        return a
+    if n == 1:
+        return b
+    return fibonacci_tail(n-1, b, a+b)
+
+print(fibonacci_tail(6))
 
 ~~~
