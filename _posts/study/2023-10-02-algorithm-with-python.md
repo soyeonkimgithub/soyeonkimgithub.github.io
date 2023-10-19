@@ -78,15 +78,20 @@ def fibonacci_tail(n, a=0, b=1):
 def fibonacci_iteration(n):
     a, b = 0, 1
 
-    if n == 0:
-        return a
-    elif n == 1:
-        return b
-    else:
-        for i in range(2, n+1) :
-            c = a + b
-            a, b = b, c
-        return b
+    while n > 0:
+        n = n - 1
+        a, b = b, a + b
+
+    return a
+
+    # if n == 0:
+    #     return a
+    # elif n == 1:
+    #     return b
+    # else:
+    #     for i in range(2, n+1) :
+    #         a, b = b, a + b
+    #     return b
 
 print(fibonacci_iteration(6))
 
@@ -94,7 +99,6 @@ print(fibonacci_iteration(6))
 
 #### Towers of Hanoi
 a puzzle consisting of three rods and a number of disks of various diameters, which can slide onto any rod. The puzzle begins with the disks stacked on one rod in order of decreasing size, the smallest at the top. The objective of the puzzle is to move the entire stack to the last rod.
-
 ~~~python
 def hanoi(disk, source, middle, dest ):
 
@@ -107,7 +111,23 @@ def hanoi(disk, source, middle, dest ):
     hanoi(disk-1, middle, source, dest)
 
 hanoi(2, 'A', 'B', 'C')
+~~~
 
+#### Euclidean Algorithm
+is an efficient method for computing the greatest common divisor of two integers, the largest number that divides them both without a remainder.
+-> based on the principle that the greatest common divisor of two numbers does not change if the larger number is replaced by its difference with the smaller number. -> GCD(a, b) == GCD(b, a%b)
+~~~python
+def gcd(a, b):
+    # base case
+    if a % b == 0:
+        return b
+    return gcd(b, a % b)
 
+def gcd_iter(a, b) :
+    while a % b != 0:
+        a, b = b, a % b
+    return b
 
+if __name__ == '__main__':
+    print(gcd_iter(24, 9))
 ~~~
