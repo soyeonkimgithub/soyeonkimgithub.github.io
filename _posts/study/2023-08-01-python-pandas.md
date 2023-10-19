@@ -63,9 +63,9 @@ Return the result table sorted by id in ascending order.
 import pandas as pd
 
 def article_views(views: pd.DataFrame) -> pd.DataFrame:
-    df = views[views['author_id']==views['viewer_id']]
-    df.drop(['article_id', 'viewer_id', 'view_date'], axis='columns', inplace=True)
-    df = df.drop_duplicates().rename(columns={'author_id':'id'}).sort_values(by=['id'])
+    df = views[views['viewer_id']==views['author_id']][['viewer_id']]
+    df.rename(columns={'viewer_id':'id'}, inplace=True)
+    df = pd.DataFrame(df['id'].unique(), columns=['id']).sort_values(by='id', ascending=True)
     return df
 ~~~
 
@@ -92,11 +92,9 @@ Return the result table ordered by employee_id.
 import pandas as pd
 
 def calculate_special_bonus(employees: pd.DataFrame) -> pd.DataFrame:
-    employees['bonus'] = employees[(employees['employee_id']%2==1) & (~employees['name'].str.startswith('M')) ]['salary']
+    employees['bonus'] = employees[(employees['employee_id']%2==1) & (~employees['name'].str.startswith('M'))][['salary']]
     employees['bonus'] = employees['bonus'].fillna(0)
-    df = pd.DataFrame(employees, columns=['employee_id', 'bonus'])
-    df = df.sort_values(by=['employee_id'])
-    return df
+    return employees[['employee_id', 'bonus']].sort_values(by='employee_id')    
 ~~~
 
 ## String Methods - Fix Names in a Table
@@ -109,10 +107,8 @@ Return the result table ordered by user_id.
 import pandas as pd
 
 def fix_names(users: pd.DataFrame) -> pd.DataFrame:
-    users['name'] = users['name'].str.lower()
-    users['name'] = users['name'].astype(str).str[0].str.upper() + "" + users['name'].astype(str).str[1:]
-    users = users.sort_values(by=['user_id'])
-    return users
+    users['name'] = users['name'].str.upper().str[0] + users['name'].str.lower().str[1:]
+    return users.sort_values(by='user_id')
 ~~~
 
 ## String Methods - Find Users With Valid E-Mails
