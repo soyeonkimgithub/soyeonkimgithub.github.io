@@ -76,5 +76,24 @@ def fibonacci_tail(n, a=0, b=1):
     return fibonacci_tail(n-1, b, a+b)
 
 print(fibonacci_tail(6))
+~~~
+
+#### Towers of Hanoi
+a puzzle consisting of three rods and a number of disks of various diameters, which can slide onto any rod. The puzzle begins with the disks stacked on one rod in order of decreasing size, the smallest at the top. The objective of the puzzle is to move the entire stack to the last rod.
+
+~~~python
+def hanoi(disk, source, middle, dest ):
+
+    if disk == 0:
+        print('1.disk %s from %s to %s' % (disk, source, dest))
+        return
+
+    hanoi(disk-1, source, dest, middle)
+    print('2.disk %s from %s to %s' % (disk, source, dest))
+    hanoi(disk-1, middle, source, dest)
+
+hanoi(2, 'A', 'B', 'C')
+
+
 
 ~~~
