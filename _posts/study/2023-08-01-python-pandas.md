@@ -125,7 +125,9 @@ Return the result table in any order.
 import pandas as pd
 
 def valid_emails(users: pd.DataFrame) -> pd.DataFrame:
-    return users[users['mail'].str.match(r'^[a-zA-Z][a-zA-Z\d_.-]*@leetcode\.com')]
+    regexp = "^[a-zA-Z][a-zA-Z\d_.-]*@leetcode\.com"
+    df = users[users['mail'].str.match(regexp)]
+    return df
 ~~~
 
 ## String Methods - Patients With a Condition
@@ -163,7 +165,6 @@ import pandas as pd
 def delete_duplicate_emails(person: pd.DataFrame) -> None:
     person.sort_values(by=['id'], ascending=True, inplace=True)
     person.drop_duplicates(subset='email', keep='first', inplace=True)
-    
 ~~~    
 
 ## Data Manipulation - Rearrange Products Table
