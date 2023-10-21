@@ -225,11 +225,10 @@ Return the result table in any order.
 import pandas as pd
 
 def total_time(employees: pd.DataFrame) -> pd.DataFrame:
-    df = employees.groupby(['emp_id', 'event_day']).sum().reset_index()
-    df['total_time'] = df['out_time'] - df['in_time']
-    df.rename(columns={"event_day": "day", "emp_id":"emp_id", "total_time":"total_time"}, inplace=True)
-    df.drop(['in_time', 'out_time'], axis=1, inplace=True)
-
+    employees['total_time'] = employees['out_time'] - employees['in_time']
+    employees = employees[['event_day', 'emp_id', 'total_time']]
+    df = employees.groupby(by=['event_day', 'emp_id']).sum()
+    df = df.reset_index().rename(columns={'event_day':'day'})
     return df
 ~~~
 
@@ -243,9 +242,9 @@ Return the result table in any order.
 import pandas as pd
 
 def game_analysis(activity: pd.DataFrame) -> pd.DataFrame:
-    df = activity.groupby(['player_id']).min().reset_index()
-    df.rename(columns={'player_id':'player_id', 'event_date':'first_login'}, inplace=True)
-    df.drop(['device_id', 'games_played'], axis=1, inplace=True)
+    df = activity.sort_values(by=['player_id', 'event_date'])
+    df = df.groupby(by=['player_id'])['event_date'].min().to_frame().reset_index()
+    df.rename(columns={'event_date':'first_login'}, inplace=True)
     return df
     
 ~~~
