@@ -56,8 +56,8 @@ menu:
     url:               /project/    
   - title:             Study
     url:               /study/     
-  - title:             Literature
-    url:               /literature/  
+#  - title:             Literature
+#    url:               /literature/  
   #   - title:             Documentation
   #     url:               /docs/    
   #   - title:             Posts
