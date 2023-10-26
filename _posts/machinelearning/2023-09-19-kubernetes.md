@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Docker 
-categories: machine learning
+categories: machinelearning
 sitemap: false
 hide_last_modified: true
 published: true

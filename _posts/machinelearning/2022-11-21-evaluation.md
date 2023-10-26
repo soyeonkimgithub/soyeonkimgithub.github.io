@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Evalution
-categories: machine_learning
+categories: machinelearning
 sitemap: false
 hide_last_modified: true
 published: true

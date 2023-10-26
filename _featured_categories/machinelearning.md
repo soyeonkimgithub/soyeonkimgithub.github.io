@@ -6,7 +6,7 @@ layout: list
 title: Machine Learning
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: machine_learning
+slug: machinelearning
 
 menu: true
 

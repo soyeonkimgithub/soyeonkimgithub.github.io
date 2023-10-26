@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Framing a ML Solution
-categories: machine learning
+categories: machinelearning
 sitemap: false
 hide_last_modified: true
 published: true
