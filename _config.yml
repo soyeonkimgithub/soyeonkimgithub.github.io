@@ -59,7 +59,7 @@ menu:
   - title:             Algorithm
     url:               /algorithm/  
   - title:             Machine Learning
-    url:               /machine learning/  
+    url:               /machine_learning/  
   - title:             Literature
     url:               /literature/  
   #   - title:             Documentation
