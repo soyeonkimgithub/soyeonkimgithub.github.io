@@ -14,23 +14,24 @@ published: true
 * Link : https://arxiv.org/pdf/2004.07296.pdf (04/2004) Code : in paper
 * Credible source: -
 
-| autoencoder |  |
-| --- | --- |
-| - a type of neural networks that transforms input data into their output 
+* autoencoder 
+- a type of neural networks that transforms input data into their output 
 - uses two parts in this transformation
  * encoder : transforms its high dimensional inputs into a smaller set of dimensions while keeping the most important features
  * decoder : the reduced set of features is used to reconstruct the initial input data
 - latent-space representation
  * the output of the encoder
- * a compressed form of the input data in which the most influential and important features are kept | ![evaluation-2](/assets/img/post/literature/cluster01.png){:width="40%" :.centered loading="lazy"} |
+ * a compressed form of the input data in which the most influential and important features are kept  
+![evaluation-2](/assets/img/post/literature/cluster01.png){:width="40%" :.centered loading="lazy"} |
 
-| training data | experiment | evaluation and output |
-| --- | --- | --- |
-| dataset 
-* collect 70 compa nies listed by S&P 500 (h ttps://e n. wikipe dia. org /wiki /List_o f_S% 26P_5 00_co mpani es) 
-* scrap the time series data using read_ html Python library 
-* capture adjusted close price from yahoo (01 /Jan /2019 to 15 /Apr /2019) stock market data can be characterised| 
+* training data 
+ - collect 70 compa nies listed by S&P 500 (h ttps://e n. wikipe dia. org /wiki /List_o f_S% 26P_5 00_co mpani es) 
+ - scrap the time series data using read_ html Python library 
+ - capture adjusted close price from yahoo (01 /Jan /2019 to 15 /Apr /2019) stock market data can be characterised| 
+* experiment 
 1. first step : using k-means clustering, cluster no label time series data, and keep the cluster as label
 2. second step : using autoencoder based deep neural network, build prediction model
-it models hidden features and takes into account such features into the prediction | The case study conducted in the context of the financial time series data shows t accuracy of %87.5 in clustering such data.
-More importantly, we observed that the deep learning-based model outperforms t conventional K-Means clustering. |
+it models hidden features and takes into account such features into the prediction 
+* evaluation and output 
+The case study conducted in the context of the financial time series data shows t accuracy of %87.5 in clustering such data.
+More importantly, we observed that the deep learning-based model outperforms t conventional K-Means clustering. 
