@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LeetCode - Array / String
-categories: study
+categories: python
 sitemap: false
 hide_last_modified: true
 published: true

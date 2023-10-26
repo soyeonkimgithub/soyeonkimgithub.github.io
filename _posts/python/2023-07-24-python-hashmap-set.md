@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LeetCode - Hash Map / Set
-categories: study
+categories: python
 sitemap: false
 hide_last_modified: true
 published: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python for Data Science and Machine Learning Bootcamp
-categories: study
+categories: python
 sitemap: false
 hide_last_modified: true
 published: true
