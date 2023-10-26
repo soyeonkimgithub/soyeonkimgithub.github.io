@@ -78,7 +78,7 @@ one-hot encoding : each categorical level becomes a separate feature in the data
 global accounting anomalies are journal entries that exhibit unusual or rare individual attribute values. Such anomalies usually relate to skewed attributes, e.g., rarely used ledgers, or unusual posting times.
 local accounting anomalies are journal entries that exhibit an unusual or rare combination of attribute values while their individual attribute values occur quite frequently, e.g., unusual combinations of general ledger accounts or user accounts used by several accounting departments. | 
 
-
+----
 
 | training data | method | output |
 | --- | --- | --- |
