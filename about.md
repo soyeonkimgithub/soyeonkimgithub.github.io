@@ -11,6 +11,6 @@ published: true
 # About
 
 <!--author-->
-- Self-Driven Machine Learning Engineer with extensive experience in development
-- Certified AWS Specialist of Machine Learning
-- Passionate about technology, data, running and minimalism
+- Machine Learning Engineer with extensive experience in development
+- Passionate about technology, data, running, and minimalism
+- This is a repository for study notes and retrospect of work
