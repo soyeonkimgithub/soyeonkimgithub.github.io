@@ -60,8 +60,8 @@ menu:
     url:               /algorithm/  
   - title:             Machine Learning
     url:               /machinelearning/  
-  - title:             Literature
-    url:               /literature/  
+  # - title:             Literature
+  #   url:               /literature/  
   - title:             Others
     url:               /others/     
   #   - title:             Documentation
