@@ -62,7 +62,7 @@ Regression is a task when a model attempts to predict continuous values
 * x feature 'explains' 60% of the variation in y
 * measured with training set not new data
 
-![evaluation-1](/assets/img/post/machine_learning/RSquared.png){:width="20%" :.centered loading="lazy"}
+![evaluation-1](/assets/img/post/machinelearning/RSquared.png){:width="20%" :.centered loading="lazy"}
 
 ## Classification Evaluation Metrics
 Classification is a task when a model attempts to predict categorical values (binary or multi)
@@ -90,7 +90,7 @@ $$F_{1} = {2* {(precision*recall)}\over(precision+recall)}$$
 ### 5. Confusion matrix
 * organise our predicted values compared to the real values 
 
-![evaluation-2](/assets/img/post/machine_learning/ConfusionMatrix.png){:width="40%" :.centered loading="lazy"}
+![evaluation-2](/assets/img/post/machinelearning/ConfusionMatrix.png){:width="40%" :.centered loading="lazy"}
 
 ### What is good enough accuracy?
 * this all depends on the context of the situation, need to consider what is at stake.
