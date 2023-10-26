@@ -62,6 +62,8 @@ menu:
     url:               /machinelearning/  
   - title:             Literature
     url:               /literature/  
+  - title:             Others
+    url:               /others/     
   #   - title:             Documentation
   #     url:               /docs/    
   #   - title:             Posts
