@@ -14,11 +14,12 @@ published: true
 * Link : https://arxiv.org/pdf/2004.07296.pdf (04/2004) Code : in paper
 * Credible source: -
 
-* autoencoder 
+
+#### autoencoder 
 - a type of neural networks that transforms input data into their output 
 - uses two parts in this transformation
  * encoder : transforms its high dimensional inputs into a smaller set of dimensions while keeping the most important features
- * decoder : the reduced set of features is used to reconstruct the initial input data
+ * decodser : the reduced set of features is used to reconstruct the initial input data
 - latent-space representation
  * the output of the encoder
  * a compressed form of the input data in which the most influential and important features are kept  
@@ -27,7 +28,7 @@ published: true
 * training data 
  - collect 70 compa nies listed by S&P 500 (h ttps://e n. wikipe dia. org /wiki /List_o f_S% 26P_5 00_co mpani es) 
  - scrap the time series data using read_ html Python library 
- - capture adjusted close price from yahoo (01 /Jan /2019 to 15 /Apr /2019) stock market data can be characterised| 
+ - capture adjusted close price from yahoo (01 /Jan /2019 to 15 /Apr /2019) stock market data can be characterised
 * experiment 
 1. first step : using k-means clustering, cluster no label time series data, and keep the cluster as label
 2. second step : using autoencoder based deep neural network, build prediction model
