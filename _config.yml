@@ -54,8 +54,8 @@ author:
 menu:
   - title:             Poject
     url:               /project/    
-  # - title:             Python
-  #   url:               /python/     
+  - title:             Python
+    url:               /python/     
   - title:             Algorithm
     url:               /algorithm/  
   - title:             Machine Learning
