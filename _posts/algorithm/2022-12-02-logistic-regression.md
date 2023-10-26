@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Logistic Regression
-categories: study
+categories: algorithm
 sitemap: false
 hide_last_modified: true
 published: true

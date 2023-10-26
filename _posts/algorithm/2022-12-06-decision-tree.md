@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Decision Tree and Random Forest
-categories: study
+categories: algorithm
 sitemap: false
 hide_last_modified: true
 published: true

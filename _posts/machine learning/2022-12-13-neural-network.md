@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Neural Network
-categories: study
+categories: machine learning
 sitemap: false
 hide_last_modified: true
 published: true

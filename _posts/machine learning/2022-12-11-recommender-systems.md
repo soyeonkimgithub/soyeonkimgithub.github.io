@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Recommender Systems
-categories: study
+categories: machine learning
 sitemap: false
 hide_last_modified: true
 published: true

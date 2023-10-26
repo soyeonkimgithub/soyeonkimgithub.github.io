@@ -1,7 +1,7 @@
 ---
 layout: post
 title: K Means Clustering
-categories: study
+categories: algorithm
 sitemap: false
 hide_last_modified: true
 published: true

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Principal Component Analysis
-categories: study
+categories: algorithm
 sitemap: false
 hide_last_modified: true
 published: true
