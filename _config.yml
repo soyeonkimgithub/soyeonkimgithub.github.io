@@ -58,7 +58,7 @@ menu:
     url:               /python/     
   - title:             Algorithm
     url:               /algorithm/  
-  - title:             Machine Learning
+  - title:             Machine_Learning
     url:               /machine_learning/  
   - title:             Literature
     url:               /literature/  
