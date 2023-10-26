@@ -72,7 +72,12 @@ published: true
 
 | training data | method | output |  |
 | --- | --- | --- | --- |
-| 1. real-world journal entries from SAP ERP system 2. synthetic dataset a. data A - is an extract of an SAP ERP and encompasses the entire population of journal entries of a single fiscal year b. data B - is an excerpt of the synthetic dataset presented in https://www.kaggle.com/ntnu- testimon/paysim1 c. pre-process the categorical entry to obtain a binary ("one- hot" encoded) representation by using pandas. get_dummies(), and numerical entry to be normalised d. we inject a small fraction of synthetic global and local anomalies into both datasets. one-hot encoding : each categorical level becomes a separate feature in the dataset containing binary values (1 or 0). | Adversarial | ㅅㄷㄴㅅ |
+| 1. real-world journal entries from SAP ERP system 
+2. synthetic dataset 
+a. data A - is an extract of an SAP ERP and encompasses the entire population of journal entries of a single fiscal year 
+b. data B - is an excerpt of the synthetic dataset presented in https://www.kaggle.com/ntnu- testimon/paysim1 
+c. pre-process the categorical entry to obtain a binary ("one- hot" encoded) representation by using pandas. get_dummies(), and numerical entry to be normalised 
+d. we inject a small fraction of synthetic global and local anomalies into both datasets. one-hot encoding : each categorical level becomes a separate feature in the dataset containing binary values (1 or 0). | Adversarial | test |
 
 ----
 
