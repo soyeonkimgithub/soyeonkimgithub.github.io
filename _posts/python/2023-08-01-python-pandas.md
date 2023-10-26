@@ -150,6 +150,39 @@ def find_patients(patients: pd.DataFrame) -> pd.DataFrame:
     return patients
 ~~~
 
+## Nth Highest Salary
++-------------+------+
+| Column Name | Type |
++-------------+------+
+| id          | int  |
+| salary      | int  |
++-------------+------+
+id is the primary key (column with unique values) for this table.
+Each row of this table contains information about the salary of an employee.
+
+~~~python
+import pandas as pd
+
+def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
+    employee.drop_duplicates(subset='salary', inplace=True)
+    
+    df = employee.sort_values('salary', ascending=False)
+    df.reset_index(inplace=True, drop=True)
+    df = df.iloc[N-1:N][['salary']]
+
+    colName = 'getNthHighestSalary(' + str(N) + ')'
+    
+    if df.empty:
+        return pd.DataFrame({colName: [None]})
+    
+    df.rename(columns={'salary':colName}, inplace=True)
+    return df
+
+~~~
+
+
+
+
 ## Data Manipulation - Delete Duplicate Emails
 
 Write a solution to delete all duplicate emails, keeping only one unique email with the smallest id.
@@ -259,11 +292,10 @@ Return the result table in any order.
 import pandas as pd
 
 def count_unique_subjects(teacher: pd.DataFrame) -> pd.DataFrame:
-    df = teacher.groupby(['teacher_id']).nunique('subject_id').reset_index()
-    df.rename(columns={'teacher_id':'teacher_id', 'subject_id':'cnt'}, inplace=True)
-    df.drop(['dept_id'], axis=1, inplace=True)
+    df = teacher.groupby(by=['teacher_id'])['subject_id'].nunique()
+    df = df.to_frame().reset_index()
+    df.rename(columns={'subject_id':'cnt'}, inplace=True)
     return df
-    
 ~~~
 
 ## Data Aggregation - Classes More Than 5 Students
@@ -276,10 +308,8 @@ Return the result table in any order.
 import pandas as pd
 
 def find_classes(courses: pd.DataFrame) -> pd.DataFrame:
-    df = courses.groupby('class').count().reset_index()
-    df = df[df['student'] >= 5]
-    df.drop(['student'], axis=1, inplace=True)
-    return df
+    df = courses.groupby(['class']).count().reset_index()
+    return df[df['student']>=5][['class']]
 ~~~
 
 ## Data Aggregation - Customer Placing the Largest Number of Orders
@@ -292,11 +322,8 @@ The test cases are generated so that exactly one customer will have placed more 
 import pandas as pd
 
 def largest_orders(orders: pd.DataFrame) -> pd.DataFrame:
-    df = orders.groupby('customer_number').count().reset_index()
-    df = df[df['order_number']==df['order_number'].max()]
-    df.drop(['order_number'], axis=1, inplace=True)
-    return df
-    
+    df = orders.groupby(['customer_number']).count().reset_index()
+    return df[df['order_number']==df['order_number'].max()][['customer_number']]
 ~~~
 
 ## Data Aggregation - Group Sold Products By The Date
@@ -311,9 +338,10 @@ Return the result table ordered by sell_date.
 import pandas as pd
 
 def categorize_products(activities: pd.DataFrame) -> pd.DataFrame:
-    df = activities.groupby(['sell_date'])['product'].agg([('num_sold', 'nunique'), ('products', lambda x: ','.join(sorted(x.unique())))]).reset_index()
+    by_sell_date = activities.groupby('sell_date')
+    df = by_sell_date.agg(num_sold=('product', 'nunique'), 
+    products=('product', lambda x : ','.join(sorted(set(x))))).reset_index()
     return df
-    
 ~~~
 
 ## Data Aggregation - Daily Leads and Partners
@@ -326,9 +354,10 @@ Return the result table in any order.
 import pandas as pd
 
 def daily_leads_and_partners(daily_sales: pd.DataFrame) -> pd.DataFrame:
-    df = daily_sales.groupby(['date_id', 'make_name']).nunique().reset_index()
-    df.rename(columns={'date_id':'date_id', 'make_name':'make_name', 'lead_id':'unique_leads','partner_id':'unique_partners'}, inplace=True)
-    return df
+    byDate = daily_sales.groupby(['date_id', 'make_name'])
+    df = byDate.agg(unique_leads=('lead_id', 'nunique'), unique_partners=('partner_id', 'nunique')).reset_index()
+    df = df.sort_values(['make_name'], ascending=False)
+    return df    
 ~~~
 
 ## Data Integration - Actors and Directors Who Cooperated At Least Three Times
@@ -341,11 +370,8 @@ Return the result table in any order.
 import pandas as pd
 
 def actors_and_directors(actor_director: pd.DataFrame) -> pd.DataFrame:
-    df = actor_director.groupby(['actor_id', 'director_id']).count().reset_index()
-    df = df[df['timestamp']>=3]
-    df.drop('timestamp', axis=1, inplace=True)
-    return df
-    
+    by_ad = actor_director.groupby(['actor_id', 'director_id']).count().reset_index()
+    return by_ad[by_ad['timestamp']>=3][['actor_id', 'director_id']]    
 ~~~
 
 ## Data Integration - Replace Employee ID With The Unique Identifier
@@ -358,9 +384,8 @@ Return the result table in any order.
 import pandas as pd
 
 def replace_employee_id(employees: pd.DataFrame, employee_uni: pd.DataFrame) -> pd.DataFrame:
-    df = employee_uni.merge(employees, how='right', on='id')
-    df.drop('id', axis=1, inplace=True)
-    return df
+    df = pd.merge(employees, employee_uni, on='id', how='left')
+    return df[['unique_id', 'name']]
 ~~~
 
 ## Data Integration - Students and Examinations
@@ -373,9 +398,9 @@ Return the result table ordered by student_id and subject_name.
 import pandas as pd
 
 def students_and_examinations(students: pd.DataFrame, subjects: pd.DataFrame, examinations: pd.DataFrame) -> pd.DataFrame:
-    df = students.merge(subjects, how="cross")
-    exam = examinations.groupby(["student_id", "subject_name"]).agg(attended_exams=("subject_name", "count")).reset_index()
-    x = df.merge(exam, on=["student_id", "subject_name"],how="left").sort_values(by=["student_id", "subject_name"])
-    return x.fillna(0)[['student_id', 'student_name', 'subject_name', 'attended_exams']]
-    
+    df = students.merge(subjects, how='cross')
+    exam = examinations.groupby(['student_id', 'subject_name']).agg(attended_exams=('subject_name', 'count')).reset_index()
+    df = df.merge(exam, on=['student_id', 'subject_name'], how='left').sort_values(by=['student_id', 'subject_name'], ascending=True)
+    return df.fillna(0)[['student_id', 'student_name', 'subject_name', 'attended_exams']]
 ~~~
+
