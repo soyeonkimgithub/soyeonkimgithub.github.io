@@ -10,7 +10,7 @@ slug: machinelearning
 
 menu: true
 
-submenu: true
+submenu: false
 
 order: 4
 
