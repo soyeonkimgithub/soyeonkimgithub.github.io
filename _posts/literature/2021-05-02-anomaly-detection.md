@@ -58,4 +58,24 @@ published: true
         a.	still have parameters but not directly controllable in the same way as simple probability distributions
         b.	i.e. using all observations in a random sample, in effect making all observations in the sample "parameters"
 
-### Model
+## Detection of Accounting Anomalies in the Latent Space using Adversarial Autoencoder Neural Networks
+* Goal : application of adversarial autoencoder networks that are capable of learning a semantic meaningful representation of real-world journal entries
+* Link : https://arxiv.org/pdf/1908.00734.pdf (08/2019)
+* Code : https://github.com/GitiHubi/deepAD
+* Credible source: 2nd KDD Workshop on Anomaly Detection in Finance
+
+
+| training data | method | output |
+| --- | --- | --- |
+| 1. real-world journal entries from SAP ERP system
+2. synthetic dataset
+a. data A - is an extract of
+an SAP ERP and encompasses the entire population of journal entries of a single fiscal year
+b. data B - is an excerpt of the synthetic dataset presented in https://www.kaggle.com/ntnu- testimon/paysim1
+c. pre-process the categorical entry to obtain a binary ("one- hot" encoded) representation by using pandas. get_dummies(), and numerical entry to be normalised
+d. we inject a small fraction of synthetic global and local anomalies into both datasets.
+one-hot encoding : each categorical level becomes a separate feature in the dataset containing binary values (1 or 0). | Adversarial Autoencoder Neural Networks
+extends the concept of Autoencoder Neural Networks (AE) by imposing an arbitrary prior on the AEs latent space using a GAN training setup | global and local anomalies
+global accounting anomalies are journal entries that exhibit unusual or rare individual attribute values. Such anomalies usually relate to skewed attributes, e.g., rarely used ledgers, or unusual posting times.
+local accounting anomalies are journal entries that exhibit an unusual or rare combination of attribute values while their individual attribute values occur quite frequently, e.g., unusual combinations of general ledger accounts or user accounts used by several accounting departments. | 
+

@@ -15,13 +15,9 @@ published: true
 | --- | --- | --- | --- |
 |  | Pairwise Deletion |  |  |
 |  | Deleting Columns |  |  |
-| Imputation | Time-Series Problem | Data without Trend & 
-without Seasonality | Mean, Median, Mode, Random Sample Imputation |
-|  |  | Data with Trend &
-without Seasonality | Linear Imputation |
-|  |  | Data with Trend &
-with Seasonality | Seasonal Adjustment
-Imputation |
+| Imputation | Time-Series Problem | Data without Trend & without Seasonality | Mean, Median, Mode, Random Sample Imputation |
+|  |  | Data with Trend & without Seasonality | Linear Imputation |
+|  |  | Data with Trend & with Seasonality | Seasonal Adjustment Imputation |
 |  | General Problem | Categorical | Make N/A as level, Multiple Imputation, Logistic Regression |
 |  |  | Continuous | Mean, Median, Mode, Multiple Imputation, Linear Regression |
 
