@@ -54,10 +54,14 @@ author:
 menu:
   - title:             Poject
     url:               /project/    
-  - title:             Study
-    url:               /study/     
-#  - title:             Literature
-#    url:               /literature/  
+  - title:             Python
+    url:               /python/     
+  - title:             Algorithm
+    url:               /algorithm/  
+  - title:             Machine Learning
+    url:               /machine learning/  
+  - title:             Literature
+    url:               /literature/  
   #   - title:             Documentation
   #     url:               /docs/    
   #   - title:             Posts

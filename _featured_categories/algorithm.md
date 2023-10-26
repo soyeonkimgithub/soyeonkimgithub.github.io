@@ -3,16 +3,16 @@
 layout: list
 
 # The title of the tag's page.
-title: Literature
+title: Algorithm
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: literature
+slug: algorithm
 
 menu: true
 
 submenu: false
 
-order: 5
+order: 3
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 # description: >
