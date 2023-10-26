@@ -65,6 +65,17 @@ published: true
 * Credible source: 2nd KDD Workshop on Anomaly Detection in Finance
 
 
+| Deletion | Deleting Rows |  |  |
+| --- | --- | --- | --- |
+|  | Pairwise Deletion |  |  |
+|  | Deleting Columns |  |  |
+| Imputation | Time-Series Problem | Data without Trend & without Seasonality | Mean, Median, Mode, Random Sample Imputation |
+|  |  | Data with Trend & without Seasonality | Linear Imputation |
+|  |  | Data with Trend & with Seasonality | Seasonal Adjustment Imputation |
+|  | General Problem | Categorical | Make N/A as level, Multiple Imputation, Logistic Regression |
+|  |  | Continuous | Mean, Median, Mode, Multiple Imputation, Linear Regression |
+
+
 | training data | method | output |
 | --- | --- | --- |
 | 1. real-world journal entries from SAP ERP system
