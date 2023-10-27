@@ -151,14 +151,8 @@ def find_patients(patients: pd.DataFrame) -> pd.DataFrame:
 ~~~
 
 ## Nth Highest Salary
-+-------------+------+
-| Column Name | Type |
-+-------------+------+
-| id          | int  |
-| salary      | int  |
-+-------------+------+
-id is the primary key (column with unique values) for this table.
-Each row of this table contains information about the salary of an employee.
+
+Write a solution to find the nth highest salary from the Employee table. If there is no nth highest salary, return null.
 
 ~~~python
 import pandas as pd
@@ -180,8 +174,65 @@ def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
 
 ~~~
 
+## Second Highest Salary
 
+Write a solution to find the second highest salary from the Employee table. If there is no second highest salary, return null (return None in Pandas).
 
+~~~python
+import pandas as pd
+
+def second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:
+    employee.drop_duplicates(subset='salary', inplace=True)
+    df = employee.sort_values('salary', ascending=False)
+    df.reset_index(inplace=True, drop=True)
+    df = df.iloc[1:2]
+
+    if df.empty:
+        return pd.DataFrame({'SecondHighestSalary':[None]})
+
+    df.rename(columns={'salary':'SecondHighestSalary'}, inplace=True)
+    return df[['SecondHighestSalary']]
+
+~~~
+
+## Department Highest Salary
+
+Write a solution to find employees who have the highest salary in each of the departments.
+
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def department_highest_salary(employee: pd.DataFrame, department: pd.DataFrame) -> pd.DataFrame:
+    df = pd.merge(employee, department, left_on='departmentId', right_on='id')
+    df.drop(['id_y'], axis=1, inplace=True)
+    df.rename(columns={'id_x':'id', 'name_x':'Employee', 'salary':'Salary', 'name_y':'Department'}, inplace=True)
+    df_max = employee.groupby(['departmentId'])['salary'].max().reset_index()
+    df = pd.merge(df, df_max, on='departmentId')
+    df = df[df['Salary']==df['salary']][['Department', 'Employee', 'Salary']]
+
+    return df
+~~~
+
+## Rank Scores
+
+Write a solution to find the rank of the scores. The ranking should be calculated according to the following rules:
+
+The scores should be ranked from the highest to the lowest.
+If there is a tie between two scores, both should have the same ranking.
+After a tie, the next ranking number should be the next consecutive integer value. In other words, there should be no holes between ranks.
+Return the result table ordered by score in descending order.
+
+~~~python
+import pandas as pd
+
+def order_scores(scores: pd.DataFrame) -> pd.DataFrame:
+    df = scores.sort_values('score', ascending=False)
+    df = df[['score']]
+    df['rank'] = df['score'].rank(ascending=False, method='dense')
+    return df
+~~~
 
 ## Data Manipulation - Delete Duplicate Emails
 
@@ -245,6 +296,28 @@ def food_delivery(delivery: pd.DataFrame) -> pd.DataFrame:
     total_orders = delivery.shape[0]
     imm_percentage = (imm_count / total_orders) * 100
     df = pd.DataFrame({'immediate_percentage':[round(imm_percentage, 2)]})
+    return df
+~~~
+
+## Statistics - Count Salary Categories
+
+Write a solution to calculate the number of bank accounts for each salary category. The salary categories are:
+
+- "Low Salary": All the salaries strictly less than $20000.
+- "Average Salary": All the salaries in the inclusive range [$20000, $50000].
+- "High Salary": All the salaries strictly greater than $50000.
+- The result table must contain all three categories. If there are no accounts in a category, return 0.
+
+Return the result table in any order.
+~~~python
+import pandas as pd
+
+def count_salary_categories(accounts: pd.DataFrame) -> pd.DataFrame:
+    lowCnt = accounts[accounts['income']<20000].shape[0]
+    averageCnt = accounts[(accounts['income']>=20000) & (accounts['income']<=50000)].shape[0]
+    highCnt = accounts[accounts['income']>50000].shape[0]
+    df = pd.DataFrame({'category':['Low Salary', 'Average Salary', 'High Salary'], 
+                        'accounts_count':[lowCnt, averageCnt, highCnt]})
     return df
 ~~~
 
@@ -402,5 +475,44 @@ def students_and_examinations(students: pd.DataFrame, subjects: pd.DataFrame, ex
     exam = examinations.groupby(['student_id', 'subject_name']).agg(attended_exams=('subject_name', 'count')).reset_index()
     df = df.merge(exam, on=['student_id', 'subject_name'], how='left').sort_values(by=['student_id', 'subject_name'], ascending=True)
     return df.fillna(0)[['student_id', 'student_name', 'subject_name', 'attended_exams']]
+~~~
+
+## Data Integration - Managers with at Least 5 Direct Reports
+
+Write a solution to find managers with at least five direct reports.
+
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def find_managers(employee: pd.DataFrame) -> pd.DataFrame:
+    byemp = employee.groupby('managerId')['name'].count().reset_index()
+    emp = byemp[byemp['name']>=5]
+    df = pd.merge(employee, emp, left_on='id', right_on='managerId')
+    df = df[['name_x']]
+    df.rename(columns={'name_x':'name'}, inplace=True)
+
+    return df
+~~~
+
+## Data Integration - Sales Person
+
+Write a solution to find the names of all the salespersons who did not have any orders related to the company with the name "RED".
+
+Return the result table in any order.
+
+~~~python
+import pandas as pd
+
+def sales_person(sales_person: pd.DataFrame, company: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFrame:
+    company_ids = 0
+    company_id = company[company['name']=='RED'][['com_id']]
+    if not company_id.empty :
+        company_ids = company_id['com_id']
+    sales_id = orders[orders['com_id']==int(company_ids)][['sales_id']]
+    exclude_df = pd.merge(sales_id, sales_person, on='sales_id')
+    df = sales_person[(~sales_person['sales_id'].isin(exclude_df['sales_id']))][['name']]
+    return df
 ~~~
 
