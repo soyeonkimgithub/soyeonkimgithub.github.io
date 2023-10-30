@@ -45,23 +45,20 @@ s.mergeAlternately("abc", "pqr")
 Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
 ~~~python
-class Solution(object):
-    def twoSum(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: List[int]
-        """
-        self.nums = nums
-        self.target = target
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        dic = {}
 
         for i, v in enumerate(nums) :
-            for j, r in enumerate(nums) :
-                if i != j :
-                    if v+r == target :
-                        return i, j
-                    else:        
-                        continue
+            c = target - v
+
+            if c in dic:
+                return [dic[c], i]
+            
+            dic[v] = i
+
+        return [-1, -1]    
+
 
 s = Solution()
 nums = [2, 7, 11, 15]
