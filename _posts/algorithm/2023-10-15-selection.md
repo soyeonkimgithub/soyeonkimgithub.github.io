@@ -20,7 +20,6 @@ find the k-th smallest (or largest) item in a data structure. first we have to s
   2. partition the array (based on the value of the pivot)
   3. instead of recursion into both sides, we take just one side (by comparing k and pivot)
      
-
 ~~~python
 import random
 
@@ -73,3 +72,4 @@ select = QuickSelect(x)
 print(select.run(1))
 
 ~~~
+
