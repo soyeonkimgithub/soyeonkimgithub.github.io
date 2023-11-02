@@ -10,7 +10,7 @@ published: true
 
 ## [Python] LeetCode - Pandas
 
-## Data Filtering - Big Countries
+#### 595. Data Filtering - Big Countries
 A country is big if:
 it has an area of at least three million (i.e., 3000000 km2), or
 it has a population of at least twenty-five million (i.e., 25000000).
@@ -27,7 +27,7 @@ def big_countries(world: pd.DataFrame) -> pd.DataFrame:
   return df[columns]
 ~~~
 
-## Data Filtering - Recyclable and Low Fat Products
+#### 1757. Data Filtering - Recyclable and Low Fat Products
 Write a solution to find the ids of products that are both low fat and recyclable.
 
 Return the result table in any order.
@@ -40,7 +40,7 @@ def find_products(products: pd.DataFrame) -> pd.DataFrame:
     return df[['product_id']]
 ~~~
 
-## Data Filtering - Customers Who Never Order
+#### 183. Data Filtering - Customers Who Never Order
 Write a solution to find all customers who never order anything.
 
 Return the result table in any order.
@@ -54,7 +54,7 @@ def find_customers(customers: pd.DataFrame, orders: pd.DataFrame) -> pd.DataFram
     return df
 ~~~
 
-## Data Filtering - Article Views I
+#### 1148. Data Filtering - Article Views I
 Write a solution to find all the authors that viewed at least one of their own articles.
 
 Return the result table sorted by id in ascending order.
@@ -69,7 +69,7 @@ def article_views(views: pd.DataFrame) -> pd.DataFrame:
     return df
 ~~~
 
-## String Methods - Invalid Tweets
+#### 1683. String Methods - Invalid Tweets
 
 Write a solution to find the IDs of the invalid tweets. The tweet is invalid if the number of characters used in the content of the tweet is strictly greater than 15.
 
@@ -82,7 +82,7 @@ def invalid_tweets(tweets: pd.DataFrame) -> pd.DataFrame:
     return tweets[tweets['content'].str.len()>15][['tweet_id']]
 ~~~
 
-## String Methods - Calculate Special Bonus
+#### 1873. String Methods - Calculate Special Bonus
 
 Write a solution to calculate the bonus of each employee. The bonus of an employee is 100% of their salary if the ID of the employee is an odd number and the employee's name does not start with the character 'M'. The bonus of an employee is 0 otherwise.
 
@@ -97,7 +97,7 @@ def calculate_special_bonus(employees: pd.DataFrame) -> pd.DataFrame:
     return employees[['employee_id', 'bonus']].sort_values(by='employee_id')    
 ~~~
 
-## String Methods - Fix Names in a Table
+#### 1667. String Methods - Fix Names in a Table
 
 Write a solution to fix the names so that only the first character is uppercase and the rest are lowercase.
 
@@ -111,7 +111,7 @@ def fix_names(users: pd.DataFrame) -> pd.DataFrame:
     return users.sort_values(by='user_id')
 ~~~
 
-## String Methods - Find Users With Valid E-Mails
+#### 1517. String Methods - Find Users With Valid E-Mails
 
 Write a solution to find the users who have valid emails.
 
@@ -130,7 +130,7 @@ def valid_emails(users: pd.DataFrame) -> pd.DataFrame:
     return df
 ~~~
 
-## String Methods - Patients With a Condition
+#### 1527. ## String Methods - Patients With a Condition
 
 Write a solution to find the patient_id, patient_name, and conditions of the patients who have Type I Diabetes. Type I Diabetes always starts with DIAB1 prefix.
 
@@ -150,7 +150,7 @@ def find_patients(patients: pd.DataFrame) -> pd.DataFrame:
     return patients
 ~~~
 
-## Nth Highest Salary
+#### 177. Data Manipulation - Nth Highest Salary
 
 Write a solution to find the nth highest salary from the Employee table. If there is no nth highest salary, return null.
 
@@ -174,7 +174,7 @@ def nth_highest_salary(employee: pd.DataFrame, N: int) -> pd.DataFrame:
 
 ~~~
 
-## Second Highest Salary
+#### 176. Data Manipulation - Second Highest Salary
 
 Write a solution to find the second highest salary from the Employee table. If there is no second highest salary, return null (return None in Pandas).
 
@@ -195,7 +195,7 @@ def second_highest_salary(employee: pd.DataFrame) -> pd.DataFrame:
 
 ~~~
 
-## Department Highest Salary
+#### 184. Data Manipulation -  Department Highest Salary
 
 Write a solution to find employees who have the highest salary in each of the departments.
 
@@ -215,7 +215,7 @@ def department_highest_salary(employee: pd.DataFrame, department: pd.DataFrame) 
     return df
 ~~~
 
-## Rank Scores
+#### 178. Data Manipulation -  Rank Scores
 
 Write a solution to find the rank of the scores. The ranking should be calculated according to the following rules:
 
@@ -234,7 +234,7 @@ def order_scores(scores: pd.DataFrame) -> pd.DataFrame:
     return df
 ~~~
 
-## Data Manipulation - Delete Duplicate Emails
+#### 196. Data Manipulation - Delete Duplicate Emails
 
 Write a solution to delete all duplicate emails, keeping only one unique email with the smallest id.
 
@@ -251,7 +251,7 @@ def delete_duplicate_emails(person: pd.DataFrame) -> None:
     person.drop_duplicates(subset='email', keep='first', inplace=True)
 ~~~    
 
-## Data Manipulation - Rearrange Products Table
+#### 1795. Data Manipulation - Rearrange Products Table
 
 Write a solution to rearrange the Products table so that each row has (product_id, store, price). If a product is not available in a store, do not include a row with that product_id and store combination in the result table.
 
@@ -266,7 +266,7 @@ def rearrange_products_table(products: pd.DataFrame) -> pd.DataFrame:
     return melted_of
 ~~~
 
-## Statistics - The Number of Rich Customers
+#### 2082. Statistics - The Number of Rich Customers
 
 Write a solution to report the number of customers who had at least one bill with an amount strictly greater than 500.
 
@@ -282,7 +282,7 @@ def count_rich_customers(store: pd.DataFrame) -> pd.DataFrame:
     return df
 ~~~
 
-## Statistics - Immediate Food Delivery I
+#### 1173. Statistics - Immediate Food Delivery I
 
 If the customer's preferred delivery date is the same as the order date, then the order is called immediate; otherwise, it is called scheduled.
 
@@ -299,7 +299,7 @@ def food_delivery(delivery: pd.DataFrame) -> pd.DataFrame:
     return df
 ~~~
 
-## Statistics - Count Salary Categories
+#### 1907. Statistics - Count Salary Categories
 
 Write a solution to calculate the number of bank accounts for each salary category. The salary categories are:
 
@@ -321,7 +321,7 @@ def count_salary_categories(accounts: pd.DataFrame) -> pd.DataFrame:
     return df
 ~~~
 
-## Data Aggregation - Find Total Time Spent by Each Employee
+#### 1741. Data Aggregation - Find Total Time Spent by Each Employee
 
 Write a solution to calculate the total time in minutes spent by each employee on each day at the office. Note that within one day, an employee can enter and leave more than once. The time spent in the office for a single entry is out_time - in_time.
 
@@ -338,7 +338,7 @@ def total_time(employees: pd.DataFrame) -> pd.DataFrame:
     return df
 ~~~
 
-## Data Aggregation - Game Play Analysis I
+#### 511. Data Aggregation - Game Play Analysis I
 
 Write a solution to find the first login date for each player.
 
@@ -355,7 +355,7 @@ def game_analysis(activity: pd.DataFrame) -> pd.DataFrame:
     
 ~~~
 
-## Data Aggregation - Number of Unique Subjects Taught by Each Teacher
+#### 2356. Data Aggregation - Number of Unique Subjects Taught by Each Teacher
 
 Write a solution to calculate the number of unique subjects each teacher teaches in the university.
 
@@ -371,7 +371,7 @@ def count_unique_subjects(teacher: pd.DataFrame) -> pd.DataFrame:
     return df
 ~~~
 
-## Data Aggregation - Classes More Than 5 Students
+#### 596. Data Aggregation - Classes More Than 5 Students
 
 Write a solution to find all the classes that have at least five students.
 
@@ -385,7 +385,7 @@ def find_classes(courses: pd.DataFrame) -> pd.DataFrame:
     return df[df['student']>=5][['class']]
 ~~~
 
-## Data Aggregation - Customer Placing the Largest Number of Orders
+#### 586. Data Aggregation - Customer Placing the Largest Number of Orders
 
 Write a solution to find the customer_number for the customer who has placed the largest number of orders.
 
@@ -399,7 +399,7 @@ def largest_orders(orders: pd.DataFrame) -> pd.DataFrame:
     return df[df['order_number']==df['order_number'].max()][['customer_number']]
 ~~~
 
-## Data Aggregation - Group Sold Products By The Date
+#### 1484. Data Aggregation - Group Sold Products By The Date
 
 Write a solution to find for each date the number of different products sold and their names.
 
@@ -417,7 +417,7 @@ def categorize_products(activities: pd.DataFrame) -> pd.DataFrame:
     return df
 ~~~
 
-## Data Aggregation - Daily Leads and Partners
+#### 1693. Data Aggregation - Daily Leads and Partners
 
 For each date_id and make_name, find the number of distinct lead_id's and distinct partner_id's.
 
@@ -433,7 +433,7 @@ def daily_leads_and_partners(daily_sales: pd.DataFrame) -> pd.DataFrame:
     return df    
 ~~~
 
-## Data Integration - Actors and Directors Who Cooperated At Least Three Times
+#### 1050. Data Integration - Actors and Directors Who Cooperated At Least Three Times
 
 Write a solution to find all the pairs (actor_id, director_id) where the actor has cooperated with the director at least three times.
 
@@ -447,7 +447,7 @@ def actors_and_directors(actor_director: pd.DataFrame) -> pd.DataFrame:
     return by_ad[by_ad['timestamp']>=3][['actor_id', 'director_id']]    
 ~~~
 
-## Data Integration - Replace Employee ID With The Unique Identifier
+#### 1378. Data Integration - Replace Employee ID With The Unique Identifier
 
 Write a solution to show the unique ID of each user, If a user does not have a unique ID replace just show null.
 
@@ -461,7 +461,7 @@ def replace_employee_id(employees: pd.DataFrame, employee_uni: pd.DataFrame) -> 
     return df[['unique_id', 'name']]
 ~~~
 
-## Data Integration - Students and Examinations
+#### 1280. Data Integration - Students and Examinations
 
 Write a solution to find the number of times each student attended each exam.
 
@@ -477,7 +477,7 @@ def students_and_examinations(students: pd.DataFrame, subjects: pd.DataFrame, ex
     return df.fillna(0)[['student_id', 'student_name', 'subject_name', 'attended_exams']]
 ~~~
 
-## Data Integration - Managers with at Least 5 Direct Reports
+#### 570. Data Integration - Managers with at Least 5 Direct Reports
 
 Write a solution to find managers with at least five direct reports.
 
@@ -496,7 +496,7 @@ def find_managers(employee: pd.DataFrame) -> pd.DataFrame:
     return df
 ~~~
 
-## Data Integration - Sales Person
+#### 607. Data Integration - Sales Person
 
 Write a solution to find the names of all the salespersons who did not have any orders related to the company with the name "RED".
 
@@ -516,3 +516,32 @@ def sales_person(sales_person: pd.DataFrame, company: pd.DataFrame, orders: pd.D
     return df
 ~~~
 
+#### 610. Triangle Judgement
+Report for every three line segments whether they can form a triangle.
+
+~~~ python
+import pandas as pd
+
+def triangle_judgement(triangle: pd.DataFrame) -> pd.DataFrame:
+
+    def tri(x,y,z):
+        if x+y>z and x+z>y and y+z>x:
+            return 'Yes'
+        else:
+            return 'No'
+
+    print(triangle)
+    triangle['triangle'] = triangle.apply(lambda row:tri(row['x'], row['y'], row['z']), axis=1)
+
+    return triangle
+~~~ 
+
+#### 619. Biggest Single Number
+A single number is a number that appeared only once in the MyNumbers table.
+
+~~~ python
+import pandas as pd
+
+def biggest_single_number(my_numbers: pd.DataFrame) -> pd.DataFrame:
+    return my_numbers.groupby(['num']).filter(lambda x: len(x)==1).max().to_frame(name='num')   
+~~~ 
