@@ -5,7 +5,6 @@ categories: python
 sitemap: false
 hide_last_modified: true
 published: true
-
 ---
 
 ## [Pandas Doc] Group by: split-apply-combine
