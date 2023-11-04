@@ -545,3 +545,38 @@ import pandas as pd
 def biggest_single_number(my_numbers: pd.DataFrame) -> pd.DataFrame:
     return my_numbers.groupby(['num']).filter(lambda x: len(x)==1).max().to_frame(name='num')   
 ~~~ 
+
+
+#### 620. Not Boring Movies
+Write a solution to report the movies with an odd-numbered ID and a description that is not "boring".
+
+~~~ python
+import pandas as pd
+
+def not_boring_movies(cinema: pd.DataFrame) -> pd.DataFrame:
+    return cinema[(cinema['id']%2!=0) & (cinema['description']!='boring')].sort_values(by='rating', ascending=False)
+  
+~~~ 
+
+#### 627. Swap Salary
+Write a solution to swap all 'f' and 'm' values (i.e., change all 'f' values to 'm' and vice versa) with a single update statement and no intermediate temporary tables.
+
+~~~ python
+import pandas as pd
+import numpy as np
+
+def swap_salary(salary: pd.DataFrame) -> pd.DataFrame:
+    salary['sex'] = np.where(salary['sex']=='m', 'f', 'm')
+    return salary
+~~~ 
+
+#### 1068. Product Sales Analysis I
+Write a solution to report the product_name, year, and price for each sale_id in the Sales table.
+
+~~~ python
+import pandas as pd
+
+def sales_analysis(sales: pd.DataFrame, product: pd.DataFrame) -> pd.DataFrame:
+    df = pd.merge(sales, product, on='product_id')
+    return df[['product_name', 'year', 'price']]
+~~~ 
