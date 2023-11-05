@@ -11,6 +11,6 @@ published: true
 # About
 
 <!--author-->
-- Machine Learning Engineer with extensive experience in development
-- Passionate about technology, data, running, and minimalism
+- Backend/Machine Learning Engineer with extensive experience in development
+- Passionate about technology, running, and minimalism
 - This is a repository for study notes and retrospect of work
