@@ -24,7 +24,7 @@ lang:                  en
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  Machine Learning Engineer
+  Engineer
 
 # A shorter description for the sidebar.
 #tagline:               Change `tagline` in `_config.yml`
