@@ -56,12 +56,26 @@ The Spring framework is creating the SortAlgorithm instance. We are taking the c
 
 #### Application Context
 Spring framework is the application context Where all the beans are created and managed. That's where all the core logic of Spring framework happens.
+@SpringBootApplication - automatically scan the package/sub packages
 
+## Spring Framework Modules
+### Data Access/Integration
+JDBC, ORM(Hibernate), OXM, JMS, Transactions
 
+### Web
+WebSocket, Servlet, Web, Portlet
 
+### Other modules
+AOP, Aspects, Instrumentation, Messaging
 
+### Core Container 
+Beans, Core, Context, SpEL
 
+### Test
+Junit
 
+## Spring Project
 
-
+### Spring Boot 
+for developing micro services. Make it easy to develop applications quickly with features like start up projects, auto configuration, actuator. 
 
