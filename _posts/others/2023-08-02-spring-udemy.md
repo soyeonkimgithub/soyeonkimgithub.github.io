@@ -61,21 +61,16 @@ Spring framework is the application context Where all the beans are created and 
 ## Spring Framework Modules
 ### Data Access/Integration
 JDBC, ORM(Hibernate), OXM, JMS, Transactions
-
 ### Web
 WebSocket, Servlet, Web, Portlet
-
 ### Other modules
 AOP, Aspects, Instrumentation, Messaging
-
 ### Core Container 
 Beans, Core, Context, SpEL
-
 ### Test
 Junit
 
 ## Spring Project
-
 ### Spring Boot 
 for developing micro services. Make it easy to develop applications quickly with features like start up projects, auto configuration, actuator. 
 
