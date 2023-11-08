@@ -102,9 +102,7 @@ public class TodoDataService {
 - Context and Dependency Injection
 - Java EE Dependency Injection Standard (JSR-330)
 - Spring Supports most annotations
- > @Inject (@Autowired)
- > @Named (@Component & @Oualifier)
- > @Singleton (Defines a scope of Singleton)
+  @Inject (@Autowired), @Named (@Component & @Oualifier), @Singleton (Defines a scope of Singleton)
 
 #### JPA
 - JPA : is interface. Java Persistance API
