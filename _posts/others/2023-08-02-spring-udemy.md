@@ -70,7 +70,42 @@ Beans, Core, Context, SpEL
 ### Test
 Junit
 
-## Spring Project
 ### Spring Boot 
 for developing micro services. Make it easy to develop applications quickly with features like start up projects, auto configuration, actuator. 
 
+#### Dependency Injection
+~~~java
+@Component
+public class TodoBusinessService {
+
+    @Autowired
+    TodoDataService dataService;
+}
+
+@Component
+public class TodoDataService {
+
+    @Autowired
+    JdbcTemplate template;
+}
+
+~~~
+
+#### Bean scope
+- default -> singleton
+- singleton : One instance per Spring Context
+- prototype : New bean whenever requested (proxy can be used, i.e. proxyMode = ScopedProxyMode.TARGET_CLASS)
+- request : One bean per HTTP request
+- session : One bean per HTTP session
+
+#### CDI
+- Context and Dependency Injection
+- Java EE Dependency Injection Standard (JSR-330)
+- Spring Supports most annotations
+ > @Inject (@Autowired)
+ > @Named (@Component & @Oualifier)
+ > @Singleton (Defines a scope of Singleton)
+
+#### JPA
+- JPA : is interface. Java Persistance API
+- Hibernate understands the API which is defined by JPA
