@@ -107,3 +107,13 @@ public class TodoDataService {
 #### JPA
 - JPA : is interface. Java Persistance API
 - Hibernate understands the API which is defined by JPA
+
+#### Application context
+- nothing but Bean Factory++ (Bean Factory feature + Spring's AOP features)
+- Spring-core: is what the Bean Factory provides. Bean Factory provides basic management of beans and wiring of dependencies
+
+#### Component annotations
+- @Component : Generic Component
+- @Repository : encapsulating storage, retrieval, and search behavoir typically from a relational database
+- @Service : Business Service Facade
+- @Controller : UI layer, Controller in MVC patter
