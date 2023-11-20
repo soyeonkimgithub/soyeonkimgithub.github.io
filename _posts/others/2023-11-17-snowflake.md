@@ -672,11 +672,7 @@ COPY INTO COPY_DB.PUBLIC.ORDERS
 - RETURN_FAILED_ONLY
 ~~~sql
 
-
 ---- RETURN_FAILED_ONLY ----
-
-
-
 CREATE OR REPLACE TABLE  COPY_DB.PUBLIC.ORDERS (
     ORDER_ID VARCHAR(30),
     AMOUNT VARCHAR(30),
@@ -730,10 +726,8 @@ COPY INTO COPY_DB.PUBLIC.ORDERS
 
 - TRUNCATECOLUMNS
 ~~~sql
+
 ---- TRUNCATECOLUMNS ----
-
-
-
 CREATE OR REPLACE TABLE  COPY_DB.PUBLIC.ORDERS (
     ORDER_ID VARCHAR(30),
     AMOUNT VARCHAR(30),
@@ -771,9 +765,6 @@ SELECT * FROM ORDERS;
 ~~~sql
 
 ---- FORCE ----
-
-
-
 CREATE OR REPLACE TABLE  COPY_DB.PUBLIC.ORDERS (
     ORDER_ID VARCHAR(30),
     AMOUNT VARCHAR(30),
@@ -825,23 +816,7 @@ USE COPY_DB;
 
 SELECT * FROM information_schema.load_history
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 -- Query load history gloabally from SNOWFLAKE database --
-
 
 SELECT * FROM snowflake.account_usage.load_history
 
