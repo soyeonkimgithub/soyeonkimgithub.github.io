@@ -34,41 +34,8 @@ Hybrid Columnar Storage (Partition Attributes Across - PAX)
 - internal stage: local storage maintained by Snowflake
 - file format object: to store information like file type, field delimiter etc. will overide properety of Stage object
 
-~~~ sql
-//Creating the table / Meta data
 
-CREATE TABLE "OUR_FIRST_DB"."PUBLIC"."LOAN_PAYMENT" (
-  "Loan_ID" STRING,
-  "loan_status" STRING,
-  "Principal" STRING,
-  "terms" STRING,
-  "effective_date" STRING,
-  "due_date" STRING,
-  "paid_off_time" STRING,
-  "past_due_days" STRING,
-  "age" STRING,
-  "education" STRING,
-  "Gender" STRING);
-  
-  
- //Check that table is empy
- USE DATABASE OUR_FIRST_DB;
-
- SELECT * FROM LOAN_PAYMENT;
-
- 
- //Loading the data from S3 bucket
-  
- COPY INTO LOAN_PAYMENT
-    FROM s3://bucketsnowflakes3/Loan_payments_data.csv
-    file_format = (type = csv 
-                   field_delimiter = ',' 
-                   skip_header=1);
-    
-
-//Validate
- SELECT * FROM LOAN_PAYMENT;
-~~~
+### creating stage
 
 ~~~sql
 // Database to manage stage objects, fileformats etc.
@@ -113,6 +80,8 @@ COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS
     pattern='.*Order.*';
 
 ~~~
+
+### COPY command
 
 ~~~sql
 // Creating ORDERS table
@@ -169,6 +138,8 @@ COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS
     file_format= (type = csv field_delimiter=',' skip_header=1)
     pattern='.*Order.*';
 ~~~
+
+### transforming data
 
 ~~~sql
 // Transforming using the SELECT statement
@@ -244,6 +215,8 @@ COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS_EX
 SELECT * FROM OUR_FIRST_DB.PUBLIC.ORDERS_EX
 ~~~
 
+### more transformations
+
 ~~~sql
 //Example 3 - Table
 
@@ -300,6 +273,101 @@ SELECT * FROM OUR_FIRST_DB.PUBLIC.ORDERS_EX WHERE ORDER_ID > 15;
     
 DROP TABLE OUR_FIRST_DB.PUBLIC.ORDERS_EX
 ~~~
+
+### file format
+
+~~~sql
+
+// Specifying file_format in Copy command
+COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS_EX
+    FROM @MANAGE_DB.external_stages.aws_stage_errorex
+    file_format = (type = csv field_delimiter=',' skip_header=1)
+    files = ('OrderDetails_error.csv')
+    ON_ERROR = 'SKIP_FILE_3'; 
+    
+    
+
+// Creating table
+CREATE OR REPLACE TABLE OUR_FIRST_DB.PUBLIC.ORDERS_EX (
+    ORDER_ID VARCHAR(30),
+    AMOUNT INT,
+    PROFIT INT,
+    QUANTITY INT,
+    CATEGORY VARCHAR(30),
+    SUBCATEGORY VARCHAR(30));    
+    
+// Creating schema to keep things organized
+CREATE OR REPLACE SCHEMA MANAGE_DB.file_formats;
+
+// Creating file format object
+CREATE OR REPLACE file format MANAGE_DB.file_formats.my_file_format;
+
+// See properties of file format object
+DESC file format MANAGE_DB.file_formats.my_file_format;
+
+
+// Using file format object in Copy command       
+COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS_EX
+    FROM @MANAGE_DB.external_stages.aws_stage_errorex
+    file_format= (FORMAT_NAME=MANAGE_DB.file_formats.my_file_format)
+    files = ('OrderDetails_error.csv')
+    ON_ERROR = 'SKIP_FILE_3'; 
+
+
+// Altering file format object
+ALTER file format MANAGE_DB.file_formats.my_file_format
+    SET SKIP_HEADER = 1;
+    
+// Defining properties on creation of file format object   
+CREATE OR REPLACE file format MANAGE_DB.file_formats.my_file_format
+    TYPE=JSON,
+    TIME_FORMAT=AUTO;    
+    
+// See properties of file format object    
+DESC file format MANAGE_DB.file_formats.my_file_format;   
+
+  
+// Using file format object in Copy command       
+COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS_EX
+    FROM @MANAGE_DB.external_stages.aws_stage_errorex
+    file_format= (FORMAT_NAME=MANAGE_DB.file_formats.my_file_format)
+    files = ('OrderDetails_error.csv')
+    ON_ERROR = 'SKIP_FILE_3'; 
+
+
+// Altering the type of a file format is not possible
+ALTER file format MANAGE_DB.file_formats.my_file_format
+SET TYPE = CSV;
+
+
+// Recreate file format (default = CSV)
+CREATE OR REPLACE file format MANAGE_DB.file_formats.my_file_format
+
+
+// See properties of file format object    
+DESC file format MANAGE_DB.file_formats.my_file_format;   
+
+
+
+// Truncate table
+TRUNCATE table OUR_FIRST_DB.PUBLIC.ORDERS_EX;
+
+
+
+// Overwriting properties of file format object      
+COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS_EX
+    FROM  @MANAGE_DB.external_stages.aws_stage_errorex
+    file_format = (FORMAT_NAME= MANAGE_DB.file_formats.my_file_format  field_delimiter = ',' skip_header=1 )
+    files = ('OrderDetails_error.csv')
+    ON_ERROR = 'SKIP_FILE_3'; 
+
+DESC STAGE MANAGE_DB.external_stages.aws_stage_errorex;
+
+~~~
+
+## COPY options
+
+### ON_ERROR
 
 ~~~sql
  // Create new stage
@@ -413,98 +481,7 @@ COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS_EX
     SIZE_LIMIT = 30;
 ~~~
 
-~~~sql
-
-// Specifying file_format in Copy command
-COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS_EX
-    FROM @MANAGE_DB.external_stages.aws_stage_errorex
-    file_format = (type = csv field_delimiter=',' skip_header=1)
-    files = ('OrderDetails_error.csv')
-    ON_ERROR = 'SKIP_FILE_3'; 
-    
-    
-
-// Creating table
-CREATE OR REPLACE TABLE OUR_FIRST_DB.PUBLIC.ORDERS_EX (
-    ORDER_ID VARCHAR(30),
-    AMOUNT INT,
-    PROFIT INT,
-    QUANTITY INT,
-    CATEGORY VARCHAR(30),
-    SUBCATEGORY VARCHAR(30));    
-    
-// Creating schema to keep things organized
-CREATE OR REPLACE SCHEMA MANAGE_DB.file_formats;
-
-// Creating file format object
-CREATE OR REPLACE file format MANAGE_DB.file_formats.my_file_format;
-
-// See properties of file format object
-DESC file format MANAGE_DB.file_formats.my_file_format;
-
-
-// Using file format object in Copy command       
-COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS_EX
-    FROM @MANAGE_DB.external_stages.aws_stage_errorex
-    file_format= (FORMAT_NAME=MANAGE_DB.file_formats.my_file_format)
-    files = ('OrderDetails_error.csv')
-    ON_ERROR = 'SKIP_FILE_3'; 
-
-
-// Altering file format object
-ALTER file format MANAGE_DB.file_formats.my_file_format
-    SET SKIP_HEADER = 1;
-    
-// Defining properties on creation of file format object   
-CREATE OR REPLACE file format MANAGE_DB.file_formats.my_file_format
-    TYPE=JSON,
-    TIME_FORMAT=AUTO;    
-    
-// See properties of file format object    
-DESC file format MANAGE_DB.file_formats.my_file_format;   
-
-  
-// Using file format object in Copy command       
-COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS_EX
-    FROM @MANAGE_DB.external_stages.aws_stage_errorex
-    file_format= (FORMAT_NAME=MANAGE_DB.file_formats.my_file_format)
-    files = ('OrderDetails_error.csv')
-    ON_ERROR = 'SKIP_FILE_3'; 
-
-
-// Altering the type of a file format is not possible
-ALTER file format MANAGE_DB.file_formats.my_file_format
-SET TYPE = CSV;
-
-
-// Recreate file format (default = CSV)
-CREATE OR REPLACE file format MANAGE_DB.file_formats.my_file_format
-
-
-// See properties of file format object    
-DESC file format MANAGE_DB.file_formats.my_file_format;   
-
-
-
-// Truncate table
-TRUNCATE table OUR_FIRST_DB.PUBLIC.ORDERS_EX;
-
-
-
-// Overwriting properties of file format object      
-COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS_EX
-    FROM  @MANAGE_DB.external_stages.aws_stage_errorex
-    file_format = (FORMAT_NAME= MANAGE_DB.file_formats.my_file_format  field_delimiter = ',' skip_header=1 )
-    files = ('OrderDetails_error.csv')
-    ON_ERROR = 'SKIP_FILE_3'; 
-
-DESC STAGE MANAGE_DB.external_stages.aws_stage_errorex;
-
-~~~
-
-## COPY options
-
-### VALIDATION MODE
+### VALIDATION_MODE
 validate the data files instead of loading them
 
 ~~~sql
@@ -717,9 +694,9 @@ COPY INTO COPY_DB.PUBLIC.ORDERS
 ~~~
 
 ### TRUNCATECOLUMNS
-specify whether to truncate text strings that exceed the target column length
-TRUE: strings are automatically truncated to the target column length
-FALSE: COPY produces an error if a loaded string exceeds the target column length (default)
+- specify whether to truncate text strings that exceed the target column length
+- TRUE: strings are automatically truncated to the target column length
+- FALSE: COPY produces an error if a loaded string exceeds the target column length (default)
 
 ~~~sql
 
@@ -757,8 +734,8 @@ SELECT * FROM ORDERS;
 ~~~
 
 ### FORCE
-specify to load all files, regardless of whether they've been loaded previously and have not changed since they were loaded
-Note that this option reloads files, potentially duplicating data in a table
+- specify to load all files, regardless of whether they've been loaded previously and have not changed since they were loaded
+- Note that this option reloads files, potentially duplicating data in a table
 
 ~~~sql
 
