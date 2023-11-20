@@ -502,6 +502,8 @@ DESC STAGE MANAGE_DB.external_stages.aws_stage_errorex;
 
 ~~~
 
+## COPY options
+- VALIDATION MODE
 ~~~sql
 ---- VALIDATION_MODE ----
 // Prepare database & table
@@ -631,3 +633,234 @@ FROM rejected;
 SELECT * FROM rejected_values;   
 ~~~
 
+- SIZE_LIMIT
+~~~sql
+
+
+---- SIZE_LIMIT ----
+
+// Prepare database & table
+CREATE OR REPLACE DATABASE COPY_DB;
+
+CREATE OR REPLACE TABLE  COPY_DB.PUBLIC.ORDERS (
+    ORDER_ID VARCHAR(30),
+    AMOUNT VARCHAR(30),
+    PROFIT INT,
+    QUANTITY INT,
+    CATEGORY VARCHAR(30),
+    SUBCATEGORY VARCHAR(30));
+    
+    
+// Prepare stage object
+CREATE OR REPLACE STAGE COPY_DB.PUBLIC.aws_stage_copy
+    url='s3://snowflakebucket-copyoption/size/';
+    
+    
+// List files in stage
+LIST @aws_stage_copy;
+
+
+//Load data using copy command
+COPY INTO COPY_DB.PUBLIC.ORDERS
+    FROM @aws_stage_copy
+    file_format= (type = csv field_delimiter=',' skip_header=1)
+    pattern='.*Order.*'
+    SIZE_LIMIT=20000;
+~~~
+
+
+- RETURN_FAILED_ONLY
+~~~sql
+
+
+---- RETURN_FAILED_ONLY ----
+
+
+
+CREATE OR REPLACE TABLE  COPY_DB.PUBLIC.ORDERS (
+    ORDER_ID VARCHAR(30),
+    AMOUNT VARCHAR(30),
+    PROFIT INT,
+    QUANTITY INT,
+    CATEGORY VARCHAR(30),
+    SUBCATEGORY VARCHAR(30));
+
+// Prepare stage object
+CREATE OR REPLACE STAGE COPY_DB.PUBLIC.aws_stage_copy
+    url='s3://snowflakebucket-copyoption/returnfailed/';
+  
+LIST @COPY_DB.PUBLIC.aws_stage_copy
+  
+    
+ //Load data using copy command
+COPY INTO COPY_DB.PUBLIC.ORDERS
+    FROM @aws_stage_copy
+    file_format= (type = csv field_delimiter=',' skip_header=1)
+    pattern='.*Order.*'
+    RETURN_FAILED_ONLY = TRUE
+    
+    
+    
+COPY INTO COPY_DB.PUBLIC.ORDERS
+    FROM @aws_stage_copy
+    file_format= (type = csv field_delimiter=',' skip_header=1)
+    pattern='.*Order.*'
+    ON_ERROR =CONTINUE
+    RETURN_FAILED_ONLY = TRUE
+
+
+// Default = FALSE
+
+CREATE OR REPLACE TABLE  COPY_DB.PUBLIC.ORDERS (
+    ORDER_ID VARCHAR(30),
+    AMOUNT VARCHAR(30),
+    PROFIT INT,
+    QUANTITY INT,
+    CATEGORY VARCHAR(30),
+    SUBCATEGORY VARCHAR(30));
+
+
+COPY INTO COPY_DB.PUBLIC.ORDERS
+    FROM @aws_stage_copy
+    file_format= (type = csv field_delimiter=',' skip_header=1)
+    pattern='.*Order.*'
+    ON_ERROR =CONTINUE
+~~~
+
+
+- TRUNCATECOLUMNS
+~~~sql
+---- TRUNCATECOLUMNS ----
+
+
+
+CREATE OR REPLACE TABLE  COPY_DB.PUBLIC.ORDERS (
+    ORDER_ID VARCHAR(30),
+    AMOUNT VARCHAR(30),
+    PROFIT INT,
+    QUANTITY INT,
+    CATEGORY VARCHAR(10),
+    SUBCATEGORY VARCHAR(30));
+
+// Prepare stage object
+CREATE OR REPLACE STAGE COPY_DB.PUBLIC.aws_stage_copy
+    url='s3://snowflakebucket-copyoption/size/';
+  
+LIST @COPY_DB.PUBLIC.aws_stage_copy
+  
+    
+ //Load data using copy command
+COPY INTO COPY_DB.PUBLIC.ORDERS
+    FROM @aws_stage_copy
+    file_format= (type = csv field_delimiter=',' skip_header=1)
+    pattern='.*Order.*'
+
+
+COPY INTO COPY_DB.PUBLIC.ORDERS
+    FROM @aws_stage_copy
+    file_format= (type = csv field_delimiter=',' skip_header=1)
+    pattern='.*Order.*'
+    TRUNCATECOLUMNS = true; 
+    
+    
+SELECT * FROM ORDERS;    
+~~~
+
+
+- FORCE
+~~~sql
+
+---- FORCE ----
+
+
+
+CREATE OR REPLACE TABLE  COPY_DB.PUBLIC.ORDERS (
+    ORDER_ID VARCHAR(30),
+    AMOUNT VARCHAR(30),
+    PROFIT INT,
+    QUANTITY INT,
+    CATEGORY VARCHAR(30),
+    SUBCATEGORY VARCHAR(30));
+
+// Prepare stage object
+CREATE OR REPLACE STAGE COPY_DB.PUBLIC.aws_stage_copy
+    url='s3://snowflakebucket-copyoption/size/';
+  
+LIST @COPY_DB.PUBLIC.aws_stage_copy
+  
+    
+ //Load data using copy command
+COPY INTO COPY_DB.PUBLIC.ORDERS
+    FROM @aws_stage_copy
+    file_format= (type = csv field_delimiter=',' skip_header=1)
+    pattern='.*Order.*'
+
+// Not possible to load file that have been loaded and data has not been modified
+COPY INTO COPY_DB.PUBLIC.ORDERS
+    FROM @aws_stage_copy
+    file_format= (type = csv field_delimiter=',' skip_header=1)
+    pattern='.*Order.*'
+   
+
+SELECT * FROM ORDERS;    
+
+
+// Using the FORCE option
+
+COPY INTO COPY_DB.PUBLIC.ORDERS
+    FROM @aws_stage_copy
+    file_format= (type = csv field_delimiter=',' skip_header=1)
+    pattern='.*Order.*'
+    FORCE = TRUE;
+    
+~~~
+
+
+- LOAD history
+~~~sql
+
+-- Query load history within a database --
+
+USE COPY_DB;
+
+SELECT * FROM information_schema.load_history
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- Query load history gloabally from SNOWFLAKE database --
+
+
+SELECT * FROM snowflake.account_usage.load_history
+
+
+// Filter on specific table & schema
+SELECT * FROM snowflake.account_usage.load_history
+  where schema_name='PUBLIC' and
+  table_name='ORDERS'
+  
+  
+// Filter on specific table & schema
+SELECT * FROM snowflake.account_usage.load_history
+  where schema_name='PUBLIC' and
+  table_name='ORDERS' and
+  error_count > 0
+  
+  
+// Filter on specific table & schema
+SELECT * FROM snowflake.account_usage.load_history
+WHERE DATE(LAST_LOAD_TIME) <= DATEADD(days,-1,CURRENT_DATE)
+
+~~~
