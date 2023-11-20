@@ -34,6 +34,13 @@ Hybrid Columnar Storage (Partition Attributes Across - PAX)
 - internal stage: local storage maintained by Snowflake
 - file format object: to store information like file type, field delimiter etc. will overide properety of Stage object
 
+~~~ sql
+COPY INTO COPY_DB.PUBLIC.ORDERS
+    FROM @aws_stage_copy
+    file_format= (type = csv field_delimiter=',' skip_header=1)
+    pattern='.*Order.*'
+    VALIDATION_MODE = RETURN_ERRORS
+~~~
 
 
 
