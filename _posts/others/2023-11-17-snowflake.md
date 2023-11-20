@@ -503,7 +503,10 @@ DESC STAGE MANAGE_DB.external_stages.aws_stage_errorex;
 ~~~
 
 ## COPY options
-- VALIDATION MODE
+
+### VALIDATION MODE
+validate the data files instead of loading them
+
 ~~~sql
 ---- VALIDATION_MODE ----
 // Prepare database & table
@@ -561,9 +564,6 @@ COPY INTO COPY_DB.PUBLIC.ORDERS
     file_format= (type = csv field_delimiter=',' skip_header=1)
     pattern='.*Order.*'
     VALIDATION_MODE = RETURN_1_rows
-    
-
-
 
 -------------- Working with error results -----------
 
@@ -594,14 +594,7 @@ select rejected_record from table(result_scan(last_query_id()));
 
 SELECT * FROM rejected;
 
-
-
-
 ---- 2) Saving rejected files without VALIDATION_MODE ---- 
-
-
-
-
 
 COPY INTO COPY_DB.PUBLIC.ORDERS
     FROM @aws_stage_copy
@@ -614,8 +607,6 @@ select * from table(validate(orders, job_id => '_last'));
 
 
 ---- 3) Working with rejected records ---- 
-
-
 
 SELECT REJECTED_RECORD FROM rejected;
 
@@ -633,9 +624,10 @@ FROM rejected;
 SELECT * FROM rejected_values;   
 ~~~
 
-- SIZE_LIMIT
-~~~sql
+### SIZE_LIMIT 
+specify maximum size(in bytes) of data loaded in that command (at least one file)
 
+~~~sql
 
 ---- SIZE_LIMIT ----
 
@@ -668,8 +660,9 @@ COPY INTO COPY_DB.PUBLIC.ORDERS
     SIZE_LIMIT=20000;
 ~~~
 
+### RETURN_FAILED_ONLY 
+specifies whether to return only files that have failed to load in the statement result
 
-- RETURN_FAILED_ONLY
 ~~~sql
 
 ---- RETURN_FAILED_ONLY ----
@@ -723,8 +716,11 @@ COPY INTO COPY_DB.PUBLIC.ORDERS
     ON_ERROR =CONTINUE
 ~~~
 
+### TRUNCATECOLUMNS
+specify whether to truncate text strings that exceed the target column length
+TRUE: strings are automatically truncated to the target column length
+FALSE: COPY produces an error if a loaded string exceeds the target column length (default)
 
-- TRUNCATECOLUMNS
 ~~~sql
 
 ---- TRUNCATECOLUMNS ----
@@ -760,8 +756,10 @@ COPY INTO COPY_DB.PUBLIC.ORDERS
 SELECT * FROM ORDERS;    
 ~~~
 
+### FORCE
+specify to load all files, regardless of whether they've been loaded previously and have not changed since they were loaded
+Note that this option reloads files, potentially duplicating data in a table
 
-- FORCE
 ~~~sql
 
 ---- FORCE ----
@@ -806,8 +804,9 @@ COPY INTO COPY_DB.PUBLIC.ORDERS
     
 ~~~
 
+### Load history
+enables you to retrieve the history of data loaded into tables using the COPY INTO <table> command
 
-- LOAD history
 ~~~sql
 
 -- Query load history within a database --
