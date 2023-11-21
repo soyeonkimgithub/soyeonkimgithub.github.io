@@ -1128,7 +1128,7 @@ FROM @MANAGE_DB.EXTERNAL_STAGES.PARQUETSTAGE;
 
 ~~~sql
 
-    // Adding metadata
+// Adding metadata
     
 SELECT 
 $1:__index_level_0__::int as index_level,
@@ -1150,7 +1150,7 @@ SELECT TO_TIMESTAMP_NTZ(current_timestamp)
 
 
 
-   // Create destination table
+// Create destination table
 
 CREATE OR REPLACE TABLE OUR_FIRST_DB.PUBLIC.PARQUET_DATA (
     ROW_NUMBER int,
@@ -1166,7 +1166,7 @@ CREATE OR REPLACE TABLE OUR_FIRST_DB.PUBLIC.PARQUET_DATA (
     Load_date timestamp default TO_TIMESTAMP_NTZ(current_timestamp))
 
 
-   // Load the parquet data
+// Load the parquet data
    
 COPY INTO OUR_FIRST_DB.PUBLIC.PARQUET_DATA
     FROM (SELECT 
