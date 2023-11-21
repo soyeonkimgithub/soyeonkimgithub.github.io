@@ -932,8 +932,6 @@ ORDER BY id
 
 ~~~sql
 
-
-
 SELECT 
     RAW_FILE:spoken_languages as spoken_languages
 FROM OUR_FIRST_DB.PUBLIC.JSON_RAW;
