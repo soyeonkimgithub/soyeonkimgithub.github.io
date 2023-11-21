@@ -1038,7 +1038,7 @@ SELECT * FROM Languages;
 
 ~~~sql
 
-    // Create file format and stage object
+// Create file format and stage object
     
 CREATE OR REPLACE FILE FORMAT MANAGE_DB.FILE_FORMATS.PARQUET_FORMAT
     TYPE = 'parquet';
@@ -1080,7 +1080,7 @@ CREATE OR REPLACE STAGE MANAGE_DB.EXTERNAL_STAGES.PARQUETSTAGE
 
 
 
-    // Syntax for Querying unstructured data
+// Syntax for Querying unstructured data
 
 SELECT 
 $1:__index_level_0__,
@@ -1099,7 +1099,7 @@ $1:"value"
 FROM @MANAGE_DB.EXTERNAL_STAGES.PARQUETSTAGE;
 
 
-    // Date conversion
+// Date conversion
     
 SELECT 1;
 
@@ -1107,7 +1107,7 @@ SELECT DATE(365*60*60*24);
 
 
 
-    // Querying with conversions and aliases
+// Querying with conversions and aliases
     
 SELECT 
 $1:__index_level_0__::int as index_level,
