@@ -22,7 +22,7 @@ Hybrid Columnar Storage (Partition Attributes Across - PAX)
 - Raw data(staging area) : can be internal or external
 - Data integration(data transformation)
 
-## Snowflake
+## Snowflake permission
 - AccountAdmin > SysAdmin > (Custome Role 1)
 - AccountAdmin > SecurityAdmin > UserAdmin > Public
 
@@ -1186,3 +1186,271 @@ COPY INTO OUR_FIRST_DB.PUBLIC.PARQUET_DATA
     
 SELECT * FROM OUR_FIRST_DB.PUBLIC.PARQUET_DATA;
 ~~~
+
+## Performance optimisation
+- make queries run faster, save costs
+- traditional way: add indexes, primary keys, create table partitions, analyse the query execution table plan, remove unnecessary full table scans
+- snowflake: automatically managed micro-partitions, assigning appropriate data types, sizing virtual warehouses, cluster keys
+
+### Dedicated virtual warehouse
+seperated according to different workloads
+
+### Scaling up
+for known patterns of high work load
+
+### Scaling out
+dynamically for unkonwn patterns of work load
+
+### Maximise cache usage
+automatic caching can be maximised
+
+### Cluster keys
+for large tables
+
+## Dedicated virtual warehouse
+
+### Identify & Classify
+identify & classify groups of workload/users
+BI team, data science team, marketing department
+
+### Create dedicated virtual warehouses
+for every class of workload & assign users
+
+### Not too many VM
+avoid underutilisation
+
+### Refine classifications
+work patterns can change
+
+~~~sql
+//  Create virtual warehouse for data scientist & DBA
+
+// Data Scientists
+CREATE WAREHOUSE DS_WH 
+WITH WAREHOUSE_SIZE = 'SMALL'
+WAREHOUSE_TYPE = 'STANDARD' 
+AUTO_SUSPEND = 300 
+AUTO_RESUME = TRUE 
+MIN_CLUSTER_COUNT = 1 
+MAX_CLUSTER_COUNT = 1 
+SCALING_POLICY = 'STANDARD';
+
+// DBA
+CREATE WAREHOUSE DBA_WH 
+WITH WAREHOUSE_SIZE = 'XSMALL'
+WAREHOUSE_TYPE = 'STANDARD' 
+AUTO_SUSPEND = 300 
+AUTO_RESUME = TRUE 
+MIN_CLUSTER_COUNT = 1 
+MAX_CLUSTER_COUNT = 1 
+SCALING_POLICY = 'STANDARD';
+
+
+
+
+// Create role for Data Scientists & DBAs
+
+CREATE ROLE DATA_SCIENTIST;
+GRANT USAGE ON WAREHOUSE DS_WH TO ROLE DATA_SCIENTIST;
+
+CREATE ROLE DBA;
+GRANT USAGE ON WAREHOUSE DBA_WH TO ROLE DBA;
+
+
+// Setting up users with roles
+
+// Data Scientists
+CREATE USER DS1 PASSWORD = 'DS1' LOGIN_NAME = 'DS1' DEFAULT_ROLE='DATA_SCIENTIST' DEFAULT_WAREHOUSE = 'DS_WH'  MUST_CHANGE_PASSWORD = FALSE;
+CREATE USER DS2 PASSWORD = 'DS2' LOGIN_NAME = 'DS2' DEFAULT_ROLE='DATA_SCIENTIST' DEFAULT_WAREHOUSE = 'DS_WH'  MUST_CHANGE_PASSWORD = FALSE;
+CREATE USER DS3 PASSWORD = 'DS3' LOGIN_NAME = 'DS3' DEFAULT_ROLE='DATA_SCIENTIST' DEFAULT_WAREHOUSE = 'DS_WH'  MUST_CHANGE_PASSWORD = FALSE;
+
+GRANT ROLE DATA_SCIENTIST TO USER DS1;
+GRANT ROLE DATA_SCIENTIST TO USER DS2;
+GRANT ROLE DATA_SCIENTIST TO USER DS3;
+
+// DBAs
+CREATE USER DBA1 PASSWORD = 'DBA1' LOGIN_NAME = 'DBA1' DEFAULT_ROLE='DBA' DEFAULT_WAREHOUSE = 'DBA_WH'  MUST_CHANGE_PASSWORD = FALSE;
+CREATE USER DBA2 PASSWORD = 'DBA2' LOGIN_NAME = 'DBA2' DEFAULT_ROLE='DBA' DEFAULT_WAREHOUSE = 'DBA_WH'  MUST_CHANGE_PASSWORD = FALSE;
+
+GRANT ROLE DBA TO USER DBA1;
+GRANT ROLE DBA TO USER DBA2;
+
+// Drop objects again
+
+DROP USER DBA1;
+DROP USER DBA2;
+
+DROP USER DS1;
+DROP USER DS2;
+DROP USER DS3;
+
+DROP ROLE DATA_SCIENTIST;
+DROP ROLE DBA;
+
+DROP WAREHOUSE DS_WH;
+DROP WAREHOUSE DBA_WH;
+~~~
+
+## Scaling Up/Down
+- changing the size of the virtual warehouse depending on different work loads in different periods
+- ETL at certain times(for example between 4pm and 8pm)
+- special business event with more work load
+- NOTE: common scenario is increased query complexity, not more users(then slcaing out would be better)
+
+### Scaling up
+- increasing the size of virtual warehouses
+- more complex query
+
+### Scaling out
+- using addition warehouses/multi-cluster warehouses
+- more concurrent users/queries
+- handling performance related to large numbers of concurrent users
+- automation the process if you have fluctuating numbers of users
+- if you use at least Enterprise Edition all warehouses should be multi-cluster
+- minimum: default should be 1
+- maxinum: can be very high
+
+~~~sql
+ALTER WAREHOUSE COMPUTE_WH SET WAREHOUSE_SIZE='XSMALL';
+
+// run below in multiple worksheets
+SELECT * FROM SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.WEB_SITE T1
+CROSS JOIN SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.WEB_SITE T2
+CROSS JOIN SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.WEB_SITE T3
+CROSS JOIN (SELECT TOP 57 * FROM SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.WEB_SITE)  T4
+~~~
+
+## Maximise Caching
+
+### caching
+- automatical process to speed up the queries
+- if query is executed twice, results are cached and can be re-used
+- results are cached for 24 hours or until underlaying data has changed
+
+### what can we do?
+- ensure that similar queries go on the same warehouse
+- example: team of data scientist run similar quries, so they should all use the same warehouse
+
+~~~sql
+
+SELECT AVG(C_BIRTH_YEAR) FROM SNOWFLAKE_SAMPLE_DATA.TPCDS_SF100TCL.CUSTOMER
+
+// Setting up an additional user
+CREATE ROLE DATA_SCIENTIST;
+GRANT USAGE ON WAREHOUSE COMPUTE_WH TO ROLE DATA_SCIENTIST;
+
+CREATE USER DS1 PASSWORD = 'DS1' LOGIN_NAME = 'DS1' DEFAULT_ROLE='DATA_SCIENTIST' DEFAULT_WAREHOUSE = 'DS_WH'  MUST_CHANGE_PASSWORD = FALSE;
+GRANT ROLE DATA_SCIENTIST TO USER DS1;
+
+~~~
+
+## Clustering
+
+### what is a cluster key?
+- subset of rows to locate the data in micro-partions
+- for large tables this improves the scsan efficiency in our queries
+
+### clustering in snowflake
+- snowflake automatically maintains these cluster keys
+- in general snowflake produces well-clustered tables
+- cluster keys are not always ideal and can change over time
+- manually customise these cluster keys
+
+### when to cluster?
+- clustering is not for all tables
+- mainly very large etables of multiple terabytes can benefit
+
+### how to cluster?
+- columns that are used most frequently in WHERE-clauses (often date columns for evenet tables)
+- if you typically use filters on two columns then the table can also benefit from two cluster keys
+- column that is frequently used in JOINs
+- large enough number of distinct values to enable effective grouping (i.e. ID), small enough number of distinct values to allow effective grouping (i.e. male or female)
+
+~~~sql
+// Publicly accessible staging area    
+
+CREATE OR REPLACE STAGE MANAGE_DB.external_stages.aws_stage
+    url='s3://bucketsnowflakes3';
+
+// List files in stage
+
+LIST @MANAGE_DB.external_stages.aws_stage;
+
+//Load data using copy command
+
+COPY INTO OUR_FIRST_DB.PUBLIC.ORDERS
+    FROM @MANAGE_DB.external_stages.aws_stage
+    file_format= (type = csv field_delimiter=',' skip_header=1)
+    pattern='.*OrderDetails.*';
+    
+
+// Create table
+
+CREATE OR REPLACE TABLE ORDERS_CACHING (
+ORDER_ID	VARCHAR(30)
+,AMOUNT	NUMBER(38,0)
+,PROFIT	NUMBER(38,0)
+,QUANTITY	NUMBER(38,0)
+,CATEGORY	VARCHAR(30)
+,SUBCATEGORY	VARCHAR(30)
+,DATE DATE)    
+
+
+
+INSERT INTO ORDERS_CACHING 
+SELECT
+t1.ORDER_ID
+,t1.AMOUNT	
+,t1.PROFIT	
+,t1.QUANTITY	
+,t1.CATEGORY	
+,t1.SUBCATEGORY	
+,DATE(UNIFORM(1500000000,1700000000,(RANDOM())))
+FROM ORDERS t1
+CROSS JOIN (SELECT * FROM ORDERS) t2
+CROSS JOIN (SELECT TOP 100 * FROM ORDERS) t3
+
+
+// Query Performance before Cluster Key
+
+SELECT * FROM ORDERS_CACHING  WHERE DATE = '2020-06-09'
+
+
+// Adding Cluster Key & Compare the result
+
+ALTER TABLE ORDERS_CACHING CLUSTER BY ( DATE ) 
+
+SELECT * FROM ORDERS_CACHING  WHERE DATE = '2020-01-05'
+
+
+// Not ideal clustering & adding a different Cluster Key using function
+
+SELECT * FROM ORDERS_CACHING  WHERE MONTH(DATE)=11
+
+ALTER TABLE ORDERS_CACHING CLUSTER BY ( MONTH(DATE) )
+
+~~~
+
+## Loading from AWS
+
+~~~sql
+// Create storage integration object
+
+create or replace storage integration s3_int
+  TYPE = EXTERNAL_STAGE
+  STORAGE_PROVIDER = S3
+  ENABLED = TRUE 
+  STORAGE_AWS_ROLE_ARN = ''
+  STORAGE_ALLOWED_LOCATIONS = ('s3://<your-bucket-name>/<your-path>/', 's3://<your-bucket-name>/<your-path>/')
+   COMMENT = 'This an optional comment' 
+   
+   
+// See storage integration properties to fetch external_id so we can update it in S3
+DESC integration s3_int;
+~~~
+
+
+
+
+
+
