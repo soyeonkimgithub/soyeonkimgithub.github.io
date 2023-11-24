@@ -1451,6 +1451,7 @@ DESC integration s3_int;
 ## Loading from S3
 
 ~~~sql
+
 // Create table first
 CREATE OR REPLACE TABLE OUR_FIRST_DB.PUBLIC.movie_titles (
   show_id STRING,
@@ -1465,7 +1466,7 @@ CREATE OR REPLACE TABLE OUR_FIRST_DB.PUBLIC.movie_titles (
   duration STRING,
   listed_in STRING,
   description STRING )
-
+  
 // Create file format object
 CREATE OR REPLACE file format MANAGE_DB.file_formats.csv_fileformat
     type = csv
@@ -1476,7 +1477,7 @@ CREATE OR REPLACE file format MANAGE_DB.file_formats.csv_fileformat
     
  // Create stage object with integration object & file format object
 CREATE OR REPLACE stage MANAGE_DB.external_stages.csv_folder
-    URL = 's3://<your-bucket-name>/<your-path>/'
+    URL = 's3://snowflakes3bucketstest/csv/'
     STORAGE_INTEGRATION = s3_int
     FILE_FORMAT = MANAGE_DB.file_formats.csv_fileformat
 
@@ -1493,9 +1494,8 @@ CREATE OR REPLACE file format MANAGE_DB.file_formats.csv_fileformat
     empty_field_as_null = TRUE    
     FIELD_OPTIONALLY_ENCLOSED_BY = '"'    
     
-    
 SELECT * FROM OUR_FIRST_DB.PUBLIC.movie_titles
-
+    
 ~~~
 
 ## Handling JSON
