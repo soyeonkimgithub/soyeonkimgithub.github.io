@@ -1503,11 +1503,16 @@ SELECT * FROM OUR_FIRST_DB.PUBLIC.movie_titles
 ~~~sql
 // Taming the JSON file
 
+CREATE OR REPLACE file format MANAGE_DB.file_formats.json_fileformat
+type=JSON
+
+CREATE OR REPLACE stage MANAGE_DB.external_stages.json_folder
+    URL = 's3://snowflakes3bucketstest/json/'
+    STORAGE_INTEGRATION = s3_int
+    FILE_FORMAT = MANAGE_DB.file_formats.json_fileformat
+
 // First query from S3 Bucket   
-
 SELECT * FROM @MANAGE_DB.external_stages.json_folder
-
-
 
 // Introduce columns 
 SELECT 
