@@ -128,9 +128,19 @@ class Solution:
 ~~~
 
 ~~~java
-public int reverse() {
+public int reverse(int input) {
     // signed or unsigned integer?
-    // 
+    // reversed value can be over or under the integer range?
+    long reversed = 0;
+
+    while(input!=0) {
+        reversed = reversed*10 + input%10;
+        input = input / 10;
+        if(reversed>Integer.MAX_VALUE || reversed<Integer.MIN_VALUE) {
+            return 0;
+        }
+    }
+    return returned;
 }
 
 ~~~
