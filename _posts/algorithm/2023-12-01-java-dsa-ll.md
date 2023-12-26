@@ -22,7 +22,7 @@ published: true
 * ref. https://www.bigocheatsheet.com/
 
 ### Linked List vs Array List
-* linked list is dynamic in length, while array list is fixed in length
+* linked list is dynamic in length, while array is fixed in length
 * linked list, instead of all of items being in a contiguous place in memory(that's why we have index), items are going to be spread out
 * linked list has head for first node, tail for last node and others point next node
 * Big O 
@@ -38,7 +38,7 @@ published: true
 | Lookup by Index | O(n)        | O(1)        |
 | Lookup by Value | O(n)        | O(n)        |
 
-###  Floyd's Tortoise and Hare algorithm)
+###  Floyd's Tortoise and Hare algorithm
 
 ~~~java
     public boolean hasLoop() {
