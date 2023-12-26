@@ -85,6 +85,26 @@ class Solution:
         return [-1, -1]    
 ~~~
 
+~~~java
+class Solution {
+    public int[] twoSum(int[] nums, int target) {
+       
+       // are there multiple solutions?
+       // can I use same element twice?
+       // what should I return when there is no right two numbers?
+       Map<Integer, Integer> map = new HashMap<>();
+       for (int i=0; i<nums.length; i++) {
+           int diff = target - nums[i];
+           if(map.containsKey(diff)) {
+               return new int[]{i, map.get(diff)};
+           }
+           map.put(nums[i], i);
+       }
+        return new int[]{-1, -1};
+    }
+}
+~~~
+
 ## Reverse Integer
 
 Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-231, 231 - 1], then return 0.
