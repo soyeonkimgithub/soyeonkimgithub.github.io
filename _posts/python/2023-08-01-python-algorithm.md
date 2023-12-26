@@ -125,6 +125,13 @@ class Solution:
             x //= 10
             
         return rev * sign    
+~~~
+
+~~~java
+public int reverse() {
+    // signed or unsigned integer?
+    // 
+}
 
 ~~~
 
@@ -148,3 +155,25 @@ class Solution:
     def reverseString(self, s: List[str]) -> None:
         s.reverse()
 ~~~
+
+* String - immutable, operation leads to waste of space and decrease of performance, reason: String can be reused frequently, JVM creates 'string constant pool' and shares this with other objects, performance getting better, but it cannot be changed
+* StringBuffer - mutable, having inner space 'buffer', thread-safe -> for single thread, can have performance issue, then use StringBuilder
+* StringBuilder - mutable, not thread-safe, lighter than StringBuffer, commonly used
+
+~~~java
+public String reverse() {
+    String str = "Hello";
+    StringBuilder sb = new StringBuilder();
+    return sb.append(str).reverse().toString();
+}
+
+public String reverse() {
+    String str = "Hello";
+    StringBuilder sb = new StringBuilder();
+    for(int i=str.length()-1; i>=0 ;i--) {
+        sb.append(str.charAt(i));
+    }
+    return sb.toString();
+}
+~~~
+
