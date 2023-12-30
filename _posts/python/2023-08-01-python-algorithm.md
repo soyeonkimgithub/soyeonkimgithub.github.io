@@ -185,5 +185,19 @@ public String reverse() {
     }
     return sb.toString();
 }
+
+public String reverse() {
+    Stack<Character> stack = new Stack<>();
+    StringBuffer sb = new StringBuffer();
+
+    for(char c : myString.toCharArray()) {
+        stack.push(c);
+    }
+    while(!stack.isEmpty()) {
+        sb.append(stack.pop());
+    }
+    return sb.toString();
+}
+
 ~~~
 
