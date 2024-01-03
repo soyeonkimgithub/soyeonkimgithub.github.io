@@ -112,6 +112,7 @@ public class Square extends Shape {
 ~~~
 ### Java ver. 8, 13, 17
 * 8: massive release 
+
   1) language features: 
   - Lambda: Before Java8, whenever you wanted to instantiate a new Runnable, you had to write an anonymous inner class
 
@@ -142,6 +143,7 @@ list.stream()
  ~~~
 
 * 13
+
   1) Switch expression can now return a value, and can use lambda-style syntax for expressions 
 
 ~~~java
@@ -183,6 +185,7 @@ String htmlWithJava13 = """
 ~~~
 
 * 17: new long-term support (LTS) release 
+
   1) Pattern matching for switch (preview)
 
 ~~~java
@@ -251,14 +254,14 @@ experimental APIs distributed in a form of separate modules.
 
 ### Collections
 * Set/List/Map
-- Set is an unordered collection of unique elements(HashSet)
-- List is an ordered collection that allows duplicate elements(ArrayList, LinedList)
-- Map is a collection of key-value pairs(HashMap)
+Set is an unordered collection of unique elements(HashSet)
+List is an ordered collection that allows duplicate elements(ArrayList, LinedList)
+Map is a collection of key-value pairs(HashMap)
 
 * String/StringBuffer/StringBuilder
-- String: immutable, operation leads to waste of space and decrease of performance, reason: String can be reused frequently, JVM creates ‘string constant pool’ and shares this with other objects, performance getting better, but it cannot be changed
-- StringBuffer: mutable, having inner space ‘buffer’, thread-safe -> for single thread, can have performance issue, then use StringBuilder
-- StringBuilder: mutable, not thread-safe, lighter than StringBuffer, commonly used
+String: immutable, operation leads to waste of space and decrease of performance, reason: String can be reused frequently, JVM creates ‘string constant pool’ and shares this with other objects, performance getting better, but it cannot be changed
+StringBuffer: mutable, having inner space ‘buffer’, thread-safe -> for single thread, can have performance issue, then use StringBuilder
+StringBuilder: mutable, not thread-safe, lighter than StringBuffer, commonly used
 
 * Lambda expression
-- provides a concise way to express instances of single-method interfaces (functional interfaces)
+provides a concise way to express instances of single-method interfaces (functional interfaces)
