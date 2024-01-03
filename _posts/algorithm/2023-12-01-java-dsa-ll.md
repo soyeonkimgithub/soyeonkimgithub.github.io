@@ -39,6 +39,11 @@ published: true
 | Lookup by Value | O(n)        | O(n)        |
 
 ###  Floyd's Tortoise and Hare algorithm
+Write a method called hasLoop that is part of the linked list class.
+
+The method should be able to detect if there is a cycle or loop present in the linked list.
+
+The method should utilize Floyd's cycle-finding algorithm, also known as the "tortoise and hare" algorithm, to determine the presence of a loop efficiently.
 
 ~~~java
     public boolean hasLoop() {
@@ -59,6 +64,9 @@ published: true
 ~~~
 
 ### Find middle node
+Implement a method called findMiddleNode that returns the middle node of the linked list.
+
+If the list has an even number of nodes, the method should return the second middle node.
 
 ~~~java
     public Node findMiddleNode() {
