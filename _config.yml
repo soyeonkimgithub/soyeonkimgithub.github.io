@@ -54,10 +54,10 @@ author:
 menu:
   - title:             Poject
     url:               /project/    
-  - title:             Python
-    url:               /python/     
-  - title:             Algorithm
-    url:               /algorithm/  
+  - title:             Programming Languages
+    url:               /languages/     
+  - title:             Data Structure and Algorithm
+    url:               /dsa/  
   - title:             Machine Learning
     url:               /machinelearning/  
   # - title:             Literature
